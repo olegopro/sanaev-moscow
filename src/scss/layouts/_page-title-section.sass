@@ -1,0 +1,57 @@
+section.page-title-section
+	position: relative
+	padding: 0
+	height: 30vh
+	background: white
+
+	img.section-bg-image
+		// z-index: -1
+		// position: absolute
+		// height: 40vh
+		// object-fit: cover
+		// width: 100%
+		// filter: grayscale(90%)
+
+	// &::after
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	width: 100%
+	// 	height: 100%
+	// 	background: black
+	// 	opacity: 0.4
+
+	.container
+		position: absolute
+		top: 56%
+		left: 50%
+		transform: translate(-50%, -50%)
+		z-index: 2
+
+		.row
+			nav
+				width: fit-content
+				ol
+					a
+						text-decoration: none
+						color: 	#dcdcdc
+						transition: .3s ease-out .1s
+						&:hover
+							color: #fff
+
+							transition: .3s ease-out .1s
+
+					li
+						color: 	#dcdcdc
+						&::before
+							color: #dcdcdc
+
+						&:last-child
+							transition: .2s ease-out
+							color: #9d9d9d
+							user-select: none
+							&:active
+								opacity: 0.9
+							&::before
+								color: #7d7d7d

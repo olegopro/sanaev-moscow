@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('./_head.html', { "path": "../..", "title": "Аренда автомобилей в компании в Sanaev Moscow" })
+	</head>
+
+	<body>
+		<!-- icons -->
+		@@include('./components/_svg-icons.html', { "path": "../.." })
+
+		<!-- navbar -->
+		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
+
+		<!-- Page title section -->
+		<section class="page-title-section">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb breadcrumb-primary breadcrumb-transparent">
+								<li class="breadcrumb-item"><a href="#">Главная</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Галерея</li>
+							</ol>
+						</nav>
+
+						<h1>Наша галерея</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery-main-title-block-section section">
+			<div class="container">
+				<div class="row justify-content-center text-center">
+					<div class="col text-center main-header">
+						<h1 class="mb-5 position-relative header-element text-gradient">Вас приветствуего агенство <span class="fw-bold">SanaevMoscow</span></h1>
+
+						<p class="lead">В этом разделе собраны фотографии катания на лимузинах по Москве, сделанные нашими фотографами и предоставленные нашими клиентами, которые доверили проекту Sanaew Moscow проведение своего торжественного мероприятия.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="gallery-block-section section pt-0">
+			<div class="container">
+				<!-- prettier-ignore -->
+				<div class=" row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+					<!-- Gallery card -->
+					@@include('./components/_gallery-card-single.html', { 
+						"path": "../..", 
+						"imageGallery": "/assets/images/gallery/connector.jpg", 
+						"galleryName": "Портфолио Форумы и Кабриолет" 
+					})
+
+					<!-- Gallery card -->
+					@@include('./components/_gallery-card-single.html', { 
+						"path": "../..", 
+						"imageGallery": "/assets/images/gallery/connector-1.jpg", 
+						"galleryName": "Детские праздники" 
+					})
+
+					<!-- Gallery card -->
+					@@include('./components/_gallery-card-single.html', { 
+						"path": "../..", 
+						"imageGallery": "/assets/images/gallery/connector-2.jpg", 
+						"galleryName": "Девичник на лимузине в Москве" 
+					})
+
+					<!-- Gallery card -->
+					@@include('./components/_gallery-card-single.html', { 
+						"path": "../..", 
+						"imageGallery": "/assets/images/gallery/connector-3.jpg", 
+						"galleryName": "Выпускной" 
+					})
+
+					<!-- Gallery card -->
+					@@include('./components/_gallery-card-single.html', { 
+						"path": "../..", 
+						"imageGallery": "/assets/images/gallery/connector-4.jpg", 
+						"galleryName": "Девичник в кабриолете" 
+					})
+
+					<!-- Gallery card -->
+					@@include('./components/_gallery-card-single.html', { 
+						"path": "../..", 
+						"imageGallery": "/assets/images/gallery/connector-5.jpg", 
+						"galleryName": "Корпоратив на лимузине" 
+					})
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- footer -->
+		@@include('./_footer.html', { "path": "../.." })
+
+		<!-- Scripts -->
+		@@include('./_scripts.html', { "path": "../.." })
+	</body>
+</html>

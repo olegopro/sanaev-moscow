@@ -1,0 +1,188 @@
+section.cars-block-tab-section
+	// +inner-shadow-up
+
+	.container-fluid
+		.row
+			.nav-tabs
+				padding-left: calc(var(--bs-gutter-x) * .5)
+				border-bottom: none
+				margin-bottom: 30px
+				li
+					padding-right: 10px
+					button
+						width: 80px
+						border-radius: 0
+						padding: .5rem .5rem
+						border: 2px solid #e0e0e0
+						&.active
+
+							background: linear-gradient(to bottom, #520565 0%,#540765 3%,#600f6b 10%,#601069 11%,#65126c 13%,#812975 27%,#852a77 28%,#97387c 37%,#a34080 46%,#a44181 53%,#9f3f7f 58%,#94347b 66%,#8e3379 69%,#8d2f79 69%,#812975 74%,#822776 75%,#7a2372 77%,#620f6b 89%,#5e0d69 90%,#510464 98%,#500265 100%)
+							border: 2px solid white
+							color: white
+							box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25)
+
+			.tab-content
+				position: relative
+
+				#type
+					input
+						background-size: 90%
+
+				#brand
+					input
+						background-size: 80%
+
+				#color
+					input[type=checkbox]
+						&:checked
+							outline: 2px solid rgba(255, 255, 255, 1)
+
+				#country
+					.checkbox-style
+						width: 170px
+						input
+							width: 170px
+							&:checked
+								outline: 2px solid rgba(255, 255, 255, 1)
+
+				.tab-pane
+					.carousel__nav
+						button
+							background: white
+							box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
+							&.is-next
+								top: 46%
+								right: 0
+							&.is-prev
+								top: 46%
+								left: 0
+					.carousel__viewport
+						.carousel__track
+							.carousel__slide
+								max-width: fit-content
+								&:first-child
+									padding-left: 3px
+								&:last-child
+									padding-right: 3px
+
+								.checkbox-style
+
+									display: block
+									position: relative
+									height: 100px
+									width: 100px
+									overflow: initial
+									text-align: center
+									border-radius: 0.25rem
+									box-shadow: 0px 0px 3px 0px rgba(75, 75, 75, 0.52)
+
+									span
+										font-size: 14px
+										font-weight: normal
+
+									input[type=checkbox]
+										-webkit-appearance: none
+										-moz-appearance: none
+										appearance: none
+
+										display: block
+										cursor: pointer
+
+										position: relative
+										z-index: -1
+
+										width: 100%
+										height: 100%
+
+										background-size: contain
+										background-repeat: no-repeat
+										background-position: center
+										background-origin: content-box
+
+										border-radius: 0.25rem
+
+									input[type=checkbox]:checked
+										background-size: contain
+										background-repeat: no-repeat
+										background-position: center
+										// filter: brightness(150%)
+										// outline: 2px solid #4b4b4b
+										outline: 2px solid #530666
+										box-shadow: 0px 0px 10px 0px #272727 !important
+										border-radius: 0.25rem
+
+									input[type=checkbox]:active
+										background-size: contain
+										background-repeat: no-repeat
+										background-position: center
+
+			span.name-title-range
+				display: block
+				// margin-bottom: 20px
+				margin-left: -7px
+
+			div[id$="-range"]
+
+				border: none
+				height: 0.5rem
+				color: transparent
+				cursor: pointer
+				background-color: #dee2e6
+				border-color: transparent
+				border-radius: 1rem
+
+				&:before
+					content: ""
+					background: inherit
+					border: inherit
+					border-radius: inherit
+					position: absolute
+					left: -.6em
+					top: -1px
+					right: -.6em
+					bottom: -1px
+				.ui-slider-range
+					// width: calc(100% + 10px)
+					background: #530666
+
+				input[class$="-range-start"]
+					margin: 20px -10px
+
+					height: 30px
+					width: 50px
+					text-align: start
+					border: none
+					outline: none
+					cursor: default
+					background-color: #00000000
+
+				input[class$="-range-end"]
+					margin: 20px -11px
+					height: 30px
+					width: 50px
+					text-align: end
+					border: none
+					outline: none
+					cursor: default
+					background-color: #00000000
+				.ui-slider-handle
+					// margin-left: -12px
+					// top: -2px
+					width: 1.2rem
+					height: 1.2rem
+					background-color: #530666
+					border: 0
+					border-radius: 1rem
+					transition: background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.15s ease-in-out
+					appearance: none
+
+					// opacity: 0.3
+
+					&:focus
+						box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(83, 6, 102, 0.25)
+						outline: none
+					&:first-child
+						margin-left: -12px
+
+section.cars-block-catalog-section
+	@import ../layouts/car-card-single

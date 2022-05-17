@@ -1,0 +1,282 @@
+#mainCarousel
+	.carousel-indicators
+		.active
+			background-color: #ffffff
+			background-clip: padding-box
+
+	.carousel-inner
+		.carousel-item
+			height: 40rem
+
+			img
+				object-fit: cover
+				object-position: center
+				width: 100%
+				height: 100%
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+
+				background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4033262963388481) 50%, rgba(0,0,0,0.6) 100%)
+
+			.container
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+				.carousel-title-block
+					color: white
+
+					h1, p
+						text-shadow: 1px 1px 4px black,
+					a.btn
+						border-radius: 1px
+						background: white
+						color: black
+						&:hover
+							background: rgb(83, 6, 102)
+							color: white
+
+section.main-description-block-section
+	z-index: 2
+	background: white
+	box-shadow: 0 -20px 20px -20px #d5d5d5 inset, 0 20px 20px -20px #727272 inset
+
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-size: cover
+		opacity: 0.06
+		// background-image: url(/assets/images/decoration/car-sale-and-rental-concept-businessman-showing-c-2021-08-26-16-33-48-utc.jpg)
+		background-repeat: no-repeat
+		background-position: center
+		z-index: -1
+
+	.header-element
+		background: linear-gradient(45deg, #0B2349 33%, #7B2A86 66%, #880046)
+		background-clip: border-box
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
+	// .logo-img-section
+	// 	position: absolute
+	// 	top: 30%
+	// 	left: 0
+	// 	right: 0
+	// 	margin: 0 auto
+	// 	width: 848px
+	// 	height: auto
+	// 	opacity: 0.06
+	// 	background-repeat: no-repeat
+	// 	transform: translateX(-50%)
+	// 	z-index: -1
+
+	.main-counters
+		span.fas
+			font-size: 50px
+			background: linear-gradient(45deg, #2A4876 33%, #7B2A86 66%, #880046)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+		.counters-block
+			z-index: 1
+			background-color: #fff
+			box-shadow: 0px 6px 20px -5px rgba(34, 60, 80, 0.2)
+			.h5
+				user-select: none
+				cursor: default
+				color: #2a3863ed
+
+section.main-cars-block-section
+	background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(240, 240, 240) 100%)
+
+	// &::before
+	// 	content: ''
+	// 	position: absolute
+	// 	top: calc(100% - 856px)
+	// 	left: -58px
+	// 	width: 100%
+	// 	height: 100%
+	// 	background-image: url(/assets/images/decoration/road_image.png)
+	// 	background-repeat: no-repeat
+
+	// &::after
+	// 	content: ''
+	// 	position: absolute
+	// 	top: 0
+	// 	right: 0
+	// 	width: 100%
+	// 	height: 100%
+	// 	background-image: url(/assets/images/decoration/road_image-2.png)
+	// 	background-repeat: no-repeat
+	// 	transform: scaleX(-1)
+
+	.container-fluid
+		position: relative
+		z-index: 1
+		.row
+			h3
+				position: relative
+				a
+					font-weight: 600
+			@import ../layouts/car-card-carousel
+
+			a.btn
+				border-radius: 1px
+				border-color: #530666
+				background: white
+				color: #530666
+				padding: 8px 30px
+				font-weight: 300
+				&:hover
+					background: linear-gradient(to bottom, #520565 0%,#540765 3%,#600f6b 10%,#601069 11%,#65126c 13%,#812975 27%,#852a77 28%,#97387c 37%,#a34080 46%,#a44181 53%,#9f3f7f 58%,#94347b 66%,#8e3379 69%,#8d2f79 69%,#812975 74%,#822776 75%,#7a2372 77%,#620f6b 89%,#5e0d69 90%,#510464 98%,#500265 100%)
+					color: white
+
+			.second-header-title
+				position: absolute
+				top: -12px
+				left: -32px
+				right: 0
+				z-index: -1
+				width: max-content
+				transform: translate(-50%, -50%)
+				text-align: center
+				font-size: 66px
+				opacity: 0.1
+				color: #53066640
+				text-transform: uppercase
+				font-weight: bold
+				text-align: left
+
+				user-select: none
+				cursor: default
+
+section.main-about-us-section
+	&::before
+		content: ''
+		top: 0
+		left: 0
+		height: 100%
+		position: absolute
+		width: 100%
+		opacity: 1
+		filter: grayscale(30%)
+		// filter: blur(1px)
+		// background: linear-gradient(180deg, rgba(36,46,76,0.3) 0%, rgba(36,46,76,0.5) 49%, #121224b3 100%)
+
+		background-image: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgba(0,0,0,0.7) 50%, rgb(20, 20, 20) 100%), url(/assets/images/decoration/123152_orig.jpg)
+		background-size: contain
+		overflow: hidden
+
+	.container
+		position: relative
+		z-index: 1
+		.row
+			img
+				box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.300)
+				border-radius: 1rem
+
+			.main-header
+				&::after
+					content: ''
+					position: absolute
+					background: url(/assets/images/logo-header-white.png)
+
+	.back-text-animation
+		position: absolute
+		top: 69%
+		left: 0
+		right: -45%
+		text-align: center
+		transform: translate(-50%, -50%)
+		font-size: 141px
+		opacity: 0.5
+		z-index: 2
+		color: #d3d3d340
+		text-transform: uppercase
+		font-weight: bold
+
+		user-select: none
+		cursor: default
+
+section.main-about-us-section-posttitle
+	img
+		position: absolute
+		width: 300px
+		right: 7%
+		top: 95%
+		opacity: 1
+
+section.main-about-us-section-second
+	img
+		position: absolute
+		width: 882px
+		left: 0
+		top: 50%
+		z-index: -1
+		opacity: 0.07
+
+section.main-services-section
+	// background: linear-gradient(180deg, rgba(251, 251, 251, 0) 0%, rgb(243, 244, 246) 100%)
+	.container
+		.row
+			&:first-child
+				img
+					height: 390px
+					object-fit: cover
+					object-position: center
+					border-top-left-radius: 1rem
+					border-bottom-left-radius: 1rem
+					border-top-right-radius: 0
+					border-bottom-right-radius: 0
+
+					margin: 0 1px -1px -1px
+			&:last-child
+				img
+					height: 386px
+					object-fit: cover
+					object-position: center
+					border-top-left-radius: 0
+					border-bottom-left-radius: 0
+					border-top-right-radius: 1rem
+					border-bottom-right-radius: 1rem
+					border-image-outset: -10px
+
+					margin: 0 1px -1px 1px
+
+			.card
+				&:hover
+					box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -2px !important
+				.card-body
+					a
+						width: min-content
+
+section.main-faq-section
+	.back-text-animation
+		position: absolute
+		top: 78%
+		left: 0
+		text-align: center
+		transform: translate(-50%, -50%)
+		font-size: 141px
+		opacity: 1
+		z-index: 0
+		color: #ffffff82
+		text-transform: uppercase
+		font-weight: bold
+
+		user-select: none
+		cursor: default
+	img
+		position: absolute
+		width: 500px
+		right: 0.7%
+		top: 15%

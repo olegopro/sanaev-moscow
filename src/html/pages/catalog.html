@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('./_head.html', { "path": "../..", "title": "Аренда автомобилей в компании в Sanaev Moscow" })
+	</head>
+
+	<body>
+		<!-- Icons -->
+		@@include('./components/_svg-icons.html', { "path": "../.." })
+
+		<!-- Navbar -->
+		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
+
+		<!-- Page title section -->
+		<section class="page-title-section">
+			<!-- <img class="section-bg-image" src="/assets/images/decoration/backlight-of-sport-car-with-copy-space-for-text-2022-01-03-23-18-03-utc.jpg" alt="" /> -->
+
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb breadcrumb-primary breadcrumb-transparent">
+								<li class="breadcrumb-item"><a href="#">Главная</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Автопарк</li>
+							</ol>
+						</nav>
+
+						<h1 class="text-dark">Каталог автомобилей</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Tab's section FancyApp -->
+		<section class="cars-block-tab-section py-5">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-3">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="type-tab" data-bs-toggle="tab" data-bs-target="#type" type="button" role="tab" aria-controls="type" aria-selected="true">Тип</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="brand-tab" data-bs-toggle="tab" data-bs-target="#brand" type="button" role="tab" aria-controls="brand" aria-selected="false">Марка</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="color-tab" data-bs-toggle="tab" data-bs-target="#color" type="button" role="tab" aria-controls="color" aria-selected="false">Цвет</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="country-tab" data-bs-toggle="tab" data-bs-target="#country" type="button" role="tab" aria-controls="country" aria-selected="false">Страна</button>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-9">
+						<div class="row sliders">
+							<div class="col-4">
+								<span class="name-title-range">Мест</span>
+								<div id="passengers-range" class="d-flex justify-content-between">
+									<input readonly class="passengers-range-start" />
+									<input readonly class="passengers-range-end" />
+								</div>
+							</div>
+
+							<div class="col-4">
+								<span class="name-title-range">Год</span>
+								<div id="year-range" class="d-flex justify-content-between">
+									<input readonly class="year-range-start" />
+									<input readonly class="year-range-end" />
+								</div>
+							</div>
+
+							<div class="col-4">
+								<span class="name-title-range">Цена</span>
+								<div id="price-range" class="d-flex justify-content-between">
+									<input readonly class="price-range-start" />
+									<input readonly class="price-range-end" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="type" role="tabpanel" aria-labelledby="type-tab">
+							<div id="type-tab-carousel-fancy">
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/wheel.png')" />
+										<span>Без водителя</span>
+									</label>
+								</div>
+
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/suv.png')" />
+										<span class="">Внедорожники</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/cabriolet.png')" />
+										<span>Кабриолеты</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/coupe.png')" />
+										<span>Купе</span>
+									</label>
+								</div>
+
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/limousine.png')" />
+										<span>Лимузины</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/minibus.png')" />
+										<span>Микроавтобусы</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/minivan.png')" />
+										<span>Минивены</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/motorcycle.png')" />
+										<span>Мотоциклы</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/wedding.png')" />
+										<span>На свадьбу</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/shooting.png')" />
+										<span>На съемки</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/premium.png')" />
+										<span>Премиум</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/retro.png')" />
+										<span>Ретро</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/sedan.png')" />
+										<span>Седаны</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/sportcar.png')" />
+										<span>Спорткары</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="brand" role="tabpanel" aria-labelledby="brand-tab">
+							<div id="brand-tab-carousel-fancy">
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/audi-icon.png')" />
+										<span>Audi</span>
+									</label>
+								</div>
+
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/bmw-icon.png')" />
+										<span>BMW</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/cadillac-icon.png')" />
+										<span>Cadilac</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/chevrolet-icon.png')" />
+										<span>Chevrolet</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/chrysler-icon.png')" />
+										<span>Chrysler</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/ford.png')" />
+										<span>Ford</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/hyundai.png')" />
+										<span>Hyundai</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/jaguar.png')" />
+										<span>Jaguar</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/mercedes.png')" />
+										<span>Mercedes</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/nissan.png')" />
+										<span>Nissan</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/opel.png')" />
+										<span>Opel</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/porsche.png')" />
+										<span>Porsche</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/subaru.png')" />
+										<span>Subaru</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/suzuki.png')" />
+										<span>Suzuku</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/toyota.png')" />
+										<span>Toyota</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/volkswagen.png')" />
+										<span>Volkswagen</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/volvo.png')" />
+										<span>Volvo</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="color" role="tabpanel" aria-labelledby="color-tab">
+							<div id="color-tab-carousel-fancy">
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" class="bg-danger" />
+										<span>Красный</span>
+									</label>
+								</div>
+
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" class="bg-success" />
+										<span>Зеленый</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" class="bg-primary" />
+										<span>Синий</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" class="bg-dark" />
+										<span>Черный</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="country" role="tabpanel" aria-labelledby="country-tab">
+							<div id="country-tab-carousel-fancy">
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag102.png')" />
+										<span>Россия</span>
+									</label>
+								</div>
+
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag97.png')" />
+										<span>Германия</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag45.png')" />
+										<span>Англия</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag68.png')" />
+										<span>Франция</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag82.png')" />
+										<span>Италия</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag114.png')" />
+										<span>Корея</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag22.png')" />
+										<span>США</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag118.png')" />
+										<span>Япония</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/ussr.jpg')" />
+										<span>СССР</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cars block section -->
+		<section class="cars-block-catalog-section section pt-0 bg-light">
+			<div class="container-fluid">
+				<p class="lead">Знаете ли вы, что прокат лимузина отлично подойдет для такого праздника как день рождения? Вы сможете весело прокатиться со своими друзьями по интересным и знаковым местам Москвы, сделать на память отличные фото. Мы позаботимся, чтобы ваш день рождения в лимузине прошел в легкой и непринужденной атмосфере праздника.</p>
+
+				<!-- prettier-ignore -->
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+					<!-- <h3 class="d-block w-100">Премиум автомобили</h3> -->
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"carName": "BMW 530d M-SPORT", 
+						"carPrice": "от 25 600 руб/час" 
+					})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"carName": "Akura NSX", 
+						"carPrice": "от 21 600 руб/час" 
+					})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"carName": "Toyota Supra FT1", 
+						"carPrice": "от 12 600 руб/час" 
+					})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"carName": "McLaren 675LT", 
+						"carPrice": "от 6 000 руб/час" 
+					})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"carName": "Cadillac 1959 Convertible", 
+						"carPrice": "от 4 500 руб/час" 
+					})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', {
+						 "path": "../..", 
+						 "carName": "Corvette C1 Retro", 
+						 "carPrice": "от 5 400 руб/час" 
+						})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"carName": "Toyota Supra FT1", 
+						"carPrice": "от 12 22 руб/час" 
+					})
+					
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"carName": "McLaren 675L", 
+						"carPrice": "от 76 500 руб/час" 
+					})
+					
+				</div>
+			</div>
+		</section>
+
+		<section class="section pt-0">
+			<div class="container">
+				<div class="row">
+					<div class="row justify-content-center">
+						<div class="text-center">
+							<p class="lead">Знаете ли вы, что прокат лимузина отлично подойдет для такого праздника как день рождения? Вы сможете весело прокатиться со своими друзьями по интересным и знаковым местам Москвы, сделать на память отличные фото. Мы позаботимся, чтобы ваш день рождения в лимузине прошел в легкой и непринужденной атмосфере праздника.</p>
+							<p class="lead">Также вас приглашают наши партнеры – ночные клубы, бары, рестораны. В ваш день рождения они подготовили для вас самые лояльные условия и скидки. Ведь заказ лимузина на день рождения в Sanaev Moscow - это индивидуальный подход и возможность отпраздновать день рождения наилучшим образом.</p>
+							<h3 class="h2">Сценарий дня рождения в лимузине:</h3>
+							<ul>
+								<li>Во время заказа услуги вы указываете место подачи автомобиля. Это будет место, с которого начнется ваш удивительный день рождения.</li>
+								<li>В самых красивый и топовых местах города мы делаем остановки, чтобы сделать красивые фотографии. Это могут быть снимки в лимузине, на фоне необычного природного ландшафта или здания с красивой архитектурой. Количество снимков не ограничено.</li>
+								<li>В ходе поездки вы будете обеспечены хорошим настроением, веселым драйвом и различными напитками.</li>
+								<li>По окончании праздничной программы мы привезем вас в желаемое место. Это может быть ресторан, бар, клуб, караоке – все зависит от вашего выбора, с которым можем помочь заранее.</li>
+							</ul>
+							<h3 class="h2">Почему стоит заказать лимузин именно у нас?</h3>
+							<p class="lead">Компания Sanaev Moscow – это безупречная репутация и большой опыт в организации праздничных мероприятий. Предлагаем недорого заказать лимузин на день рождения, чтобы весело отпраздновать праздник. Непринужденная атмосфера и веселое настроение вам гарантированы.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-md bg-gray-100 mb-n3 pt-6">@@include('./components/_advantages.html')</section>
+
+		<section class="section pt-0">
+			<div class="container">
+				<div class="row">
+					<div class="row justify-content-center">
+						<div class="text-center">
+							<p class="lead">Знаете ли вы, что прокат лимузина отлично подойдет для такого праздника как день рождения? Вы сможете весело прокатиться со своими друзьями по интересным и знаковым местам Москвы, сделать на память отличные фото. Мы позаботимся, чтобы ваш день рождения в лимузине прошел в легкой и непринужденной атмосфере праздника.</p>
+							<p class="lead">Также вас приглашают наши партнеры – ночные клубы, бары, рестораны. В ваш день рождения они подготовили для вас самые лояльные условия и скидки. Ведь заказ лимузина на день рождения в Sanaev Moscow - это индивидуальный подход и возможность отпраздновать день рождения наилучшим образом.</p>
+							<h3 class="h2">Сценарий дня рождения в лимузине:</h3>
+							<ul>
+								<li>Во время заказа услуги вы указываете место подачи автомобиля. Это будет место, с которого начнется ваш удивительный день рождения.</li>
+								<li>В самых красивый и топовых местах города мы делаем остановки, чтобы сделать красивые фотографии. Это могут быть снимки в лимузине, на фоне необычного природного ландшафта или здания с красивой архитектурой. Количество снимков не ограничено.</li>
+								<li>В ходе поездки вы будете обеспечены хорошим настроением, веселым драйвом и различными напитками.</li>
+								<li>По окончании праздничной программы мы привезем вас в желаемое место. Это может быть ресторан, бар, клуб, караоке – все зависит от вашего выбора, с которым можем помочь заранее.</li>
+							</ul>
+							<h3 class="h2">Почему стоит заказать лимузин именно у нас?</h3>
+							<p class="lead">Компания Sanaev Moscow – это безупречная репутация и большой опыт в организации праздничных мероприятий. Предлагаем недорого заказать лимузин на день рождения, чтобы весело отпраздновать праздник. Непринужденная атмосфера и веселое настроение вам гарантированы.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="datepicker-picker-single-car-section section">
+			<div class="container">
+				<div class="row">
+					<h2 class="text-center mb-4">Бронировение автомобиля</h2>
+					<div class="col-12">
+						<!-- Form -->
+						<div class="row align-items-center">
+							<!-- Дата начала -->
+							<div class="col start-date">
+								<div class="form-group">
+									<div class="input-group input-group-border">
+										<span class="input-group-text" id="basic-addonDate2"><span class="fas far fa-calendar-alt"></span></span>
+										<input class="form-control datepicker-input" data-datepicker="" id="exampleInputDate2" placeholder="Дата начала" type="text" />
+										<div class="datepicker datepicker-dropdown datepicker-orient-left datepicker-orient-top" style="left: 39px; top: -293.6px">
+											<div class="datepicker-picker">
+												<div class="datepicker-header">
+													<div class="datepicker-title" style="display: none"></div>
+													<div class="datepicker-controls"><button type="button" class="btn prev-btn">«</button><button type="button" class="btn view-switch">April 2022</button><button type="button" class="btn next-btn">»</button></div>
+												</div>
+												<div class="datepicker-main">
+													<div class="datepicker-view">
+														<div class="days">
+															<div class="days-of-week"><span class="dow">Su</span><span class="dow">Mo</span><span class="dow">Tu</span><span class="dow">We</span><span class="dow">Th</span><span class="dow">Fr</span><span class="dow">Sa</span></div>
+															<div class="datepicker-grid">
+																<span class="datepicker-cell day prev" data-date="1648328400000">27</span><span class="datepicker-cell day prev" data-date="1648414800000">28</span><span class="datepicker-cell day prev" data-date="1648501200000">29</span><span class="datepicker-cell day prev" data-date="1648587600000">30</span><span class="datepicker-cell day prev" data-date="1648674000000">31</span
+																><span class="datepicker-cell day" data-date="1648760400000">1</span><span class="datepicker-cell day" data-date="1648846800000">2</span><span class="datepicker-cell day" data-date="1648933200000">3</span><span class="datepicker-cell day" data-date="1649019600000">4</span><span class="datepicker-cell day" data-date="1649106000000">5</span><span class="datepicker-cell day" data-date="1649192400000">6</span
+																><span class="datepicker-cell day" data-date="1649278800000">7</span><span class="datepicker-cell day" data-date="1649365200000">8</span><span class="datepicker-cell day" data-date="1649451600000">9</span><span class="datepicker-cell day" data-date="1649538000000">10</span><span class="datepicker-cell day selected focused" data-date="1649624400000">11</span><span class="datepicker-cell day" data-date="1649710800000">12</span
+																><span class="datepicker-cell day" data-date="1649797200000">13</span><span class="datepicker-cell day" data-date="1649883600000">14</span><span class="datepicker-cell day" data-date="1649970000000">15</span><span class="datepicker-cell day" data-date="1650056400000">16</span><span class="datepicker-cell day" data-date="1650142800000">17</span><span class="datepicker-cell day" data-date="1650229200000">18</span
+																><span class="datepicker-cell day" data-date="1650315600000">19</span><span class="datepicker-cell day" data-date="1650402000000">20</span><span class="datepicker-cell day" data-date="1650488400000">21</span><span class="datepicker-cell day" data-date="1650574800000">22</span><span class="datepicker-cell day" data-date="1650661200000">23</span><span class="datepicker-cell day" data-date="1650747600000">24</span
+																><span class="datepicker-cell day" data-date="1650834000000">25</span><span class="datepicker-cell day" data-date="1650920400000">26</span><span class="datepicker-cell day" data-date="1651006800000">27</span><span class="datepicker-cell day" data-date="1651093200000">28</span><span class="datepicker-cell day" data-date="1651179600000">29</span><span class="datepicker-cell day" data-date="1651266000000">30</span
+																><span class="datepicker-cell day next" data-date="1651352400000">1</span><span class="datepicker-cell day next" data-date="1651438800000">2</span><span class="datepicker-cell day next" data-date="1651525200000">3</span><span class="datepicker-cell day next" data-date="1651611600000">4</span><span class="datepicker-cell day next" data-date="1651698000000">5</span
+																><span class="datepicker-cell day next" data-date="1651784400000">6</span><span class="datepicker-cell day next" data-date="1651870800000">7</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="datepicker-footer">
+													<div class="datepicker-controls"><button type="button" class="btn today-btn" style="display: none">Today</button><button type="button" class="btn clear-btn" style="display: none">Clear</button></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Дата конца -->
+							<div class="col end-date">
+								<div class="form-group">
+									<!-- <label class="h6" for="exampleInputDate3">To</label> -->
+									<div class="input-group input-group-border">
+										<input class="form-control datepicker-input" data-datepicker="" id="exampleInputDate3" placeholder="Дата завершения" type="text" />
+										<div class="datepicker datepicker-dropdown datepicker-orient-left datepicker-orient-top" style="left: 39px; top: -293.6px">
+											<div class="datepicker-picker">
+												<div class="datepicker-header">
+													<div class="datepicker-title" style="display: none"></div>
+													<div class="datepicker-controls"><button type="button" class="btn prev-btn">«</button><button type="button" class="btn view-switch">April 2022</button><button type="button" class="btn next-btn">»</button></div>
+												</div>
+												<div class="datepicker-main">
+													<div class="datepicker-view">
+														<div class="days">
+															<div class="days-of-week"><span class="dow">Su</span><span class="dow">Mo</span><span class="dow">Tu</span><span class="dow">We</span><span class="dow">Th</span><span class="dow">Fr</span><span class="dow">Sa</span></div>
+															<div class="datepicker-grid">
+																<span class="datepicker-cell day prev" data-date="1648328400000">27</span><span class="datepicker-cell day prev" data-date="1648414800000">28</span><span class="datepicker-cell day prev" data-date="1648501200000">29</span><span class="datepicker-cell day prev" data-date="1648587600000">30</span><span class="datepicker-cell day prev" data-date="1648674000000">31</span
+																><span class="datepicker-cell day" data-date="1648760400000">1</span><span class="datepicker-cell day" data-date="1648846800000">2</span><span class="datepicker-cell day" data-date="1648933200000">3</span><span class="datepicker-cell day" data-date="1649019600000">4</span><span class="datepicker-cell day" data-date="1649106000000">5</span><span class="datepicker-cell day" data-date="1649192400000">6</span
+																><span class="datepicker-cell day" data-date="1649278800000">7</span><span class="datepicker-cell day" data-date="1649365200000">8</span><span class="datepicker-cell day" data-date="1649451600000">9</span><span class="datepicker-cell day" data-date="1649538000000">10</span><span class="datepicker-cell day" data-date="1649624400000">11</span><span class="datepicker-cell day" data-date="1649710800000">12</span
+																><span class="datepicker-cell day" data-date="1649797200000">13</span><span class="datepicker-cell day" data-date="1649883600000">14</span><span class="datepicker-cell day" data-date="1649970000000">15</span><span class="datepicker-cell day" data-date="1650056400000">16</span><span class="datepicker-cell day" data-date="1650142800000">17</span><span class="datepicker-cell day" data-date="1650229200000">18</span
+																><span class="datepicker-cell day" data-date="1650315600000">19</span><span class="datepicker-cell day" data-date="1650402000000">20</span><span class="datepicker-cell day" data-date="1650488400000">21</span><span class="datepicker-cell day selected focused" data-date="1650574800000">22</span><span class="datepicker-cell day" data-date="1650661200000">23</span><span class="datepicker-cell day" data-date="1650747600000">24</span
+																><span class="datepicker-cell day" data-date="1650834000000">25</span><span class="datepicker-cell day" data-date="1650920400000">26</span><span class="datepicker-cell day" data-date="1651006800000">27</span><span class="datepicker-cell day" data-date="1651093200000">28</span><span class="datepicker-cell day" data-date="1651179600000">29</span><span class="datepicker-cell day" data-date="1651266000000">30</span
+																><span class="datepicker-cell day next" data-date="1651352400000">1</span><span class="datepicker-cell day next" data-date="1651438800000">2</span><span class="datepicker-cell day next" data-date="1651525200000">3</span><span class="datepicker-cell day next" data-date="1651611600000">4</span><span class="datepicker-cell day next" data-date="1651698000000">5</span
+																><span class="datepicker-cell day next" data-date="1651784400000">6</span><span class="datepicker-cell day next" data-date="1651870800000">7</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="datepicker-footer">
+													<div class="datepicker-controls"><button type="button" class="btn today-btn" style="display: none">Today</button><button type="button" class="btn clear-btn" style="display: none">Clear</button></div>
+												</div>
+											</div>
+										</div>
+										<span class="input-group-text" id="basic-addonDate3"><span class="fas far fa-calendar-alt"></span></span>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<input type="text" placeholder="+7 (123) 123-45-67" class="form-control" id="cartInputPhone1" aria-describedby="cartInputPhone1" />
+							</div>
+							<div class="col">
+								<input type="text" placeholder="Имя" class="form-control" id="cartInputPhone1" aria-describedby="cartInputPhone1" />
+							</div>
+							<div class="col">
+								<button class="btn btn-pill btn-outline-primary w-100 submit-btn-book" type="button">Забронировать</button>
+							</div>
+						</div>
+						<!-- End of Form -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer -->
+		@@include('./_footer.html', { "path": "../.." })
+
+		<!-- Scripts -->
+		@@include('./_scripts.html', { "path": "../.." })
+	</body>
+</html>

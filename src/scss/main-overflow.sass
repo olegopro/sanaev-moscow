@@ -1,0 +1,69 @@
+@import mixins/vertical-lines
+
+@import pages/index
+@import pages/catalog
+@import pages/single-car
+@import pages/services
+@import pages/single-service
+@import pages/gallery
+@import pages/single-gallery
+@import pages/brand
+@import pages/contacts
+
+@import layouts/header
+@import layouts/section
+@import layouts/footer
+@import layouts/page-title-section
+@import layouts/advantages
+
+@import utilites/animations
+
+@import components/buttons
+@import components/decorations
+
+@import helpers/text-gradients
+
+body
+	overflow-x: hidden
+
+//FancyBox Index-page Carousel
+#carousel-premium-cars, #carousel-cabriolet-cars, #carousel-sport-cars, #color-tab-carousel
+	.carousel__viewport
+		width: 100%
+		max-width: none
+	.carousel__slide
+		width: calc(100% / 3)
+
+		// padding-left: 2px
+		// padding-right: 0
+
+	.carousel__nav
+		button
+			background: white
+			box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
+			&.is-next
+				top: 45%
+				right: -50px
+			&.is-prev
+				top: 45%
+				left: -50px
+
+//Simpe Parallax
+.parallax-simple
+	height: 40vh
+
+// jQuery Brazzers Carousel
+.tmb-wrap-table div.active
+	border-color: #530666
+
+.rounded-default
+	border-radius: 3px !important
+
+.demo
+	margin-top: 57px
+	position: absolute
+	top: 112px
+	z-index: 10
+	right: 411px
+	padding: 50px
+	background: white

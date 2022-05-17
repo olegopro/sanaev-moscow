@@ -1,0 +1,84 @@
+
+header
+	nav
+		transition: all 0.3s
+
+		&.navbar-main
+			position: fixed
+			padding-top: 0.3rem
+			padding-bottom: 0.3rem
+			background: white
+
+			>a
+				img
+					height: 38px
+
+			.navbar-collapse
+				ul.navbar-nav
+					li
+						a
+							color: black
+							font-weight: bold
+							text-transform: uppercase
+							&:hover
+								color: black
+			a.btn-tel-header
+				color: black
+
+			.fab
+				// font-size: 24px
+				padding-right: 0
+
+			.whatsapp-btn
+				color: #43d854
+				font-size: 24px
+				transition: all .2s
+				&::before
+					transition: all .2s
+					content: ''
+					width: 40px
+					height: 40px
+					border: 2px solid #43d854
+					border-radius: 50%
+					position: absolute
+
+					top: 50%
+					left: 50%
+					transform: translateX(-50%) translateY(-50%)
+
+				&:focus
+					box-shadow: none
+				&:hover
+					color: #4ef862
+					&::before
+						border: 2px solid #4ef862
+
+			.telegram-btn
+				color: #0088cc
+				font-size: 24px
+				transition: all .2s
+				&::before
+					transition: all .2s
+					content: ''
+					width: 40px
+					height: 40px
+					border: 2px solid #0088cc
+					border-radius: 50%
+					position: absolute
+
+					top: 50%
+					left: 50%
+					transform: translateX(-50%) translateY(-50%)
+
+				&:focus
+					box-shadow: none
+				&:hover
+					color: #019fee
+					&::before
+						border: 2px solid #019fee
+
+.scrollHeader
+	background: white
+
+.textLinkBlack
+	color: black

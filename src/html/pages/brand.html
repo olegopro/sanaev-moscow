@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('./_head.html', { "path": "../..", "title": "Аренда автомобилей в компании в Sanaev Moscow" })
+	</head>
+
+	<body>
+		<!-- icons -->
+		@@include('./components/_svg-icons.html', { "path": "../.." })
+
+		<!-- navbar -->
+		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
+
+		<!-- Page title section -->
+		<section class="page-title-section">
+			<div class="parallax-simple">
+				<img class="section-bg-image" src="/assets/images/page-title-image.jpg" alt="" />
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb breadcrumb-primary breadcrumb-transparent">
+								<li class="breadcrumb-item"><a href="/">Главная</a></li>
+								<li class="breadcrumb-item"><a href="@@path/html/pages/catalog.html">Автопарк</a></li>
+								<li class="breadcrumb-item active" aria-current="page">BMW</li>
+							</ol>
+						</nav>
+
+						<h1 class="text-white">BMW</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cars block section -->
+		<section class="brand-cars-block-section section">
+			<div class="container">
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+					<!-- car card  multiply photo-->
+					<!-- prettier-ignore -->
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName": "Audi Q8 S-line", "carPrice": "от 4 200 руб/час"})
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName":  "Bentley Continental GT V12 ", "carPrice": "от 26 900 руб/час"})
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName": "Audi Q8 S-line", "carPrice": "от 4 200 руб/час"})
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName":  "Bentley Continental GT V12 ", "carPrice": "от 26 900 руб/час"})
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName": "Audi Q8 S-line", "carPrice": "от 4 200 руб/час"})
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})
+					@@include('./components/_car-card-multiply-photo-carousel.html', {"path": "../..", "carName":  "Bentley Continental GT V12 ", "carPrice": "от 26 900 руб/час"})
+				</div>
+			</div>
+		</section>
+
+		<!-- footer -->
+		@@include('./_footer.html', { "path": "../.." })
+
+		<!-- Scripts -->
+		@@include('./_scripts.html', { "path": "../.." })
+	</body>
+</html>
