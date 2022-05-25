@@ -1,4 +1,110 @@
-section.gallery-main-title-block-section
 
-section.gallery-block-section
-	@import ../layouts/gallery-card-single
+section.main-gallery-section
+	.container
+		.row
+			.nav-tabs
+				border: none
+
+				li
+					display: flex
+					border-radius: 8px
+					height: 48px
+
+					&:first-child
+
+					&:last-child
+						display: flex
+						align-self: center
+						align-items: center
+
+						background: #FFFFFF
+
+						border-radius: 8px
+						// border: 1px solid #8C93A9
+
+					button
+						font-weight: 400
+						font-size: 16px
+						border-radius: 0
+						border: none
+						padding: 0 1rem
+						width: 100px
+						height: 100%
+						border: 1px solid #8C93A9
+
+						&.active
+							font-size: 16px
+							background-color: #530666
+							color: white
+							border: 1px solid #530666
+							-webkit-text-stroke-width: 1px
+
+						&:not(:last-child)
+							border-right: 1px solid #8C93A9
+
+						&:first-child
+							border-top-left-radius: 8px
+							border-bottom-left-radius: 8px
+							border-right: none
+						&:last-child
+							border-top-right-radius: 8px
+							border-bottom-right-radius: 8px
+							border-left: none
+
+			.tab-content
+				#photo
+				#video
+					#galleryVideoCardCarousel
+
+						margin: 0 auto 1rem auto
+
+						--carousel-button-color: #170724
+						--carousel-button-bg: #fff
+						--carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%)
+
+						--carousel-button-svg-width: 20px
+						--carousel-button-svg-height: 20px
+						--carousel-button-svg-stroke-width: 2.5
+
+						.carousel__viewport
+							// height: 500px
+							border-radius: 1rem
+							box-shadow: 0px 3px 12px 2px rgba(0, 0, 0, 0.28)
+
+						.carousel__slide
+							width: 100%
+							padding: 0
+							img
+								object-fit: cover
+								height: 750px
+								width: auto
+
+						.carousel__button.is-prev
+							left: -1.5rem
+
+						.carousel__button.is-next
+							right: -1.5rem
+
+						.carousel__button:focus
+							outline: none
+							box-shadow: 0 0 0 4px #a78bfa
+
+					#galleryVideoCardThumbCarousel
+						.carousel__slide
+							opacity: 0.5
+							padding: 0
+							margin: 0.25rem
+							width: 96px
+							height: 64px
+
+						.carousel__slide
+							img
+								width: 100%
+								height: 100%
+								object-fit: cover
+								border-radius: 4px
+
+						.carousel__slide.is-nav-selected
+							opacity: 1
+
+				@import ../layouts/gallery-card-single

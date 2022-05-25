@@ -23,71 +23,107 @@
 							</ol>
 						</nav>
 
-						<h1>Наша галерея</h1>
+						<h1 class="text-gradient">Наша галерея</h1>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="gallery-main-title-block-section section">
+		<section class="content-section mb-3">
 			<div class="container">
-				<div class="row justify-content-center text-center">
-					<div class="col text-center main-header">
-						<h1 class="mb-5 position-relative header-element text-gradient">Вас приветствуего агенство <span class="fw-bold">SanaevMoscow</span></h1>
-
-						<p class="lead">В этом разделе собраны фотографии катания на лимузинах по Москве, сделанные нашими фотографами и предоставленные нашими клиентами, которые доверили проекту Sanaew Moscow проведение своего торжественного мероприятия.</p>
+				<div class="row">
+					<div class="main-content">
+						<p>В этом разделе собраны фотографии катания на лимузинах по Москве, сделанные нашими фотографами и предоставленные нашими клиентами, которые доверили проекту Sanaew Moscow проведение своего торжественного мероприятия.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="gallery-block-section section pt-0">
+		<section class="main-gallery-section">
 			<div class="container">
-				<!-- prettier-ignore -->
-				<div class=" row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+				<div class="row">
+					<div class="col mb-3">
+						<ul class="nav nav-tabs" id="myTabGallery" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="photo-tab" data-bs-toggle="tab" data-bs-target="#photo" type="button" role="tab" aria-controls="photo" aria-selected="true">Фото</button>
+								<button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video" type="button" role="tab" aria-controls="video" aria-selected="false">Видео</button>
+							</li>
+						</ul>
+					</div>
 
-					<!-- Gallery card -->
-					@@include('./components/_gallery-card-single.html', { 
-						"path": "../..", 
-						"imageGallery": "/assets/images/gallery/connector.jpg", 
-						"galleryName": "Портфолио Форумы и Кабриолет" 
-					})
+					<div class="tab-content" id="myTabGalleryContent">
+						<div class="tab-pane fade show active" id="photo" role="tabpanel" aria-labelledby="photo-tab">
+							<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+								<!-- Gallery card -->
+								@@include('./components/_gallery-card-single.html', { "path": "../..", "imageGallery": "/assets/images/gallery/connector.jpg", "galleryName": "Портфолио Форумы и Кабриолет" })
 
-					<!-- Gallery card -->
-					@@include('./components/_gallery-card-single.html', { 
-						"path": "../..", 
-						"imageGallery": "/assets/images/gallery/connector-1.jpg", 
-						"galleryName": "Детские праздники" 
-					})
+								<!-- Gallery card -->
+								@@include('./components/_gallery-card-single.html', { "path": "../..", "imageGallery": "/assets/images/gallery/connector-1.jpg", "galleryName": "Детские праздники" })
 
-					<!-- Gallery card -->
-					@@include('./components/_gallery-card-single.html', { 
-						"path": "../..", 
-						"imageGallery": "/assets/images/gallery/connector-2.jpg", 
-						"galleryName": "Девичник на лимузине в Москве" 
-					})
+								<!-- Gallery card -->
+								@@include('./components/_gallery-card-single.html', { "path": "../..", "imageGallery": "/assets/images/gallery/connector-2.jpg", "galleryName": "Девичник на лимузине в Москве" })
 
-					<!-- Gallery card -->
-					@@include('./components/_gallery-card-single.html', { 
-						"path": "../..", 
-						"imageGallery": "/assets/images/gallery/connector-3.jpg", 
-						"galleryName": "Выпускной" 
-					})
+								<!-- Gallery card -->
+								@@include('./components/_gallery-card-single.html', { "path": "../..", "imageGallery": "/assets/images/gallery/connector-3.jpg", "galleryName": "Выпускной" })
 
-					<!-- Gallery card -->
-					@@include('./components/_gallery-card-single.html', { 
-						"path": "../..", 
-						"imageGallery": "/assets/images/gallery/connector-4.jpg", 
-						"galleryName": "Девичник в кабриолете" 
-					})
+								<!-- Gallery card -->
+								@@include('./components/_gallery-card-single.html', { "path": "../..", "imageGallery": "/assets/images/gallery/connector-4.jpg", "galleryName": "Девичник в кабриолете" })
 
-					<!-- Gallery card -->
-					@@include('./components/_gallery-card-single.html', { 
-						"path": "../..", 
-						"imageGallery": "/assets/images/gallery/connector-5.jpg", 
-						"galleryName": "Корпоратив на лимузине" 
-					})
-					
+								<!-- Gallery card -->
+								@@include('./components/_gallery-card-single.html', { "path": "../..", "imageGallery": "/assets/images/gallery/connector-5.jpg", "galleryName": "Корпоратив на лимузине" })
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+							<div id="galleryVideoCardCarousel" class="carousel">
+								<div class="carousel__slide" data-src="/assets/images/single-car/01.jpg" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
+									<img src="/assets/images/single-car/01.jpg" />
+								</div>
+								<div class="carousel__slide" data-src="/assets/images/single-car/02.jpeg" data-fancybox="gallery" data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris">
+									<img src="/assets/images/single-car/02.jpeg" />
+								</div>
+								<div class="carousel__slide" data-src="/assets/images/single-car/03.jpeg" data-fancybox="gallery" data-caption="Hello 🖐">
+									<img src="/assets/images/single-car/03.jpeg" />
+								</div>
+								<div class="carousel__slide" data-src="/assets/images/single-car/04.jpeg" data-fancybox="gallery" data-caption="Another caption">
+									<img src="/assets/images/single-car/04.jpeg" />
+								</div>
+								<div class="carousel__slide" data-src="/assets/images/single-car/05.jpeg" data-fancybox="gallery">
+									<img data-lazy-src="/assets/images/single-car/05.jpeg" />
+								</div>
+								<div class="carousel__slide" data-src="/assets/images/single-car/06.jpeg" data-fancybox="gallery">
+									<img src="/assets/images/single-car/06.jpeg" />
+								</div>
+								<div class="carousel__slide" data-src="/assets/images/single-car/07.webp" data-fancybox="gallery">
+									<img src="/assets/images/single-car/07.webp" />
+								</div>
+							</div>
+
+							<div id="galleryVideoCardThumbCarousel" class="carousel">
+								<div class="carousel__slide">
+									<img class="panzoom__content" src="/assets/images/single-car/01.jpg" />
+								</div>
+								<div class="carousel__slide">
+									<img class="panzoom__content" src="/assets/images/single-car/02.jpeg" />
+								</div>
+								<div class="carousel__slide">
+									<img class="panzoom__content" src="/assets/images/single-car/03.jpeg" />
+								</div>
+								<div class="carousel__slide">
+									<img class="panzoom__content" src="/assets/images/single-car/04.jpeg" />
+								</div>
+								<div class="carousel__slide">
+									<img class="panzoom__content" src="/assets/images/single-car/05.jpeg" />
+								</div>
+								<div class="carousel__slide">
+									<img class="panzoom__content" src="/assets/images/single-car/06.jpeg" />
+								</div>
+								<div class="carousel__slide">
+									<img class="panzoom__content" src="/assets/images/single-car/07.webp" />
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

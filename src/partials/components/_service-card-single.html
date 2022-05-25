@@ -1,21 +1,17 @@
-<div class="col col-lg-4 mb-3 mb-sm-4 mb-lg-0 service-card-single">
-	<div class="card shadow-lg">
+<div class="col service-card-single">
+	<div class="card">
 		<!-- prettier-ignore -->
 		<div class="card-images">
 			<!-- card-image -->
 			@@include('./components/car-card/_card-image-service.html', { 
 				"imageService": "@@imageService", 
 				"path": "@@path" 
-			})
-			
+			})	
 		</div>
 
 		<div class="card-body">
-			<h4 class="h5 card-text">@@serviceName</h4>
-			<div class="d-flex justify-content-between align-items-center">
-				<small class="text-muted">@@servicePrice</small>
-				<a href="@@path/html/pages/single-service.html" class="btn btn-sm btn-outline-secondary">Подробнее</a>
-			</div>
+			<h4 class="h5 card-text"><a href="@@path/html/pages/single-service.html">@@serviceName</a></h4>
+			<small>@@servicePrice</small>
 		</div>
 	</div>
 </div>

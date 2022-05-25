@@ -1,34 +1,27 @@
 .service-card-single
 	.card
-		// z-index: 1
-		border-radius: 1rem
+		border: none
 		.card-images
-			margin-bottom: -10px
-			.tmb-wrap
-				height: calc(100% - 5px)
+			img
+				filter: drop-shadow(-4px 4px 6px rgba(28, 37, 64, 0.1))
+				border-radius: 8px
 
-			.image-wrap
-				img
-					height: 235px
-					object-fit: cover
-					object-position: center
-					border-top-left-radius: 1rem
-					border-top-right-radius: 1rem
 		.card-body
-			.card-text
-				margin-bottom: 15px
-				overflow: hidden
-				text-overflow: ellipsis
-				display: -webkit-box
-				-webkit-line-clamp: 1
-				-webkit-box-orient: vertical
-			a.btn
-				background: white
-				border: 2px solid #0f0213
-				transition: all .2s
+			padding-left: 0
+			padding-top: 8px
+			color: #1C2540
 
-				&:hover
-					background: #530666
-					border: 2px solid white
-					color: white
-					box-shadow: 0px 1px 5px 1px rgba(83, 6, 102, 0.3)
+			.card-text
+				a
+					font-size: 24px
+					font-weight: bold
+					margin-bottom: 0
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 1
+					-webkit-box-orient: vertical
+
+			small
+				font-size: 20px
+				font-weight: normal

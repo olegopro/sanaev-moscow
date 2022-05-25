@@ -1,5 +1,5 @@
 <div class="col mb-3 mb-sm-4 mb-lg-0 car-card-carousel">
-	<div class="card shadow-sm">
+	<div class="card">
 		<div class="card-images images-toggle">
 			<!-- card-image -->
 			@@include('./components/car-card/_card-image.html', { "imageCar": "@@imageCar", "path": "@@path" } )
@@ -9,8 +9,9 @@
 			<a href="@@path/html/pages/single-car.html"><h4 class="h5 card-text">@@carName</h4></a>
 			<div class="d-flex justify-content-between align-items-center">
 				<small class="text-muted">@@carPrice</small>
-				<!-- <a href="@@path/html/pages/single-car.html" class="btn btn-sm btn-outline-secondary">Подробнее</a> -->
 			</div>
+
+			<a class="arrow-click" href=""><img src="@@path/assets/images/elements/diagonal-arrow-right-up.svg" alt="" /></a>
 		</div>
 	</div>
 </div>

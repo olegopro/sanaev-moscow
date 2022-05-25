@@ -1,24 +1,51 @@
 .car-card-carousel
 	.card
-		// z-index: 1
+		border: none
+
 		.card-images
 			margin-bottom: -10px
+			transition: all .3s
+			&:hover
+				filter: drop-shadow(-5px 8px 14px rgba(83, 6, 102, 0.22))
 			.tmb-wrap
-				height: calc(100% - 5px)
+				height: calc(100% - 10px)
+				.tmb-wrap-table
+					> div
+						&:first-child
+							border-top-left-radius: 8px
+							border-bottom-left-radius: 8px
+
+						&:last-child
+							border-top-right-radius: 8px
+							border-bottom-right-radius: 8px
 
 			.image-wrap
 				img
-					// height: 235px
-					height: 335px
+					height: 370px
 					object-fit: cover
 					object-position: center
-					border-top-left-radius: 1rem
-					border-top-right-radius: 1rem
+					border-radius: 8px
 		.card-body
+			padding: 16px 0 0 0
+			position: relative
+			a
+				display: inline-block
+
 			.card-text
-				margin-bottom: 15px
+				font-size: 24px
+				font-weight: bold
+				margin-bottom: 0
 				overflow: hidden
 				text-overflow: ellipsis
 				display: -webkit-box
 				-webkit-line-clamp: 1
 				-webkit-box-orient: vertical
+			small
+				font-weight: 400
+				font-size: 16px
+				color: #1C2540
+			.arrow-click
+				position: absolute
+				top: 65%
+				right: 0
+				transform: translateY(-50%)

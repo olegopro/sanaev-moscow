@@ -15,6 +15,8 @@
 @import layouts/footer
 @import layouts/page-title-section
 @import layouts/advantages
+@import layouts/booking-order
+@import layouts/content-section
 
 @import utilites/animations
 
@@ -22,12 +24,15 @@
 @import components/decorations
 
 @import helpers/text-gradients
+@import helpers/borders
 
 body
 	overflow-x: hidden
 
 //FancyBox Index-page Carousel
 #carousel-premium-cars, #carousel-cabriolet-cars, #carousel-sport-cars, #color-tab-carousel
+	padding-left: 0
+	padding-right: 0
 	.carousel__viewport
 		width: 100%
 		max-width: none
@@ -59,11 +64,12 @@ body
 .rounded-default
 	border-radius: 3px !important
 
-.demo
-	margin-top: 57px
-	position: absolute
-	top: 112px
-	z-index: 10
-	right: 411px
-	padding: 50px
-	background: white
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+input[type=number]
+  -moz-appearance: textfield

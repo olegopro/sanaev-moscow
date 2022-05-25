@@ -1,51 +1,171 @@
-#mainCarousel
-	.carousel-indicators
-		.active
-			background-color: #ffffff
-			background-clip: padding-box
+section.main-banner
 
-	.carousel-inner
-		.carousel-item
-			height: 40rem
+	img
+		width: 100%
+		height: 70vh
+		object-fit: cover
+		object-position: center
 
-			img
-				object-fit: cover
-				object-position: center
-				width: 100%
-				height: 100%
-			&::before
-				content: ''
-				position: absolute
-				left: 0
-				top: 0
-				width: 100%
-				height: 100%
+section.cars-block-tab-section
+	.container-fluid
+		.row
+			.nav-tabs
 
-				background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4033262963388481) 50%, rgba(0,0,0,0.6) 100%)
+				border: none
 
-			.container
-				position: absolute
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
+				li
+					display: flex
+					border-radius: 8px
+					height: 48px
+					// border: 1px solid #8C93A9
+					box-shadow: 0px 0px 0px 1px #8C93A9
+					&:first-child
+						margin-right: 48px
+					&:last-child
+						display: flex
+						align-self: center
+						align-items: center
 
-				.carousel-title-block
-					color: white
+						margin-left: auto
+						background: #FFFFFF
+						box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
+						border-radius: 8px
+						border: 1px solid #540666
 
-					h1, p
-						text-shadow: 1px 1px 4px black,
-					a.btn
-						border-radius: 1px
-						background: white
-						color: black
-						&:hover
-							background: rgb(83, 6, 102)
+					.show-all-button
+						font-weight: 600
+						font-size: 20px
+						margin-left: auto
+						line-height: 120%
+
+						padding: 0 16px
+
+					button
+						font-weight: 400
+						font-size: 16px
+						border-radius: 0
+						border: none
+						padding: 0 1rem
+						width: calc(100 + 10px)
+
+						&.active
+							font-size: 16px
+							background-color: #530666
 							color: white
+							-webkit-text-stroke-width: 1px
+
+						&:not(:last-child)
+							border-right: 1px solid #8C93A9
+
+						&:first-child
+							border-top-left-radius: 8px
+							border-bottom-left-radius: 8px
+						&:last-child
+							border-top-right-radius: 8px
+							border-bottom-right-radius: 8px
+
+			.tab-content
+				position: relative
+				margin-top: 14px
+
+				#type
+					input
+						background-size: 90%
+
+				#brand
+					input
+						background-size: 80%
+
+				#color
+					input[type=checkbox]
+						&:checked
+							outline: 2px solid rgba(255, 255, 255, 1)
+
+				#country
+					.checkbox-style
+						width: 170px
+						input
+							width: 170px
+							&:checked
+								outline: 2px solid rgba(255, 255, 255, 1)
+
+				.tab-pane
+					.carousel__nav
+						button
+							background: white
+							box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
+							&.is-next
+								top: 46%
+								right: 0
+							&.is-prev
+								top: 46%
+								left: 0
+					.carousel__viewport
+						.carousel__track
+							.carousel__slide
+								max-width: fit-content
+								&:first-child
+									padding-left: 3px
+								&:last-child
+									padding-right: 3px
+
+								.checkbox-style
+
+									display: block
+									position: relative
+									height: 100px
+									width: 100px
+									overflow: initial
+									text-align: center
+									border-radius: 0.25rem
+									box-shadow: 0px 0px 3px 0px rgba(75, 75, 75, 0.52)
+
+									span
+										font-size: 14px
+										font-weight: normal
+
+									input[type=checkbox]
+										-webkit-appearance: none
+										-moz-appearance: none
+										appearance: none
+
+										display: block
+										cursor: pointer
+
+										position: relative
+										z-index: -1
+
+										width: 100%
+										height: 100%
+
+										background-size: contain
+										background-repeat: no-repeat
+										background-position: center
+										background-origin: content-box
+
+										border-radius: 0.25rem
+
+									input[type=checkbox]:checked
+										background-size: contain
+										background-repeat: no-repeat
+										background-position: center
+										// filter: brightness(150%)
+										// outline: 2px solid #4b4b4b
+										outline: 2px solid #530666
+										box-shadow: 0px 0px 10px 0px #272727 !important
+										border-radius: 0.25rem
+
+									input[type=checkbox]:active
+										background-size: contain
+										background-repeat: no-repeat
+										background-position: center
+
+			span.name-title-range
+				display: block
+				// margin-bottom: 20px
+				margin-left: -7px
 
 section.main-description-block-section
-	z-index: 2
-	background: white
-	box-shadow: 0 -20px 20px -20px #d5d5d5 inset, 0 20px 20px -20px #727272 inset
 
 	&::after
 		content: ''
@@ -56,31 +176,15 @@ section.main-description-block-section
 		height: 100%
 		background-size: cover
 		opacity: 0.06
-		// background-image: url(/assets/images/decoration/car-sale-and-rental-concept-businessman-showing-c-2021-08-26-16-33-48-utc.jpg)
 		background-repeat: no-repeat
 		background-position: center
 		z-index: -1
 
-	.header-element
-		background: linear-gradient(45deg, #0B2349 33%, #7B2A86 66%, #880046)
-		background-clip: border-box
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-
-	// .logo-img-section
-	// 	position: absolute
-	// 	top: 30%
-	// 	left: 0
-	// 	right: 0
-	// 	margin: 0 auto
-	// 	width: 848px
-	// 	height: auto
-	// 	opacity: 0.06
-	// 	background-repeat: no-repeat
-	// 	transform: translateX(-50%)
-	// 	z-index: -1
-
 	.main-counters
+		.counters-block
+			&:not(:last-child)
+				margin-right: 40px
+
 		span.fas
 			font-size: 50px
 			background: linear-gradient(45deg, #2A4876 33%, #7B2A86 66%, #880046)
@@ -89,44 +193,42 @@ section.main-description-block-section
 		.counters-block
 			z-index: 1
 			background-color: #fff
-			box-shadow: 0px 6px 20px -5px rgba(34, 60, 80, 0.2)
+			border: 1px solid #530666
+
 			.h5
-				user-select: none
-				cursor: default
 				color: #2a3863ed
 
 section.main-cars-block-section
-	background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(240, 240, 240) 100%)
-
-	// &::before
-	// 	content: ''
-	// 	position: absolute
-	// 	top: calc(100% - 856px)
-	// 	left: -58px
-	// 	width: 100%
-	// 	height: 100%
-	// 	background-image: url(/assets/images/decoration/road_image.png)
-	// 	background-repeat: no-repeat
-
-	// &::after
-	// 	content: ''
-	// 	position: absolute
-	// 	top: 0
-	// 	right: 0
-	// 	width: 100%
-	// 	height: 100%
-	// 	background-image: url(/assets/images/decoration/road_image-2.png)
-	// 	background-repeat: no-repeat
-	// 	transform: scaleX(-1)
 
 	.container-fluid
 		position: relative
 		z-index: 1
 		.row
-			h3
-				position: relative
-				a
-					font-weight: 600
+			margin-top: 32px
+			.category-block-title
+				display: flex
+				align-items: center
+
+				.category-titile
+					margin-bottom: 0
+					font-size: 40px
+					font-weight: bold
+					margin-right: 64px
+				.category-titile-url
+					position: relative
+					font-size: 24px
+					font-weight: normal
+					padding-right: 4px
+					&::after
+						content: ''
+						position: absolute
+						width: 24px
+						height: 24px
+						top: 54%
+						left: 100%
+						transform: translateY(-50%)
+						background-image: url('/assets/images/elements/arrow-right.svg')
+
 			@import ../layouts/car-card-carousel
 
 			a.btn
@@ -160,52 +262,23 @@ section.main-cars-block-section
 				cursor: default
 
 section.main-about-us-section
-	&::before
-		content: ''
-		top: 0
-		left: 0
-		height: 100%
-		position: absolute
-		width: 100%
-		opacity: 1
-		filter: grayscale(30%)
-		// filter: blur(1px)
-		// background: linear-gradient(180deg, rgba(36,46,76,0.3) 0%, rgba(36,46,76,0.5) 49%, #121224b3 100%)
-
-		background-image: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgba(0,0,0,0.7) 50%, rgb(20, 20, 20) 100%), url(/assets/images/decoration/123152_orig.jpg)
-		background-size: contain
-		overflow: hidden
 
 	.container
 		position: relative
 		z-index: 1
 		.row
-			img
-				box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.300)
-				border-radius: 1rem
-
 			.main-header
-				&::after
-					content: ''
-					position: absolute
-					background: url(/assets/images/logo-header-white.png)
+				font-size: 64px
+				font-weight: 600
+			img
 
-	.back-text-animation
-		position: absolute
-		top: 69%
-		left: 0
-		right: -45%
-		text-align: center
-		transform: translate(-50%, -50%)
-		font-size: 141px
-		opacity: 0.5
-		z-index: 2
-		color: #d3d3d340
-		text-transform: uppercase
-		font-weight: bold
+				border-radius: 8px
+				filter: drop-shadow(-5px 8px 19px rgba(83, 6, 102, 0.15))
 
-		user-select: none
-		cursor: default
+			p.lead
+				font-size: 16px
+				font-weight: normal
+				color: #1C2540
 
 section.main-about-us-section-posttitle
 	img
@@ -216,25 +289,25 @@ section.main-about-us-section-posttitle
 		opacity: 1
 
 section.main-about-us-section-second
-	img
-		position: absolute
-		width: 882px
-		left: 0
-		top: 50%
-		z-index: -1
-		opacity: 0.07
+	.container
+		.row
+			p.lead
+				font-size: 16px
+				font-weight: normal
+				color: #1C2540
 
 section.main-services-section
 	// background: linear-gradient(180deg, rgba(251, 251, 251, 0) 0%, rgb(243, 244, 246) 100%)
 	.container
 		.row
 			&:first-child
+
 				img
 					height: 390px
 					object-fit: cover
 					object-position: center
-					border-top-left-radius: 1rem
-					border-bottom-left-radius: 1rem
+					border-top-left-radius: 8px
+					border-bottom-left-radius: 8px
 					border-top-right-radius: 0
 					border-bottom-right-radius: 0
 
@@ -246,18 +319,23 @@ section.main-services-section
 					object-position: center
 					border-top-left-radius: 0
 					border-bottom-left-radius: 0
-					border-top-right-radius: 1rem
-					border-bottom-right-radius: 1rem
+					border-top-right-radius: 8px
+					border-bottom-right-radius: 8px
 					border-image-outset: -10px
 
 					margin: 0 1px -1px 1px
 
 			.card
+				transition: all .3s
 				&:hover
-					box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -2px !important
+					box-shadow: rgba(0, 0, 0, 0.034) 0px 10px 10px -3px, rgba(0, 0, 0, 0.04) 0px 4px 6px -2px !important
 				.card-body
 					a
 						width: min-content
+					p
+						font-size: 16px
+						font-weight: normal
+						color: #1C2540
 
 section.main-faq-section
 	.back-text-animation

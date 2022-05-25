@@ -1,17 +1,20 @@
 .gallery-card-single
 	.card
-		// z-index: 1
+		border: none
 		.card-images
 
 			img
+
 				height: 235px
 				width: 100%
 				object-fit: cover
 				object-position: center
-				border-top-left-radius: 1rem
-				border-top-right-radius: 1rem
+				filter: drop-shadow(-4px 4px 6px rgba(28, 37, 64, 0.1))
+				border-radius: 8px
+
 		.card-body
-			// height: 92px
+			padding-left: 0
+			padding-top: 10px
 			a
 				display: inline
 				+vertical-lines(1)

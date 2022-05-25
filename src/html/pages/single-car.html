@@ -13,10 +13,6 @@
 
 		<!-- Page title section -->
 		<section class="page-title-section">
-			<!-- <div class="parallax-simple">
-				<img class="section-bg-image" src="/assets/images/page-title-image.jpg" alt="" />
-			</div> -->
-
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -35,15 +31,17 @@
 			</div>
 		</section>
 
-		<section class="car-card-single-car-section section pb-5">
+		<section class="car-card-single-car-section pb-5">
 			<div class="container">
 				<div class="row">
-					<div class="col-12">
-						<div class="col d-flex justify-content-between align-items-center">
-							<h1>Cadillac 1959 Convertible</h1>
-							<span class="h4 demo">от 10.500 до 14.000 ₽/сутки</span>
-						</div>
+					<div class="col d-flex justify-content-between align-items-center">
+						<h1>Cadillac 1959 Convertible</h1>
+						<span class="h4">от 14.000 ₽/сутки</span>
+					</div>
+				</div>
 
+				<div class="row">
+					<div class="car-image-box col-9">
 						<div id="singleCarCardCarousel" class="carousel">
 							<div class="carousel__slide" data-src="/assets/images/single-car/01.jpg" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
 								<img src="/assets/images/single-car/01.jpg" />
@@ -92,6 +90,29 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="car-info-box col-3">
+						<ul class="box-item">
+							<li class="title">год выпуска</li>
+							<li class="content">2016</li>
+						</ul>
+						<ul class="box-item">
+							<li class="title">вместительность</li>
+							<li class="content">до 23 человек</li>
+						</ul>
+						<ul class="box-item">
+							<li class="title">Аренда с водителем</li>
+							<li class="content">7 000 ₽ /час</li>
+						</ul>
+						<ul class="box-item">
+							<li class="title">Аренда без водителя</li>
+							<li class="content">Вс.-Пт. - (4+1)*</li>
+							<li class="content">Сб. - (6+1)*</li>
+						</ul>
+						<small>*Минимальный заказ: Количество часов + час подачи</small>
+
+						<button>Заказать</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -134,145 +155,64 @@
 			</div>
 		</section>
 
-		<section class="datepicker-picker-single-car-section">
+		<!-- Booking order -->
+		<section class="booking-order-section">@@include('./components/_booking-order.html', { "path": "../..", "title": "Заказать Porsche Boxster" })</section>
+
+		<section class="content-section pt-0">
 			<div class="container">
 				<div class="row">
-					<h2 class="text-center mb-4">Бронировение автомобиля</h2>
-					<div class="col-12">
-						<!-- Form -->
-						<div class="row align-items-center">
-							<!-- Дата начала -->
-							<div class="col start-date">
-								<div class="form-group">
-									<div class="input-group input-group-border">
-										<span class="input-group-text" id="basic-addonDate2"><span class="fas far fa-calendar-alt"></span></span>
-										<input class="form-control datepicker-input" data-datepicker="" id="exampleInputDate2" placeholder="Дата начала" type="text" />
-										<div class="datepicker datepicker-dropdown datepicker-orient-left datepicker-orient-top" style="left: 39px; top: -293.6px">
-											<div class="datepicker-picker">
-												<div class="datepicker-header">
-													<div class="datepicker-title" style="display: none"></div>
-													<div class="datepicker-controls"><button type="button" class="btn prev-btn">«</button><button type="button" class="btn view-switch">April 2022</button><button type="button" class="btn next-btn">»</button></div>
-												</div>
-												<div class="datepicker-main">
-													<div class="datepicker-view">
-														<div class="days">
-															<div class="days-of-week"><span class="dow">Su</span><span class="dow">Mo</span><span class="dow">Tu</span><span class="dow">We</span><span class="dow">Th</span><span class="dow">Fr</span><span class="dow">Sa</span></div>
-															<div class="datepicker-grid">
-																<span class="datepicker-cell day prev" data-date="1648328400000">27</span><span class="datepicker-cell day prev" data-date="1648414800000">28</span><span class="datepicker-cell day prev" data-date="1648501200000">29</span><span class="datepicker-cell day prev" data-date="1648587600000">30</span><span class="datepicker-cell day prev" data-date="1648674000000">31</span
-																><span class="datepicker-cell day" data-date="1648760400000">1</span><span class="datepicker-cell day" data-date="1648846800000">2</span><span class="datepicker-cell day" data-date="1648933200000">3</span><span class="datepicker-cell day" data-date="1649019600000">4</span><span class="datepicker-cell day" data-date="1649106000000">5</span><span class="datepicker-cell day" data-date="1649192400000">6</span
-																><span class="datepicker-cell day" data-date="1649278800000">7</span><span class="datepicker-cell day" data-date="1649365200000">8</span><span class="datepicker-cell day" data-date="1649451600000">9</span><span class="datepicker-cell day" data-date="1649538000000">10</span><span class="datepicker-cell day selected focused" data-date="1649624400000">11</span><span class="datepicker-cell day" data-date="1649710800000">12</span
-																><span class="datepicker-cell day" data-date="1649797200000">13</span><span class="datepicker-cell day" data-date="1649883600000">14</span><span class="datepicker-cell day" data-date="1649970000000">15</span><span class="datepicker-cell day" data-date="1650056400000">16</span><span class="datepicker-cell day" data-date="1650142800000">17</span><span class="datepicker-cell day" data-date="1650229200000">18</span
-																><span class="datepicker-cell day" data-date="1650315600000">19</span><span class="datepicker-cell day" data-date="1650402000000">20</span><span class="datepicker-cell day" data-date="1650488400000">21</span><span class="datepicker-cell day" data-date="1650574800000">22</span><span class="datepicker-cell day" data-date="1650661200000">23</span><span class="datepicker-cell day" data-date="1650747600000">24</span
-																><span class="datepicker-cell day" data-date="1650834000000">25</span><span class="datepicker-cell day" data-date="1650920400000">26</span><span class="datepicker-cell day" data-date="1651006800000">27</span><span class="datepicker-cell day" data-date="1651093200000">28</span><span class="datepicker-cell day" data-date="1651179600000">29</span><span class="datepicker-cell day" data-date="1651266000000">30</span
-																><span class="datepicker-cell day next" data-date="1651352400000">1</span><span class="datepicker-cell day next" data-date="1651438800000">2</span><span class="datepicker-cell day next" data-date="1651525200000">3</span><span class="datepicker-cell day next" data-date="1651611600000">4</span><span class="datepicker-cell day next" data-date="1651698000000">5</span
-																><span class="datepicker-cell day next" data-date="1651784400000">6</span><span class="datepicker-cell day next" data-date="1651870800000">7</span>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="datepicker-footer">
-													<div class="datepicker-controls"><button type="button" class="btn today-btn" style="display: none">Today</button><button type="button" class="btn clear-btn" style="display: none">Clear</button></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Дата конца -->
-							<div class="col end-date">
-								<div class="form-group">
-									<!-- <label class="h6" for="exampleInputDate3">To</label> -->
-									<div class="input-group input-group-border">
-										<input class="form-control datepicker-input" data-datepicker="" id="exampleInputDate3" placeholder="Дата завершения" type="text" />
-										<div class="datepicker datepicker-dropdown datepicker-orient-left datepicker-orient-top" style="left: 39px; top: -293.6px">
-											<div class="datepicker-picker">
-												<div class="datepicker-header">
-													<div class="datepicker-title" style="display: none"></div>
-													<div class="datepicker-controls"><button type="button" class="btn prev-btn">«</button><button type="button" class="btn view-switch">April 2022</button><button type="button" class="btn next-btn">»</button></div>
-												</div>
-												<div class="datepicker-main">
-													<div class="datepicker-view">
-														<div class="days">
-															<div class="days-of-week"><span class="dow">Su</span><span class="dow">Mo</span><span class="dow">Tu</span><span class="dow">We</span><span class="dow">Th</span><span class="dow">Fr</span><span class="dow">Sa</span></div>
-															<div class="datepicker-grid">
-																<span class="datepicker-cell day prev" data-date="1648328400000">27</span><span class="datepicker-cell day prev" data-date="1648414800000">28</span><span class="datepicker-cell day prev" data-date="1648501200000">29</span><span class="datepicker-cell day prev" data-date="1648587600000">30</span><span class="datepicker-cell day prev" data-date="1648674000000">31</span
-																><span class="datepicker-cell day" data-date="1648760400000">1</span><span class="datepicker-cell day" data-date="1648846800000">2</span><span class="datepicker-cell day" data-date="1648933200000">3</span><span class="datepicker-cell day" data-date="1649019600000">4</span><span class="datepicker-cell day" data-date="1649106000000">5</span><span class="datepicker-cell day" data-date="1649192400000">6</span
-																><span class="datepicker-cell day" data-date="1649278800000">7</span><span class="datepicker-cell day" data-date="1649365200000">8</span><span class="datepicker-cell day" data-date="1649451600000">9</span><span class="datepicker-cell day" data-date="1649538000000">10</span><span class="datepicker-cell day" data-date="1649624400000">11</span><span class="datepicker-cell day" data-date="1649710800000">12</span
-																><span class="datepicker-cell day" data-date="1649797200000">13</span><span class="datepicker-cell day" data-date="1649883600000">14</span><span class="datepicker-cell day" data-date="1649970000000">15</span><span class="datepicker-cell day" data-date="1650056400000">16</span><span class="datepicker-cell day" data-date="1650142800000">17</span><span class="datepicker-cell day" data-date="1650229200000">18</span
-																><span class="datepicker-cell day" data-date="1650315600000">19</span><span class="datepicker-cell day" data-date="1650402000000">20</span><span class="datepicker-cell day" data-date="1650488400000">21</span><span class="datepicker-cell day selected focused" data-date="1650574800000">22</span><span class="datepicker-cell day" data-date="1650661200000">23</span><span class="datepicker-cell day" data-date="1650747600000">24</span
-																><span class="datepicker-cell day" data-date="1650834000000">25</span><span class="datepicker-cell day" data-date="1650920400000">26</span><span class="datepicker-cell day" data-date="1651006800000">27</span><span class="datepicker-cell day" data-date="1651093200000">28</span><span class="datepicker-cell day" data-date="1651179600000">29</span><span class="datepicker-cell day" data-date="1651266000000">30</span
-																><span class="datepicker-cell day next" data-date="1651352400000">1</span><span class="datepicker-cell day next" data-date="1651438800000">2</span><span class="datepicker-cell day next" data-date="1651525200000">3</span><span class="datepicker-cell day next" data-date="1651611600000">4</span><span class="datepicker-cell day next" data-date="1651698000000">5</span
-																><span class="datepicker-cell day next" data-date="1651784400000">6</span><span class="datepicker-cell day next" data-date="1651870800000">7</span>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="datepicker-footer">
-													<div class="datepicker-controls"><button type="button" class="btn today-btn" style="display: none">Today</button><button type="button" class="btn clear-btn" style="display: none">Clear</button></div>
-												</div>
-											</div>
-										</div>
-										<span class="input-group-text" id="basic-addonDate3"><span class="fas far fa-calendar-alt"></span></span>
-									</div>
-								</div>
-							</div>
-							<div class="col">
-								<input type="text" placeholder="+7 (123) 123-45-67" class="form-control" id="cartInputPhone1" aria-describedby="cartInputPhone1" />
-							</div>
-							<div class="col">
-								<button class="btn btn-pill btn-outline-primary w-100 submit-btn-book" type="button">Забронировать</button>
-							</div>
-						</div>
-						<!-- End of Form -->
+					<div class="main-content">
+						<p>Максимальный комфорт и бескомпромиссная функциональность - ключевые особенности новой крыши с ее невероятным электрогидравлическим механизмом. Двухсекционная стальная крыша открывается автоматически плавным движением, поскольку каждый Максимальный комфорт и бескомпромиссная функциональность - ключевые особенности новой крыши с ее невероятным электрогидравлическим механизмом. Двухсекционная стальная крыша открывается автоматически плавным движением, поскольку кай</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="faq-block-single-car-section section">
+		<section class="popular-cars-single-car-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-12">
-						<div class="card shadow-lg">
-							<div class="card-body text-center text-md-left">
-								<div class="row align-items-center">
-									<div class="col-md-6 p-6">
-										<h2 class="mb-3 text-gradient">ОСТАЛИСЬ ВОПРОСЫ?</h2>
-										<p class="mb-4">Получите бесплатную консультацию и помощь в выборе и получении автомобиля от эксперта по телефону:</p>
-										<a href="#" class="btn btn-primary">
-											<span class="me-1">
-												<span class="fas fa-mobile-alt"></span>
-											</span>
-											+7 (926) 304-44-48
-										</a>
-									</div>
-									<div class="col-6">
-										<img src="/assets/images/decoration/call-center-operator-with-headphones-2021-08-26-15-34-42-utc.jpg" alt="" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<h1 class="text-gradient">Популярные машины</h1>
+				</div>
+				<!-- prettier-ignore -->
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5">
+				
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"class": "d-none",
+						"carName": "BMW 530d M-SPORT", 
+						"carPrice": "от 25 600 руб/час" 
+					})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"class": "d-none",
+						"carName": "Akura NSX", 
+						"carPrice": "от 21 600 руб/час" 
+					})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"class": "d-none",
+						"carName": "Toyota Supra FT1", 
+						"carPrice": "от 12 600 руб/час" 
+					})
+
+					<!-- car card -->
+					@@include('./components/_car-card-multiply-photo-single.html', { 
+						"path": "../..", 
+						"class": "d-none",
+						"carName": "McLaren 675LT", 
+						"carPrice": "от 6 000 руб/час" 
+					})
+
+					
 				</div>
 			</div>
 		</section>
 
-		<section class="desctiption-single-car-section section pt-0">
-			<div class="container">
-				<div class="row">
-					<h2 class="mb-3 text-gradient">АРЕНДА MERCEDES-BENZ E-CLASS В МОСКВЕ</h2>
-					<p class="mb-4">
-						Буква «Е» в названии модели обозначает Executive class или бизнес класс. Mercedes у многих ассоциируется с совершенством технических решений и особенным элегантным дизайном. Впечатляющие характеристики заставляют автолюбителей размещать это авто в личный wish list: турбодвигатель, выдающий 184 лошадиных сил, разгон до 100 км/ч за 7,8 секунды, дисковые вентилируемые тормоза, многорычажные подвески, 9-ступенчатая коробка передач. Если заглянуть в салон авто, то сразу же
-						можно отметить гармоничное сочетание роскоши и передовых технологий. Этот автомобиль не растворится в сером потоке и принесет исключительный комфорт даже на участках с затрудненным движением.
-					</p>
-				</div>
-				<div class="row">
-					<h2 class="mb-3 text-gradient">ПРЕИМУЩЕСТВА ПРОКАТА АВТО В SANAEVMOSCOW</h2>
-					<p>Мерседес – универсальный и удобный в управлении седан, который отлично подойдет как для семейных поездок, для деловых мероприятий, так и для свадебного торжества. Автомобиль бизнес-класса в идеальном состоянии вы можете арендовать в компании Carloson всего за 8900 рублей в сутки без водителя. За дополнительную плату мы предоставим личного водителя, который обеспечит высокий уровень комфорта на все время поездки.</p>
-				</div>
-			</div>
-		</section>
 		<!-- footer -->
 		@@include('./_footer.html', { "path": "../.." })
 

@@ -1,188 +1,345 @@
-section.cars-block-tab-section
-	// +inner-shadow-up
 
+section.cars-block-types-catalog-section
 	.container-fluid
 		.row
-			.nav-tabs
-				padding-left: calc(var(--bs-gutter-x) * .5)
-				border-bottom: none
-				margin-bottom: 30px
-				li
-					padding-right: 10px
-					button
-						width: 80px
-						border-radius: 0
-						padding: .5rem .5rem
-						border: 2px solid #e0e0e0
-						&.active
 
-							background: linear-gradient(to bottom, #520565 0%,#540765 3%,#600f6b 10%,#601069 11%,#65126c 13%,#812975 27%,#852a77 28%,#97387c 37%,#a34080 46%,#a44181 53%,#9f3f7f 58%,#94347b 66%,#8e3379 69%,#8d2f79 69%,#812975 74%,#822776 75%,#7a2372 77%,#620f6b 89%,#5e0d69 90%,#510464 98%,#500265 100%)
-							border: 2px solid white
-							color: white
-							box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25)
+			#cars-types-catalog
 
-			.tab-content
+				--carousel-button-bg: #fff
+
+				--carousel-button-width: 50px
+				--carousel-button-height: 50px
+
+				--carousel-button-svg-width: 18px
+				--carousel-button-svg-height: 18px
+				--carousel-button-svg-stroke-width: 1.5
+
 				position: relative
 
-				#type
-					input
-						background-size: 90%
+				.carousel__nav
 
-				#brand
-					input
-						background-size: 80%
+					button
+						background: white
+						box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
 
-				#color
-					input[type=checkbox]
-						&:checked
-							outline: 2px solid rgba(255, 255, 255, 1)
+						&.is-next
+							top: 45%
+							right: -0.7rem
 
-				#country
-					.checkbox-style
-						width: 170px
-						input
-							width: 170px
-							&:checked
-								outline: 2px solid rgba(255, 255, 255, 1)
+							&:disabled
+								opacity: 0
+								right: -10%
+								transition: all .5s
+							svg
+								margin-left: 1px
 
-				.tab-pane
-					.carousel__nav
-						button
-							background: white
-							box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
-							&.is-next
-								top: 46%
-								right: 0
-							&.is-prev
-								top: 46%
-								left: 0
-					.carousel__viewport
-						.carousel__track
-							.carousel__slide
-								max-width: fit-content
-								&:first-child
-									padding-left: 3px
-								&:last-child
-									padding-right: 3px
+						&.is-prev
+							top: 45%
+							left: -0.7rem
 
-								.checkbox-style
+							&:disabled
+								opacity: 0.6
+								left: -10%
+								transition: all .5s
+							svg
+								right-left: 1px
+
+				.carousel__viewport
+					width: calc(100% + 16px)
+					max-width: none
+					margin-left: -16px
+
+					.carousel__track
+
+						.carousel__slide
+							max-width: fit-content
+
+							.checkbox-style
+								display: block
+								position: relative
+								height: 100px
+								width: 100px
+								overflow: initial
+								text-align: center
+								border-radius: 0.25rem
+								box-shadow: 0px 0px 3px 0px rgba(75, 75, 75, 0.52)
+
+								span
+									font-size: 12px
+									font-weight: normal
+
+								input[type=checkbox]
+									appearance: none
 
 									display: block
+									cursor: pointer
+
 									position: relative
-									height: 100px
-									width: 100px
-									overflow: initial
-									text-align: center
+									z-index: -1
+
+									width: 100%
+									height: 100%
+									padding: .4rem
+
+									background-size: contain
+									background-repeat: no-repeat
+									background-position: center
+									background-origin: content-box
+
 									border-radius: 0.25rem
-									box-shadow: 0px 0px 3px 0px rgba(75, 75, 75, 0.52)
+									transition: all .1s
 
-									span
-										font-size: 14px
-										font-weight: normal
+								input[type=checkbox]:checked
+									background-size: contain
+									background-repeat: no-repeat
+									background-position: center
 
-									input[type=checkbox]
-										-webkit-appearance: none
-										-moz-appearance: none
-										appearance: none
+									// outline: 1px solid #530666
+									box-shadow: -5px 8px 14px rgba(63, 60, 66, 0.32)
+									border-radius: 0.25rem
+									transition: all .3s
+									filter: invert(11%) sepia(56%) saturate(500%) hue-rotate(250deg) brightness(77%) contrast(125%)
 
-										display: block
-										cursor: pointer
+								input[type=checkbox]:active
+									background-size: contain
+									background-repeat: no-repeat
+									background-position: center
 
-										position: relative
-										z-index: -1
+section.filter-bar-catalog-section
 
-										width: 100%
-										height: 100%
+	border-radius: 8px
+	.container-fluid
+		.row
+			.selectors-panel
+				display: flex
+				flex-wrap: wrap
+				height: 48px
+				.select-wrapper
+					display: flex
+					width: 100%
+					.select
+						display: block
+						flex-basis: 100%
+						// flex: 1 1 auto
+						// max-width: 215px
+						// width: 100%
+						position: relative
 
-										background-size: contain
-										background-repeat: no-repeat
-										background-position: center
-										background-origin: content-box
+						&:first-child
+							.new-select
+								border-top-left-radius: 8px
+								border-bottom-left-radius: 8px
 
-										border-radius: 0.25rem
+						&:last-child
+							.new-select
+								border-top-right-radius: 8px
+								border-bottom-right-radius: 8px
 
-									input[type=checkbox]:checked
-										background-size: contain
-										background-repeat: no-repeat
-										background-position: center
-										// filter: brightness(150%)
-										// outline: 2px solid #4b4b4b
-										outline: 2px solid #530666
-										box-shadow: 0px 0px 10px 0px #272727 !important
-										border-radius: 0.25rem
+						&:not(:last-child)
+							.new-select
+								border-right: none
 
-									input[type=checkbox]:active
-										background-size: contain
-										background-repeat: no-repeat
-										background-position: center
+						.new-select
 
-			span.name-title-range
-				display: block
-				// margin-bottom: 20px
-				margin-left: -7px
+							position: relative
+							border: 1px solid #ced4da
+							padding-top: 10px
+							padding-right: 39px
+							padding-bottom: 10px
+							padding-left: 15px
+							cursor: pointer
+							user-select: none
 
-			div[id$="-range"]
+							white-space: nowrap
+							overflow: hidden
+							text-overflow: ellipsis
 
-				border: none
-				height: 0.5rem
-				color: transparent
-				cursor: pointer
-				background-color: #dee2e6
-				border-color: transparent
-				border-radius: 1rem
+							// border-right: none
 
-				&:before
-					content: ""
-					background: inherit
-					border: inherit
-					border-radius: inherit
-					position: absolute
-					left: -.6em
-					top: -1px
-					right: -.6em
-					bottom: -1px
-				.ui-slider-range
-					// width: calc(100% + 10px)
-					background: #530666
+						.new-select__list
+							position: absolute
+							top: 55px
+							left: 0
 
-				input[class$="-range-start"]
-					margin: 20px -10px
+							padding-top: 10px
+							padding-bottom: 10px
 
-					height: 30px
-					width: 50px
-					text-align: start
+							cursor: pointer
+							width: 100%
+							z-index: 3
+							background: #fff
+							user-select: none
+
+							background: #FDFDFD
+							box-shadow: -1px 1px 15px rgba(35, 31, 32, 0.2)
+							border-radius: 8px
+
+						.new-select__list.on
+							display: block
+
+						.new-select__item
+							position: relative
+							&::before
+								content: ""
+								position: absolute
+								top: 50%
+								left: 16px
+								transform: translateY(-50%)
+								width: 24px
+								height: 24px
+								border: 1px solid #9AA0B3
+								border-radius: 4px
+
+							&.check-box-item
+								&::before
+									content: ""
+									background: green
+									border-color: blue
+
+							span
+								display: block
+								padding-top: 10px
+								padding-right: 15px
+								padding-bottom: 10px
+								padding-left: 50px
+
+								&:hover
+									color: #12b223
+								&:first-child
+									border-top-right-radius: 8px
+									border-top-left-radius: 8px
+								&:last-child
+									border-bottom-right-radius: 8px
+									border-bottom-left-radius: 8px
+
+						.new-select:after
+							content: ''
+							display: block
+							width: 25px
+							height: 25px
+							position: absolute
+							right: 9px
+							top: 9px
+							background: url('/assets/images/elements/chevron-down.svg') no-repeat right center / cover
+							opacity: 1
+							transition: all .27s ease-in-out
+							transform: rotate(0deg)
+
+						.new-select.on:after
+							transform: rotate(180deg)
+					.input-data
+						flex-basis: 100%
+						position: relative
+						&:last-child
+							button
+								border-top-right-radius: 8px
+								border-bottom-right-radius: 8px
+								border-right: 1px solid #ced4da
+
+						button
+							display: block
+							width: 100%
+							background: white
+							border: 1px solid #ced4da
+							border-right: none
+							text-align: start
+
+							padding-top: 10px
+							padding-right: 39px
+							padding-bottom: 10px
+							padding-left: 15px
+							&::after
+								content: ''
+								display: block
+								width: 25px
+								height: 25px
+								position: absolute
+								right: 9px
+								top: 9px
+								background: url('/assets/images/elements/chevron-down.svg') no-repeat right center / cover
+								opacity: 1
+								transition: all .27s ease-in-out
+								transform: rotate(0deg)
+
+							&.on
+								&::after
+									transform: rotate(180deg)
+
+						.input-group
+							display: none
+
+							position: absolute
+							top: 60px
+							right: 0
+							width: 465px
+							height: 127px
+							padding: 24px 16px 24px 16px
+
+							background: #FDFDFD
+							box-shadow: -1px 1px 15px rgba(35, 31, 32, 0.2)
+							border-radius: 8px
+							z-index: 3
+							transition: none
+
+							fieldset
+								display: flex
+								width: 100%
+
+								label
+									font-weight: 400
+									font-size: 16px
+									input
+										border-radius: 8px
+										height: 56px
+										border: 1px solid #1C2540
+
+										&:focus
+											box-shadow: none
+										&::placeholder
+											color: #8C93A9
+											font-size: 16px
+
+									&:first-child input
+										border-top-right-radius: 0
+										border-bottom-right-radius: 0
+										border-right: none
+									&:last-child input
+										border-top-left-radius: 0
+										border-bottom-left-radius: 0
+
+			.filter-action-buttons
+				// flex-basis: 100%
+				margin-top: 10px
+				button
+					font-size: 16px
+					font-weight: bold
+					color: white
 					border: none
-					outline: none
-					cursor: default
-					background-color: #00000000
-
-				input[class$="-range-end"]
-					margin: 20px -11px
-					height: 30px
-					width: 50px
-					text-align: end
-					border: none
-					outline: none
-					cursor: default
-					background-color: #00000000
-				.ui-slider-handle
-					// margin-left: -12px
-					// top: -2px
-					width: 1.2rem
-					height: 1.2rem
-					background-color: #530666
-					border: 0
-					border-radius: 1rem
-					transition: background-color 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.15s ease-in-out
-					appearance: none
-
-					// opacity: 0.3
-
-					&:focus
-						box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(83, 6, 102, 0.25)
-						outline: none
-					&:first-child
-						margin-left: -12px
+					padding: 8px 40px
+					margin-right: 16px
+					background: linear-gradient(87.78deg, #540666 0%, #A64380 150.61%)
+					box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
+					border-radius: 8px
+				a
+					font-weight: 400
+					font-size: 16px
+					color: #8C93A9
 
 section.cars-block-catalog-section
+	.container-fluid
+		.row
+			.col
+				span.title-stock
+					font-size: 24px
+					font-weight: bold
+					color: #530666
+					margin-left: 10px
+					margin-right: 10px
+				p.title-stock
+					margin-bottom: 0
+					margin-top: 4px
+				img.title-stock
+					width: 32px
+					height: 32px
+
 	@import ../layouts/car-card-single

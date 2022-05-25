@@ -23,32 +23,39 @@
 							</ol>
 						</nav>
 
-						<h1>Наши услуги</h1>
+						<h1 class="text-gradient">Наши услуги</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="content-section">
+			<div class="container">
+				<div class="row">
+					<div class="main-content">
+						<p>Собственный автопарк SanaevMoscow представлен коллекцией элитных автомобилей. Вы можете оформить услугу проката авто люкс класса за считанные минуты и уже в течение часа оказаться за рулем одного из наших красавцев.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Services block section -->
-		<section class="services-block-section section">
+		<section class="services-block-single-service-section">
 			<div class="container">
-				<div class="col text-center main-header">
-					<h1 class="mb-5 position-relative header-element text-gradient">Список наших услуг</h1>
-
-					<p class="lead mb-5">Собственный автопарк SanaevMoscow представлен коллекцией элитных автомобилей. Вы можете оформить услугу проката авто люкс класса за считанные минуты и уже в течение часа оказаться за рулем одного из наших красавцев.</p>
-				</div>
 				<!-- prettier-ignore -->
+
 				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 					<!-- car card -->
-					@@include('./components/_service-card-single.html', {
+					@@include('./components/_service-card-single.html', { 
 						"path": "../..", 
 						"imageService": "/assets/images/services/happy-birthday-2021-09-24-03-06-59-utc.jpg", 
 						"serviceName": "День рождения", 
-						"servicePrice": "от 5 000 руб/час" 
+						"servicePrice":
+						 "от 5 000 руб/час" 
 					})
-					
+
 					<!-- car card -->
-					@@include('./components/_service-card-single.html', {
+					@@include('./components/_service-card-single.html', { 
 						"path": "../..", 
 						"imageService": "/assets/images/services/positive-young-girls-women-friends-indoors-on-bed-2021-09-04-09-29-06-utc.jpg", 
 						"serviceName": "Девичник", 
@@ -84,35 +91,23 @@
 						"path": "../..", 
 						"imageService": "/assets/images/services/vehicle-interior-woman-in-formal-clothes-is-indoo-2021-12-27-15-52-16-utc.jpg", 
 						"serviceName": "Фотосессия", 
-						"servicePrice": "от 4 900 руб/час"
-					 })
-
+						"servicePrice": "от 4 900 руб/час" 
+					})
+					
 				</div>
 			</div>
 		</section>
 
-		<section class="services-about-work-block-section section pt-0">
-			<div class="container z-2">
-				<div class="row position-relative justify-content-center align-items-cente">
-					<div class="col-12">
-						<!-- Card -->
-						<div class="card border-gray-300 px-4 py-1 shadow-lg">
-							<div class="card-body text-center text-md-left">
-								<div class="row align-items-center">
-									<div class="col-12 text-center">
-										<h2 class="h1 mb-3 text-gradient">Как мы работаем</h2>
-										<p class="lead mb-4">В настоящее время основным направлением нашей компании является аренда автомобилей, но также мы готовы вам предложить организацию праздников, используя лимузины, кабриолеты и другие авто из собственного аптопарка. Все мероприятия лично контролирует Илья Санаев, генеральный директор компании. За многие годы опыта качество оказания услуг является самым важным. Мы готовы выслушать все ваши пожелания и осуществить заветную мечту.</p>
-										<p class="lead mb-4">
-											Вы можете выбрать уже готовую услугу или связаться с нашими менеджарами<br />
-											и мы обязательно вам поможем!
-										</p>
-									</div>
-									<div class="col-12 col-md-6 mt-5 mt-md-0 text-md-right">
-										<img src="../../assets/img/illustrations/reading-side.svg" alt="" />
-									</div>
-								</div>
-							</div>
-						</div>
+		<section class="content-section">
+			<div class="container">
+				<div class="row">
+					<div class="main-content">
+						<h2 class="text-gradient">Как мы работаем</h2>
+						<p>В настоящее время основным направлением нашей компании является аренда автомобилей, но также мы готовы вам предложить организацию праздников, используя лимузины, кабриолеты и другие авто из собственного аптопарка. Все мероприятия лично контролирует Илья Санаев, генеральный директор компании. За многие годы опыта качество оказания услуг является самым важным. Мы готовы выслушать все ваши пожелания и осуществить заветную мечту.</p>
+						<p>
+							Вы можете выбрать уже готовую услугу или связаться с нашими менеджарами<br />
+							и мы обязательно вам поможем!
+						</p>
 					</div>
 				</div>
 			</div>
