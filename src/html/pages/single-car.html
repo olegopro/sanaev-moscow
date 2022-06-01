@@ -17,7 +17,7 @@
 				<div class="row">
 					<div class="col">
 						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb breadcrumb-primary breadcrumb-transparent">
+							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="/">Главная</a></li>
 								<li class="breadcrumb-item"><a href="../../html/pages/catalog.html">Автопарк</a></li>
 								<li class="breadcrumb-item"><a href="../../html/pages/brand.html">BMW</a></li>
@@ -34,17 +34,17 @@
 		<section class="car-card-single-car-section pb-5">
 			<div class="container">
 				<div class="row">
-					<div class="col d-flex justify-content-between align-items-center">
-						<h1>Cadillac 1959 Convertible</h1>
-						<span class="h4">от 14.000 ₽/сутки</span>
+					<div class="col mb-2 car-title d-flex justify-content-between align-items-center">
+						<h1 class="text-gradient">Cadillac 1959 Convertible</h1>
+						<span class="h4">от 7 000 ₽/час</span>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="car-image-box col-9">
 						<div id="singleCarCardCarousel" class="carousel">
-							<div class="carousel__slide" data-src="/assets/images/single-car/01.jpg" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
-								<img src="/assets/images/single-car/01.jpg" />
+							<div class="carousel__slide" data-src="/assets/images/single-car/image12.jpg" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
+								<img src="/assets/images/single-car/image12.jpg" />
 							</div>
 							<div class="carousel__slide" data-src="/assets/images/single-car/02.jpeg" data-fancybox="gallery" data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris">
 								<img src="/assets/images/single-car/02.jpeg" />
@@ -68,7 +68,7 @@
 
 						<div id="singleCarCardThumbCarousel" class="carousel">
 							<div class="carousel__slide">
-								<img class="panzoom__content" src="/assets/images/single-car/01.jpg" />
+								<img class="panzoom__content" src="/assets/images/single-car/image12.jpg" />
 							</div>
 							<div class="carousel__slide">
 								<img class="panzoom__content" src="/assets/images/single-car/02.jpeg" />
@@ -91,27 +91,29 @@
 						</div>
 					</div>
 
-					<div class="car-info-box col-3">
-						<ul class="box-item">
-							<li class="title">год выпуска</li>
-							<li class="content">2016</li>
-						</ul>
-						<ul class="box-item">
-							<li class="title">вместительность</li>
-							<li class="content">до 23 человек</li>
-						</ul>
-						<ul class="box-item">
-							<li class="title">Аренда с водителем</li>
-							<li class="content">7 000 ₽ /час</li>
-						</ul>
-						<ul class="box-item">
-							<li class="title">Аренда без водителя</li>
-							<li class="content">Вс.-Пт. - (4+1)*</li>
-							<li class="content">Сб. - (6+1)*</li>
-						</ul>
-						<small>*Минимальный заказ: Количество часов + час подачи</small>
+					<div class="col-3">
+						<div class="car-info-box">
+							<ul class="box-item">
+								<li class="title">год выпуска</li>
+								<li class="content">2016</li>
+							</ul>
+							<ul class="box-item">
+								<li class="title">вместительность</li>
+								<li class="content">до 23 человек</li>
+							</ul>
+							<ul class="box-item">
+								<li class="title">Аренда с водителем</li>
+								<li class="content">7 000 ₽ /час</li>
+							</ul>
+							<ul class="box-item">
+								<li class="title">Аренда без водителя</li>
+								<li class="content">Вс.-Пт. - (4+1)*</li>
+								<li class="content">Сб. - (6+1)*</li>
+							</ul>
+							<small>*Минимальный заказ:<br />Количество часов + час подачи</small>
 
-						<button>Заказать</button>
+							<button>Заказать</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -122,7 +124,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="mb-5">
-							<h2 class="text-center mb-4">Аренда автомобиля</h2>
+							<h1 class="text-gradient mb-4">Аренда автомобиля</h1>
 							<div class="table-responsive-sm">
 								<table class="table table-striped">
 									<tbody>
@@ -158,11 +160,16 @@
 		<!-- Booking order -->
 		<section class="booking-order-section">@@include('./components/_booking-order.html', { "path": "../..", "title": "Заказать Porsche Boxster" })</section>
 
-		<section class="content-section pt-0">
+		<section class="content-section py-5">
 			<div class="container">
 				<div class="row">
 					<div class="main-content">
-						<p>Максимальный комфорт и бескомпромиссная функциональность - ключевые особенности новой крыши с ее невероятным электрогидравлическим механизмом. Двухсекционная стальная крыша открывается автоматически плавным движением, поскольку каждый Максимальный комфорт и бескомпромиссная функциональность - ключевые особенности новой крыши с ее невероятным электрогидравлическим механизмом. Двухсекционная стальная крыша открывается автоматически плавным движением, поскольку кай</p>
+						<div class="roll-up-text-content">
+							<p>
+								Максимальный комфорт и бескомпромиссная функциональность - ключевые особенности новой крыши с ее невероятным электрогидравлическим механизмом. Двухсекционная стальная крыша открывается автоматически плавным движением, поскольку каждый Максимальный комфорт и бескомпромиссная функциональность - ключевые особенности новой крыши с ее невероятным электрогидравлическим механизмом. Двухсекционная стальная крыша открывается автоматически плавным движением, поскольку кай
+							</p>
+							<button class="roll-up-text-button">Развернуть описание</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -199,15 +206,6 @@
 						"carName": "Toyota Supra FT1", 
 						"carPrice": "от 12 600 руб/час" 
 					})
-
-					<!-- car card -->
-					@@include('./components/_car-card-multiply-photo-single.html', { 
-						"path": "../..", 
-						"class": "d-none",
-						"carName": "McLaren 675LT", 
-						"carPrice": "от 6 000 руб/час" 
-					})
-
 					
 				</div>
 			</div>

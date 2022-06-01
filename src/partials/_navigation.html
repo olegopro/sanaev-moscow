@@ -1,23 +1,39 @@
 <header class="header-global">
-	<nav id="navbar-main" aria-label="Меню навигации" class="navbar navbar-main navbar-expand-lg navbar-theme-primary @@classes">
-		<div class="container position-relative">
-			<a class="navbar-brand me-lg-5" href="@@path/index.html">
+	<nav id="navbar-main" aria-label="Меню навигации" class="navbar navbar-main navbar-expand-lg">
+		<div class="container-fluid position-relative">
+			<a class="navbar-brand" href="@@path/index.html">
 				<img class="navbar-brand-logo" src="@@path/assets/images/logo-header-black.png" alt="Logo light" />
 			</a>
+
 			<div class="navbar-collapse collapse me-auto justify-content-center" id="navbar_global">
 				<div class="navbar-collapse-header">
-					<div class="row">
-						<div class="col-6 collapse-brand">
-							<a href="@@path/index.html">
-								<img src="@@path/assets/images/logo-header-black.png" alt="Themesberg logo" />
-							</a>
+					<div class="row d-flex flex-nowrap align-items-center">
+						<div class="col">
+							<ul class="navbar-nav lang d-flex flex-nowrap flex-row">
+								<li class="nav-item">
+									<a href="@@path/html/pages/contacts.html" class="nav-link">RU</a>
+								</li>
+								<li class="nav-item">
+									<a href="@@path/html/pages/contacts.html" class="nav-link lang-active">ENG</a>
+								</li>
+							</ul>
 						</div>
-						<div class="col-6 collapse-close">
-							<a href="#navbar_global" class="fas fa-times" data-bs-toggle="collapse" data-bs-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
+						<div class="col collapse-close">
+							<a
+								href="#navbar_global"
+								class="fas fa-times"
+								data-bs-toggle="collapse"
+								data-bs-target="#navbar_global"
+								aria-controls="navbar_global"
+								aria-expanded="false"
+								title="Закрыть"
+								aria-label="Toggle navigation"
+							></a>
 						</div>
 					</div>
 				</div>
-				<ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+
+				<ul class="navbar-nav align-items-lg-center">
 					<li class="nav-item">
 						<a href="@@path/html/pages/catalog.html" class="nav-link">Автопарк</a>
 					</li>
@@ -30,17 +46,59 @@
 					<li class="nav-item">
 						<a href="@@path/html/pages/contacts.html" class="nav-link">Контакты</a>
 					</li>
+
+					<li class="soc-icons-block-mobile">
+						<ul>
+							<li class="d-flex d-sm-none nav-item">
+								<a href="https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit" target="_blank" class="btn whatsapp-btn">
+									<img src="@@path/assets/images/social-icons/whatsapp.svg" alt="" />
+								</a>
+							</li>
+							<li class="d-flex d-sm-none nav-item">
+								<a href="https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit" target="_blank" class="btn telegram-btn">
+									<img src="@@path/assets/images/social-icons/telegram.svg" alt="" />
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<ul class="navbar-nav lang d-none d-sm-flex">
+							<li class="nav-item">
+								<a href="@@path/html/pages/contacts.html" class="nav-link">RU</a>
+							</li>
+							<li class="nav-item">
+								<a href="@@path/html/pages/contacts.html" class="nav-link lang-active">ENG</a>
+							</li>
+						</ul>
+					</li>
 				</ul>
+
+				<form class="d-none d-lg-flex mx-4" role="search">
+					<input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск" />
+					<button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+				</form>
 			</div>
-			<div class="d-flex align-items-center">
-				<a href="https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit" target="_blank" class="btn btn-tel-header"> +7 (495) 095-10-88 </a>
+
+			<div class="d-none d-sm-flex ms-auto soc-icons-block">
 				<a href="https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit" target="_blank" class="btn whatsapp-btn">
-					<i class="fab fa-whatsapp"></i>
+					<img src="@@path/assets/images/social-icons/whatsapp.svg" alt="" />
 				</a>
 				<a href="https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit" target="_blank" class="btn telegram-btn">
-					<i class="fab fa-telegram"></i>
+					<img src="@@path/assets/images/social-icons/telegram.svg" alt="" />
 				</a>
-				<button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+			</div>
+
+			<div class="d-flex align-items-center">
+				<button
+					class="navbar-toggler ms-2"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbar_global"
+					aria-controls="navbar_global"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
 			</div>

@@ -6,100 +6,164 @@ section.main-banner
 		object-fit: cover
 		object-position: center
 
+		@media (max-width: 767px)
+			height: 40vh
 section.cars-block-tab-section
 	.container-fluid
 		.row
-			.nav-tabs
-
-				border: none
-
-				li
+			.wrap-show-all-button
+				display: flex
+				justify-content: flex-end
+				align-items: center
+				.show-all-button
 					display: flex
+
+					width: auto
+					height: calc(100% - 10px)
+
+					max-width: fit-content
+					align-items: center
+					padding: 8px 16px
+
+					background: #FFFFFF
+
 					border-radius: 8px
-					height: 48px
-					// border: 1px solid #8C93A9
-					box-shadow: 0px 0px 0px 1px #8C93A9
-					&:first-child
-						margin-right: 48px
-					&:last-child
-						display: flex
-						align-self: center
-						align-items: center
-
-						margin-left: auto
-						background: #FFFFFF
+					border: 1px solid #540666
+					font-weight: 600
+					font-size: 20px
+					&:hover
 						box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
+
+					@media (max-width: 992px)
+						width: 100%
+						max-width: none
+
+						box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
+						justify-content: center
+						margin-top: 16px
+			.nav-tabs-wrapper
+				overflow: hidden
+
+				@media ( max-width: 767px)
+					overflow: auto
+					overflow-y: hidden
+
+				.nav-tabs
+					border: none
+					flex-wrap: nowrap
+					overflow-x: scroll
+					padding: 5px 1px 15px 1px
+
+					margin-bottom: -10px
+
+					li
+						display: flex
 						border-radius: 8px
-						border: 1px solid #540666
-
-					.show-all-button
-						font-weight: 600
-						font-size: 20px
-						margin-left: auto
-						line-height: 120%
-
-						padding: 0 16px
-
-					button
-						font-weight: 400
-						font-size: 16px
-						border-radius: 0
-						border: none
-						padding: 0 1rem
-						width: calc(100 + 10px)
-
-						&.active
-							font-size: 16px
-							background-color: #530666
-							color: white
-							-webkit-text-stroke-width: 1px
-
-						&:not(:last-child)
-							border-right: 1px solid #8C93A9
-
+						height: 48px
+						// border: 1px solid #8C93A9
+						box-shadow: 0px 0px 0px 1px #8C93A9
 						&:first-child
-							border-top-left-radius: 8px
-							border-bottom-left-radius: 8px
+							margin-right: 48px
+							@media(max-width: 991px)
+								margin-right: 10px
 						&:last-child
-							border-top-right-radius: 8px
-							border-bottom-right-radius: 8px
+
+						button
+							font-weight: 400
+							font-size: 16px
+							border-radius: 0
+							border: none
+							padding: 0 1rem
+							width: calc(100 + 10px)
+
+							&.active
+								font-size: 16px
+								background-color: #530666
+								color: white
+								-webkit-text-stroke-width: 1px
+
+							&:not(:last-child)
+								border-right: 1px solid #8C93A9
+
+							&:first-child
+								border-top-left-radius: 8px
+								border-bottom-left-radius: 8px
+							&:last-child
+								border-top-right-radius: 8px
+								border-bottom-right-radius: 8px
 
 			.tab-content
 				position: relative
 				margin-top: 14px
 
+				@media (max-width: 575px)
+					margin-top: 0
+
 				#type
-					input
-						background-size: 90%
+					#type-tab-carousel-fancy
+
+						input
+							background-size: 90%
 
 				#brand
 					input
 						background-size: 80%
 
-				#color
-					input[type=checkbox]
-						&:checked
-							outline: 2px solid rgba(255, 255, 255, 1)
+				#model
+					input
+						background-size: 80%
 
-				#country
-					.checkbox-style
-						width: 170px
-						input
-							width: 170px
-							&:checked
-								outline: 2px solid rgba(255, 255, 255, 1)
+				#service
+					input
+						background-size: 80%
 
 				.tab-pane
+
+					--carousel-button-bg: #fff
+
+					--carousel-button-width: 50px
+					--carousel-button-height: 50px
+
+					--carousel-button-svg-width: 18px
+					--carousel-button-svg-height: 18px
+					--carousel-button-svg-stroke-width: 1.5
+
+					--carousel-button-shadow: 1px 2px 14px rgba(72, 72, 72, 0.25)
+
+					.carousel__button.is-prev
+						top: 46%
+						left: 0
+						svg
+							margin-right: 1px
+							margin-top: 1px
+						&:disabled
+							opacity: 0.6
+							left: -10%
+							transition: all .5s
+
+						@media (max-width: 575px)
+							width: 24px
+							height: 24px
+							padding: 9px
+
+					.carousel__button.is-next
+						top: 46%
+						right: 0
+						svg
+							margin-right: 1px
+							margin-top: 1px
+						&:disabled
+							opacity: 0
+							right: -10%
+							transition: all .5s
+
+						@media (max-width: 575px)
+							width: 24px
+							height: 24px
+							padding: 9px
+
 					.carousel__nav
-						button
-							background: white
-							box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
-							&.is-next
-								top: 46%
-								right: 0
-							&.is-prev
-								top: 46%
-								left: 0
+
 					.carousel__viewport
 						.carousel__track
 							.carousel__slide
@@ -149,11 +213,12 @@ section.cars-block-tab-section
 										background-size: contain
 										background-repeat: no-repeat
 										background-position: center
-										// filter: brightness(150%)
-										// outline: 2px solid #4b4b4b
-										outline: 2px solid #530666
-										box-shadow: 0px 0px 10px 0px #272727 !important
+
+										// outline: 1px solid #ff60009e
+										box-shadow: -5px 8px 14px rgba(63, 60, 66, 0.32)
 										border-radius: 0.25rem
+										transition: all .3s
+										// filter: invert(11%) sepia(56%) saturate(500%) hue-rotate(250deg) brightness(77%) contrast(125%)
 
 									input[type=checkbox]:active
 										background-size: contain
@@ -167,36 +232,57 @@ section.cars-block-tab-section
 
 section.main-description-block-section
 
-	&::after
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background-size: cover
-		opacity: 0.06
-		background-repeat: no-repeat
-		background-position: center
-		z-index: -1
-
 	.main-counters
-		.counters-block
-			&:not(:last-child)
-				margin-right: 40px
+		// @media (max-width: 767px)
+		// 	flex-direction: column
 
-		span.fas
-			font-size: 50px
-			background: linear-gradient(45deg, #2A4876 33%, #7B2A86 66%, #880046)
-			-webkit-background-clip: text
-			-webkit-text-fill-color: transparent
 		.counters-block
+			display: flex
+			align-items: center
+			justify-content: center
+
+			border-radius: 8px
 			z-index: 1
 			background-color: #fff
 			border: 1px solid #530666
+			height: 200px
 
-			.h5
-				color: #2a3863ed
+			@media (max-width: 767px)
+				display: block
+
+				height: auto
+
+			.icon-box
+				@media (max-width: 767px)
+					display: flex
+					align-items: center
+
+					h1 ,h2, h3, h4, h5, h6
+						margin-bottom: 0
+						text-align: start
+
+				.icon
+					span.fas
+						font-size: 50px
+						background: linear-gradient(45deg, #2A4876 33%, #7B2A86 66%, #880046)
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+
+					@media (max-width: 767px)
+						margin-right: 16px
+
+						.fa-handshake
+							&::before
+								display: flex
+								justify-content: center
+								width: 50px
+
+				.icon-title
+					color: #2a3863ed
+					@media (max-width: 575px)
+						font-size: 16px
+						font-weight: bold
+						text-align: start
 
 section.main-cars-block-section
 
@@ -204,21 +290,98 @@ section.main-cars-block-section
 		position: relative
 		z-index: 1
 		.row
-			margin-top: 32px
+			#carousel-premium-cars,
+			#carousel-cabriolet-cars,
+			#carousel-sport-cars,
+
+				--carousel-button-bg: #fff
+
+				--carousel-button-width: 50px
+				--carousel-button-height: 50px
+
+				--carousel-button-svg-width: 18px
+				--carousel-button-svg-height: 18px
+				--carousel-button-svg-stroke-width: 1.5
+
+				--carousel-button-shadow: 1px 2px 14px rgba(72, 72, 72, 0.25)
+
+				padding-left: 0
+				padding-right: 0
+				.carousel__viewport
+					width: 100%
+					max-width: none
+				.carousel__slide
+					width: calc(100% / 3)
+
+					@media (max-width: 991px)
+						width: calc(100% / 2)
+
+					@media (max-width: 575px)
+						width: 100%
+
+				.carousel__nav
+					display: none
+
+					@media (max-width: 575px)
+						display: block
+						button
+							background: white
+							box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
+							&.is-next
+								top: 39%
+								right: 0
+								svg
+									margin-left: 1px
+									margin-top: 1px
+								&:disabled
+									opacity: 0
+									right: -30%
+									transition: all .5s
+
+								@media (max-width: 575px)
+									width: 24px
+									height: 24px
+									padding: 9px
+
+							&.is-prev
+								top: 39%
+								left: 0
+								svg
+									margin-left: 1px
+									margin-top: 1px
+								&:disabled
+									opacity: 0.6
+									left: -30%
+									transition: all .5s
+
+								@media (max-width: 575px)
+									width: 24px
+									height: 24px
+									padding: 9px
+
 			.category-block-title
 				display: flex
 				align-items: center
 
+				@media (max-width: 575px)
+					flex-direction: column
+					align-items: start
+
 				.category-titile
 					margin-bottom: 0
-					font-size: 40px
+					// font-size: 40px
 					font-weight: bold
 					margin-right: 64px
+
+					@media (max-width: 575px)
+						margin-right: 0
+
 				.category-titile-url
 					position: relative
 					font-size: 24px
 					font-weight: normal
 					padding-right: 4px
+
 					&::after
 						content: ''
 						position: absolute
@@ -228,6 +391,14 @@ section.main-cars-block-section
 						left: 100%
 						transform: translateY(-50%)
 						background-image: url('/assets/images/elements/arrow-right.svg')
+
+						@media (max-width: 575px)
+							transform: scale(0.65) translateY(-55%)
+							top: 30%
+							left: 100%
+
+					@media (max-width: 575px)
+						font-size: 12px
 
 			@import ../layouts/car-card-carousel
 
@@ -275,60 +446,147 @@ section.main-about-us-section
 				border-radius: 8px
 				filter: drop-shadow(-5px 8px 19px rgba(83, 6, 102, 0.15))
 
-			p.lead
-				font-size: 16px
-				font-weight: normal
-				color: #1C2540
+			button
+				display: none
+				@media (max-width: 575px)
+					display: block
+					margin-top: 8px
+					font-size: 14px
+					font-weight: bold
+					line-height: 120%
+					text-decoration-line: underline
+					color: #1C2540
+					background: none
+					border: none
+					text-align: start
 
-section.main-about-us-section-posttitle
-	img
-		position: absolute
-		width: 300px
-		right: 7%
-		top: 95%
-		opacity: 1
+			.content-block-rollup
+				position: relative
+
+				p
+					font-size: 16px
+					font-weight: normal
+					color: #1C2540
+					@media (max-width: 575px)
+						&:last-child
+							margin-bottom: 0
+
+				@media (max-width: 575px)
+					height: 15vh
+					margin-top: 8px
+					overflow: hidden
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						box-shadow: 0px -60px 28px -32px rgba(255, 255, 255, 1) inset
+						pointer-events: none
 
 section.main-about-us-section-second
 	.container
 		.row
-			p.lead
-				font-size: 16px
-				font-weight: normal
-				color: #1C2540
+			button
+				display: none
+				@media (max-width: 575px)
+					display: block
+					margin-top: 8px
+					font-size: 14px
+					font-weight: bold
+					line-height: 120%
+					text-decoration-line: underline
+					color: #1C2540
+					background: none
+					border: none
+					text-align: start
+					padding-left: 0
+
+			.content-block-rollup
+				position: relative
+
+				p
+					font-size: 16px
+					font-weight: normal
+					color: #1C2540
+					@media (max-width: 575px)
+						&:last-child
+							margin-bottom: 0
+
+				@media (max-width: 575px)
+					height: 15vh
+					margin-top: 8px
+					overflow: hidden
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						box-shadow: 0px -60px 28px -32px rgba(255, 255, 255, 1) inset
+						pointer-events: none
+
+					// img
+					// 	padding-left: 20px
+					// 	padding-bottom: 10px
 
 section.main-services-section
 	// background: linear-gradient(180deg, rgba(251, 251, 251, 0) 0%, rgb(243, 244, 246) 100%)
 	.container
 		.row
 			&:first-child
+				.card
+					img
+						height: 390px
+						object-fit: cover
+						object-position: center
+						border-top-left-radius: 8px
+						border-bottom-left-radius: 8px
+						border-top-right-radius: 0
+						border-bottom-right-radius: 0
 
-				img
-					height: 390px
-					object-fit: cover
-					object-position: center
-					border-top-left-radius: 8px
-					border-bottom-left-radius: 8px
-					border-top-right-radius: 0
-					border-bottom-right-radius: 0
+						margin: 0 1px -1px -1px
 
-					margin: 0 1px -1px -1px
+						@media (max-width: 991px)
+							height: auto
+							aspect-ratio: 3 / 2
+							border-radius: 8px
+
+					@media (max-width: 991px)
+						border: none
+
 			&:last-child
-				img
-					height: 386px
-					object-fit: cover
-					object-position: center
-					border-top-left-radius: 0
-					border-bottom-left-radius: 0
-					border-top-right-radius: 8px
-					border-bottom-right-radius: 8px
-					border-image-outset: -10px
+				.card
 
-					margin: 0 1px -1px 1px
+					img
+						height: 386px
+						object-fit: cover
+						object-position: center
+						border-top-left-radius: 0
+						border-bottom-left-radius: 0
+						border-top-right-radius: 8px
+						border-bottom-right-radius: 8px
+						border-image-outset: -10px
+
+						margin: 0 1px -1px 1px
+
+						@media (max-width: 991px)
+							height: auto
+							aspect-ratio: 3 / 2
+							border-radius: 8px
+
+					@media (max-width: 991px)
+						border: none
 
 			.card
 				transition: all .3s
 				&:hover
-					box-shadow: rgba(0, 0, 0, 0.034) 0px 10px 10px -3px, rgba(0, 0, 0, 0.04) 0px 4px 6px -2px !important
+					box-shadow: rgba(0, 0, 0, 0.034) 0px 10px 10px -3px, rgba(0, 0, 0, 0.04) 0px 4px 6px -2px
+					border-radius: 8px
+					@media (max-width: 575px)
+						box-shadow: none
 				.card-body
 					a
 						width: min-content

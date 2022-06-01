@@ -3,32 +3,36 @@ section.page-title-section
 	padding-top: 73px
 	background: white
 
-	.container-fluid
-		// position: absolute
+	div[class^="container"]
 
 		.row
 			nav
 				width: fit-content
-				ol
+
+				ol.breadcrumb
+					background-color: transparent
+					padding: 1rem 0
+
+					margin-bottom: 0
+
+					font-size: 16px
+					font-weight: normal
+					color: #8C93A9
+
 					a
 						text-decoration: none
-						color: 	#dcdcdc
-						transition: .3s ease-out .1s
+						color: 	inherit
+						transition: .2s ease-out .1s
 						&:hover
-							color: #fff
 
-							transition: .3s ease-out .1s
+							color: darken(#8C93A9, 20%)
 
 					li
-						color: 	#dcdcdc
+						color: 	inherit
+						font-weight: inherit
+
 						&::before
-							color: #dcdcdc
+							color: inherit
 
 						&:last-child
-							transition: .2s ease-out
-							color: #9d9d9d
 							user-select: none
-							&:active
-								opacity: 0.9
-							&::before
-								color: #7d7d7d

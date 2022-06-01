@@ -159,10 +159,69 @@
 			})
 		}
 
+		/* Mobile menu */
+		if (document.getElementById('navbar_global')) {
+			document.getElementById('navbar_global').addEventListener('show.bs.collapse', function (e) {
+				// if ($(this).is(e.target)) {
+				// 	console.log(e.target)
+				// }
+
+				$('body').addClass('position-relative overflow-hidden body-background-enable')
+				$('.navbar-brand-logo').hide()
+
+				// $(this).after('<div></div>').css({
+				// 	width: '100%',
+				// 	height: ' 300px',
+				// 	opacity: ' 0',
+				// 	background: 'transparent',
+				// 	position: 'absolute',
+				// 	top: '300px'
+				// })
+
+				// $('body').attr('data-bs-toggle', 'collapse')
+				// $('body').attr('data-bs-target', '#navbar_global')
+			})
+
+			document.getElementById('navbar_global').addEventListener('hide.bs.collapse', function () {
+				$('body').removeClass('position-relative overflow-hidden body-background-enable')
+				$('.navbar-brand-logo').show()
+			})
+		}
+
 		/* Brazzers - Carousel */
 		$('.images-toggle').brazzersCarousel()
 
+		/* Roll-up text button in main content blocks */
+		const rollUpTextContent = $('.roll-up-text-content')
+		if (rollUpTextContent) {
+			const rollUpTextButton = rollUpTextContent.find('button.roll-up-text-button').on('click', function () {
+				rollUpTextContent.find('p').css({
+					'-webkit-line-clamp': 'none'
+				})
+
+				rollUpTextButton.hide()
+			})
+		}
+
+		/* Roll-up for block in index page */
+		const contentBlockRollup = $('.content-block-rollup')
+		if (contentBlockRollup) {
+			contentBlockRollup.each(function () {
+				console.log($(this))
+				$(this)
+					.parent()
+					.find('button.content-block-rollup-button')
+					.on('click', function () {
+						console.log($(this).parent().find('.content-block-rollup'))
+						$(this).parent().find('.content-block-rollup').addClass('open-block')
+						$(this).hide()
+					})
+			})
+		}
+
 		/* FancyApp */
+
+		/* Index page CarsTypes carousel */
 		const carsTypesCatalog = document.querySelector('#cars-types-catalog')
 		if (carsTypesCatalog) {
 			new Carousel(carsTypesCatalog, {
@@ -178,8 +237,10 @@
 					GOTO: 'Вернуться к %d'
 				},
 				Navigation: {
-					prevTpl: '<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-					nextTpl: '<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 				}
 			})
 		}
@@ -196,22 +257,12 @@
 					NEXT: 'Следующий автомобиль',
 					PREV: 'Предыдущий  автомобиль',
 					GOTO: 'Вернуться к %d'
-				}
-			})
-		}
-
-		/* Index page sportCars carousel */
-		const sportCars = document.querySelector('#carousel-sport-cars')
-		if (sportCars) {
-			new Carousel(sportCars, {
-				Dots: false,
-				center: true,
-				infinite: false,
-				slidesPerPage: 'auto',
-				l10n: {
-					NEXT: 'Следующий автомобиль',
-					PREV: 'Предыдущий  автомобиль',
-					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 				}
 			})
 		}
@@ -228,6 +279,34 @@
 					NEXT: 'Следующий автомобиль',
 					PREV: 'Предыдущий  автомобиль',
 					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+				}
+			})
+		}
+
+		/* Index page sportCars carousel */
+		const sportCars = document.querySelector('#carousel-sport-cars')
+		if (sportCars) {
+			new Carousel(sportCars, {
+				Dots: false,
+				center: true,
+				infinite: false,
+				slidesPerPage: 'auto',
+				l10n: {
+					NEXT: 'Следующий автомобиль',
+					PREV: 'Предыдущий  автомобиль',
+					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 				}
 			})
 		}
@@ -244,9 +323,16 @@
 					NEXT: 'Следующий автомобиль',
 					PREV: 'Предыдущий  автомобиль',
 					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 				}
 			})
 		}
+
 		/* Index page brands Tab */
 		const brandTabCarouselFancy = document.querySelector('#brand-tab-carousel-fancy')
 		if (brandTabCarouselFancy) {
@@ -259,14 +345,20 @@
 					NEXT: 'Следующий автомобиль',
 					PREV: 'Предыдущий  автомобиль',
 					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 				}
 			})
 		}
 
-		/* Index page color Tab */
-		const colorTabCarouselFancy = document.querySelector('#color-tab-carousel-fancy')
-		if (colorTabCarouselFancy) {
-			new Carousel(colorTabCarouselFancy, {
+		/* Index page model Tab */
+		const modelTabCarouselFancy = document.querySelector('#model-tab-carousel-fancy')
+		if (modelTabCarouselFancy) {
+			new Carousel(modelTabCarouselFancy, {
 				Dots: false,
 				center: false,
 				infinite: false,
@@ -275,14 +367,20 @@
 					NEXT: 'Следующий автомобиль',
 					PREV: 'Предыдущий  автомобиль',
 					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 				}
 			})
 		}
 
-		/* Index page country Tab */
-		const countryTabCarouselFancy = document.querySelector('#country-tab-carousel-fancy')
-		if (countryTabCarouselFancy) {
-			new Carousel(countryTabCarouselFancy, {
+		/* Index page service Tab */
+		const serviceCarouselFancy = document.querySelector('#service-tab-carousel-fancy')
+		if (serviceCarouselFancy) {
+			new Carousel(serviceCarouselFancy, {
 				Dots: false,
 				center: false,
 				infinite: false,
@@ -291,6 +389,34 @@
 					NEXT: 'Следующий автомобиль',
 					PREV: 'Предыдущий  автомобиль',
 					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+				}
+			})
+		}
+
+		/* Index page service Tab */
+		const extraCarouselFancy = document.querySelector('#extra-tab-carousel-fancy')
+		if (extraCarouselFancy) {
+			new Carousel(extraCarouselFancy, {
+				Dots: false,
+				center: false,
+				infinite: false,
+				dragFree: true,
+				l10n: {
+					NEXT: 'Следующий автомобиль',
+					PREV: 'Предыдущий  автомобиль',
+					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 				}
 			})
 		}
@@ -299,7 +425,7 @@
 		const singleCarCardCarousel = document.querySelector('#singleCarCardCarousel')
 		if (singleCarCardCarousel) {
 			// Initialise Carousel
-			const initSingleCarCardCarousel = new Carousel(galleryVideoCardCarousel, {
+			const initSingleCarCardCarousel = new Carousel(singleCarCardCarousel, {
 				Dots: false
 			})
 

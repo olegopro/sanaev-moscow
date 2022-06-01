@@ -4,12 +4,12 @@
 		@@include('./_head.html', { "path": ".", "title": "Аренда автомобилей на свадьбу в Москве от Sanaev Moscow" })
 	</head>
 
-	<body>
+	<body class="position-relative">
 		<!-- svg icons -->
 		@@include('./components/_svg-icons.html', { "path": "." })
 
 		<!-- header -->
-		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
+		@@include('./_navigation.html', { "path": "../.." })
 
 		<section class="main-banner">
 			<img src="./assets/images/main-banner/bentley-banner.jpg" alt="" />
@@ -20,39 +20,39 @@
 			<div class="text-center container">
 				<div class="row">
 					<div class="col-lg-12 col-md-8 mx-auto">
-						<h1 class="position-relative text-gradient">Аренда автомобилей в Москве от Sanaev Moscow</h1>
+						<h1 class="h2 position-relative text-gradient">Аренда автомобилей в Москве от Sanaev Moscow</h1>
 					</div>
 				</div>
 
-				<div class="row main-counters mt-3">
-					<div class="counters-block col p-3 border-radius-8">
-						<div class="icon-box mb-5 mt-3 mb-md-0">
-							<div class="icon icon-primary mb-4">
-								<span class="fas fa-bullseye"></span>
+				<div class="main-counters row row-cols-1 row-cols-md-3 gy-2 gx-5 mt-3">
+					<div class="col">
+						<div class="counters-block p-3">
+							<div class="icon-box">
+								<div class="icon icon-primary mb-md-4">
+									<span class="fas fa-bullseye"></span>
+								</div>
+								<h3 class="h5 m-0 m-md-auto w-75 icon-title">Более 12 лет на рынке</h3>
 							</div>
-							<h3 class="h5">
-								Более 12 лет<br />
-								на рынке
-							</h3>
 						</div>
 					</div>
-					<div class="counters-block col p-3 border-radius-8">
-						<div class="icon-box mb-5 mt-3 mb-md-0">
-							<div class="icon icon-primary mb-4">
-								<span class="fas fa-car"></span>
+					<div class="col">
+						<div class="counters-block p-3">
+							<div class="icon-box">
+								<div class="icon icon-primary mb-md-4">
+									<span class="fas fa-car"></span>
+								</div>
+								<h3 class="h5 m-0 m-md-auto w-75 icon-title">200 автомобилей в автопарке</h3>
 							</div>
-							<h3 class="h5">
-								200 автомобилей<br />
-								в автопарке
-							</h3>
 						</div>
 					</div>
-					<div class="counters-block col p-3 border-radius-8">
-						<div class="icon-box mb-5 mt-3 mb-md-0">
-							<div class="icon icon-primary mb-4">
-								<span class="fas fa-handshake"></span>
+					<div class="col">
+						<div class="counters-block p-3">
+							<div class="icon-box">
+								<div class="icon icon-primary mb-md-4">
+									<span class="fas fa-handshake"></span>
+								</div>
+								<h3 class="h5 m-0 m-md-auto w-75 icon-title">Более 3000 довольных клиентов</h3>
 							</div>
-							<h3 class="h5">Более 3000 <br />довольных клиентов</h3>
 						</div>
 					</div>
 				</div>
@@ -60,30 +60,37 @@
 		</section>
 
 		<!-- Tab's section FancyApp -->
-		<section class="cars-block-tab-section pt-5">
+		<section class="cars-block-tab-section pt-5 pt-lg-5">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col">
+					<div class="col order-1 order-lg-1 nav-tabs-wrapper">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item" role="presentation">
-								<button class="nav-link active" id="type-tab" data-bs-toggle="tab" data-bs-target="#type" type="button" role="tab" aria-controls="type" aria-selected="true">Тип</button>
+								<button class="nav-link active" id="type-tab" data-bs-toggle="tab" data-bs-target="#type" type="button" role="tab" aria-controls="type" aria-selected="true">
+									Тип
+								</button>
 								<button class="nav-link" id="brand-tab" data-bs-toggle="tab" data-bs-target="#brand" type="button" role="tab" aria-controls="brand" aria-selected="false">Марка</button>
-								<button class="nav-link" id="color-tab" data-bs-toggle="tab" data-bs-target="#color" type="button" role="tab" aria-controls="color" aria-selected="false">Цвет</button>
-								<button class="nav-link" id="country-tab" data-bs-toggle="tab" data-bs-target="#country" type="button" role="tab" aria-controls="country" aria-selected="false">Страна</button>
+								<button class="nav-link" id="model-tab" data-bs-toggle="tab" data-bs-target="#model" type="button" role="tab" aria-controls="model" aria-selected="false">
+									Модель
+								</button>
 							</li>
 
 							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="brand-tab" data-bs-toggle="tab" data-bs-target="#brand" type="button" role="tab" aria-controls="country" aria-selected="false">Услуги</button>
-								<button class="nav-link" id="color-tab" data-bs-toggle="tab" data-bs-target="#color" type="button" role="tab" aria-controls="country" aria-selected="false">Дополнительно</button>
-							</li>
-
-							<li class="nav-item" role="presentation">
-								<a href="" class="nav-link show-all-button">Посмотреть весь каталог</a>
+								<button class="nav-link" id="service-tab" data-bs-toggle="tab" data-bs-target="#service" type="button" role="tab" aria-controls="service" aria-selected="false">
+									Услуги
+								</button>
+								<button class="nav-link" id="extra-tab" data-bs-toggle="tab" data-bs-target="#extra" type="button" role="tab" aria-controls="extra" aria-selected="false">
+									Дополнительно
+								</button>
 							</li>
 						</ul>
 					</div>
 
-					<div class="tab-content" id="myTabContent">
+					<div class="col col-lg-4 order-3 order-lg-2 wrap-show-all-button">
+						<a href="" class="show-all-button">Посмотреть весь каталог</a>
+					</div>
+
+					<div class="col col-xl-12 order-2 order-lg-3 tab-content" id="myTabContent">
 						<div class="tab-pane fade show active" id="type" role="tabpanel" aria-labelledby="type-tab">
 							<div id="type-tab-carousel-fancy">
 								<div class="carousel__slide">
@@ -283,38 +290,8 @@
 							</div>
 						</div>
 
-						<div class="tab-pane fade" id="color" role="tabpanel" aria-labelledby="color-tab">
-							<div id="color-tab-carousel-fancy">
-								<div class="carousel__slide">
-									<label class="checkbox-style">
-										<input type="checkbox" class="bg-danger" />
-										<span>Красный</span>
-									</label>
-								</div>
-
-								<div class="carousel__slide">
-									<label class="checkbox-style">
-										<input type="checkbox" class="bg-success" />
-										<span>Зеленый</span>
-									</label>
-								</div>
-								<div class="carousel__slide">
-									<label class="checkbox-style">
-										<input type="checkbox" class="bg-primary" />
-										<span>Синий</span>
-									</label>
-								</div>
-								<div class="carousel__slide">
-									<label class="checkbox-style">
-										<input type="checkbox" class="bg-dark" />
-										<span>Черный</span>
-									</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="tab-pane fade" id="country" role="tabpanel" aria-labelledby="country-tab">
-							<div id="country-tab-carousel-fancy">
+						<div class="tab-pane fade" id="model" role="tabpanel" aria-labelledby="model-tab">
+							<div id="model-tab-carousel-fancy">
 								<div class="carousel__slide">
 									<label class="checkbox-style">
 										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag102.png')" />
@@ -372,6 +349,174 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="tab-pane fade" id="service" role="tabpanel" aria-labelledby="service-tab">
+							<div id="service-tab-carousel-fancy">
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag102.png')" />
+										<span>Россия</span>
+									</label>
+								</div>
+
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag97.png')" />
+										<span>Германия</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag45.png')" />
+										<span>Англия</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag68.png')" />
+										<span>Франция</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag82.png')" />
+										<span>Италия</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag114.png')" />
+										<span>Корея</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag22.png')" />
+										<span>США</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/flag118.png')" />
+										<span>Япония</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/countries/ussr.jpg')" />
+										<span>СССР</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="extra" role="tabpanel" aria-labelledby="brand-tab">
+							<div id="extra-tab-carousel-fancy">
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/audi-icon.png')" />
+										<span>Audi</span>
+									</label>
+								</div>
+
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/bmw-icon.png')" />
+										<span>BMW</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/cadillac-icon.png')" />
+										<span>Cadilac</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/chevrolet-icon.png')" />
+										<span>Chevrolet</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/chrysler-icon.png')" />
+										<span>Chrysler</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/ford.png')" />
+										<span>Ford</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/hyundai.png')" />
+										<span>Hyundai</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/jaguar.png')" />
+										<span>Jaguar</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/mercedes.png')" />
+										<span>Mercedes</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/nissan.png')" />
+										<span>Nissan</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/opel.png')" />
+										<span>Opel</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/porsche.png')" />
+										<span>Porsche</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/subaru.png')" />
+										<span>Subaru</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/suzuki.png')" />
+										<span>Suzuku</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/toyota.png')" />
+										<span>Toyota</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/volkswagen.png')" />
+										<span>Volkswagen</span>
+									</label>
+								</div>
+								<div class="carousel__slide">
+									<label class="checkbox-style">
+										<input type="checkbox" style="background-image: url('/assets/images/tab-content/brands/volvo.png')" />
+										<span>Volvo</span>
+									</label>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -379,74 +524,148 @@
 
 		<!-- Cars block section -->
 		<section class="main-cars-block-section">
-			<div class="container-fluid">
+			<div class="container-fluid pt-5">
 				<div class="row">
 					<div class="category-block-title">
-						<h2 class="text-gradient category-titile">Премиум автомобили</h2>
+						<h2 class="h2 text-gradient category-titile">Премиум автомобили</h2>
 						<a class="category-titile-url text-gradient" href="#">посмотреть все</a>
 					</div>
 
 					<div id="carousel-premium-cars" class="position-relative">
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "chevrolet_cabriolet.jpg", "carName": "Corvette C1 Retro", "carPrice": "от 50 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-multiply-photo-carousel.html', {"path": ".", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})</div>
-						<div class="carousel__slide">@@include('./components/_car-card-multiply-photo-carousel.html', {"path": ".", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})</div>
-						<div class="carousel__slide">@@include('./components/_car-card-multiply-photo-carousel.html', {"path": ".", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "toyota-supra-ft1.jpg", "carName": "Toyota Supra FT1", "carPrice": "от 4 900 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "akura-nsx.jpg", "carName": "Akura NSX", "carPrice": "от 20 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "toyota-supra-ft1.jpg", "carName": "Toyota Supra FT1", "carPrice": "от 4 900 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20 000 руб/час" })</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "chevrolet_cabriolet.jpg", "carName": "Corvette C1 Retro", "carPrice": "от 50 000
+							руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-multiply-photo-carousel.html', {"path": ".", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-multiply-photo-carousel.html', {"path": ".", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-multiply-photo-carousel.html', {"path": ".", "carName": "BMW 530d M-SPORT", "carPrice": "от 25 600 руб/час"})
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "toyota-supra-ft1.jpg", "carName": "Toyota Supra FT1", "carPrice": "от 4 900
+							руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "akura-nsx.jpg", "carName": "Akura NSX", "carPrice": "от 20 000 руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "toyota-supra-ft1.jpg", "carName": "Toyota Supra FT1", "carPrice": "от 4 900
+							руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20
+							000 руб/час" })
+						</div>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="category-block-title">
-						<h2 class="text-gradient category-titile">Ретро кабриолеты</h2>
+						<h2 class="h2 text-gradient category-titile">Ретро кабриолеты</h2>
 						<a class="category-titile-url text-gradient" href="#">посмотреть все</a>
 					</div>
 
 					<div id="carousel-cabriolet-cars" class="position-relative">
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "chevrolet_cabriolet.jpg", "carName": "Corvette C1 Retro", "carPrice": "от 50 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "convertible_1958.jpg", "carName": "Dodge Coronet Super D-500 Convertible 1958", "carPrice": "от 4 200 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20 000 руб/час" })</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "chevrolet_cabriolet.jpg", "carName": "Corvette C1 Retro", "carPrice": "от 50 000
+							руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "convertible_1958.jpg", "carName": "Dodge Coronet Super D-500 Convertible 1958",
+							"carPrice": "от 4 200 руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20
+							000 руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20
+							000 руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20
+							000 руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20
+							000 руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "cadillac_1959.jpg", "carName": "Cadillac 1959 Convertible", "carPrice": "от 20
+							000 руб/час" })
+						</div>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="category-block-title">
-						<h2 class="text-gradient category-titile">Спорткары</h2>
+						<h2 class="h2 text-gradient category-titile">Спорткары</h2>
 						<a class="category-titile-url text-gradient" href="#">посмотреть все</a>
 					</div>
 
 					<div id="carousel-sport-cars" class="position-relative">
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "akura-nsx.jpg", "carName": "Akura NSX", "carPrice": "от 20 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "toyota-supra-ft1.jpg", "carName": "Toyota Supra FT1", "carPrice": "от 4 900 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "mclaren-675lt.jpg", "carName": "McLaren 675LT", "carPrice": "от 20 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "akura-nsx.jpg", "carName": "Akura NSX", "carPrice": "от 20 000 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "toyota-supra-ft1.jpg", "carName": "Toyota Supra FT1", "carPrice": "от 4 900 руб/час" })</div>
-						<div class="carousel__slide">@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "mclaren-675lt.jpg", "carName": "McLaren 675LT", "carPrice": "от 20 000 руб/час" })</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "akura-nsx.jpg", "carName": "Akura NSX", "carPrice": "от 20 000 руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "toyota-supra-ft1.jpg", "carName": "Toyota Supra FT1", "carPrice": "от 4 900
+							руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "mclaren-675lt.jpg", "carName": "McLaren 675LT", "carPrice": "от 20 000 руб/час"
+							})
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "akura-nsx.jpg", "carName": "Akura NSX", "carPrice": "от 20 000 руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "toyota-supra-ft1.jpg", "carName": "Toyota Supra FT1", "carPrice": "от 4 900
+							руб/час" })
+						</div>
+						<div class="carousel__slide">
+							@@include('./components/_car-card-single-photo-carousel.html', { "path": ".", "imageCar": "mclaren-675lt.jpg", "carName": "McLaren 675LT", "carPrice": "от 20 000 руб/час"
+							})
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- About section -->
-		<section class="main-about-us-section mt-4">
+		<section class="main-about-us-section mt-0 mt-lg-4">
 			<div class="container">
 				<div class="row justify-content-between align-items-center">
-					<div class="col-12 col-lg-7">
-						<h1 class="main-header font-weight-extreme mb-2 text-gradient">О нас</h1>
-						<p class="lead">Мы подберем для вас лучший ресторан столицы, отыщем открытую площадку за городом или придумаем неординарный отдых в экстремальных условиях. Мы делаем невозможное – воплощаем в жизнь любой каприз, и при этом он всегда оказывается лучше, чем вы об этом мечтали. Мы сотрудничаем с лучшими клубами, артистами, ди-джеями, звездами эстрады. Только скажите – и ваш праздник будет организован по высшему разряду!</p>
-						<p class="lead">Проект Sanaev Moscow известен в Москве среди простых людей и представителей элиты. Этот сервис способен быть полезным в любых жизненных ситуациях.</p>
-						<p class="lead">Первый наш заказ был выполнен в 2009 году. С тех пор наш бизнес идет в гору. В центре внимания – организация феерических праздников в Москве и Подмосковье. Мы проводим свадьбы, корпоративы, дни рождения, выпускные и другие торжества.</p>
-						<p class="lead">Готовим невероятные свидания для влюбленных людей и сказочные выступления аниматоров для детей. Встреча с нашими артистами – это настоящий глоток воздуха в шумном мегаполисе. Если вы мечтаете об организации особого праздника, о котором будут с восхищением вспоминать ваши гости, милости просим.</p>
-						<!-- <a class="btn btn-tertiary" href="#">Find Our Works <span class="fas fa-angle-right ms-2"></span></a> -->
-					</div>
-					<div class="col-12 col-md-5 d-none d-lg-block text-center mt-n3">
-						<img src="assets/images/sanaev-ilya.jpg" alt="" />
+					<div class="clearfix">
+						<div class="col-12 order-1">
+							<h2 class="h2 main-header mb-2 text-gradient">О нас</h2>
+						</div>
+
+						<div class="float-none float-sm-end col-12 col-sm-6 col-lg-4 order-2 order-lg-3 ps-sm-3 pb-sm-1 mt-0 mt-sm-1 text-center">
+							<img src="assets/images/sanaev-ilya.jpg" alt="" />
+						</div>
+
+						<div class="col col-lg-12 order-3 order-lg-2 content-block-rollup">
+							<p>
+								Мы подберем для вас лучший ресторан столицы, отыщем открытую площадку за городом или придумаем неординарный отдых в экстремальных условиях. Мы делаем невозможное –
+								воплощаем в жизнь любой каприз, и при этом он всегда оказывается лучше, чем вы об этом мечтали. Мы сотрудничаем с лучшими клубами, артистами, ди-джеями, звездами
+								эстрады. Только скажите – и ваш праздник будет организован по высшему разряду!
+							</p>
+							<p>Проект Sanaev Moscow известен в Москве среди простых людей и представителей элиты. Этот сервис способен быть полезным в любых жизненных ситуациях.</p>
+							<p>
+								Первый наш заказ был выполнен в 2009 году. С тех пор наш бизнес идет в гору. В центре внимания – организация феерических праздников в Москве и Подмосковье. Мы проводим
+								свадьбы, корпоративы, дни рождения, выпускные и другие торжества.
+							</p>
+							<p>
+								Готовим невероятные свидания для влюбленных людей и сказочные выступления аниматоров для детей. Встреча с нашими артистами – это настоящий глоток воздуха в шумном
+								мегаполисе. Если вы мечтаете об организации особого праздника, о котором будут с восхищением вспоминать ваши гости, милости просим.
+							</p>
+						</div>
+
+						<button class="order-4 content-block-rollup-button">Развернуть описание</button>
 					</div>
 				</div>
 			</div>
@@ -456,28 +675,45 @@
 		<section class="main-about-us-section-second pt-4">
 			<div class="container">
 				<div class="row row-grid align-items-center">
-					<div class="col-12 col-lg-12">
-						<h2 class="display-3 position-relative text-gradient">Прокат автомобилей в Москве</h2>
-
-						<p class="lead text-justify">Современный человек не может обходиться без машины. Тем более появляться на людях в особые моменты своей жизни на среднестатистическом авто. В компании Sanaev Moscow вы можете оформить прокат автомобилей в Москве на несколько часов или даже дней.</p>
-						<p class="lead text-justify">Мы располагаем обширным автопарком, где представлены машины в стиле LUXURY, спорт-кары и кабриолеты, словно сошедшие со страниц популярного глянца. Именно на таких авто всегда катались мировые звезды шоу-бизнеса, популярные политики и видные деятели.</p>
-						<p class="lead text-justify">Сегодня роскошь доступна для наших клиентов. В каталоге представлены премиум седаны, ретро, кабриолеты, спорткары, внедорожники, лимузины, минивэны и микроавтобусы. Есть предложения на любой вкус и кошелек. Доступна аренда авто в Москве с водителем и выезд без шофера.</p>
-						<p class="lead text-justify">Свяжитесь с нами или приезжайте лично, чтобы выбрать автомобиль своей мечты в прокат. Предлагаем проведение свадеб, сопровождение бизнесменов на встречи, обслуживание массовых мероприятий с развозом приглашенных гостей. У нас работают профессионалы!</p>
+					<div class="col-12 col-lg-12 mb-4">
+						<h2 class="h2 position-relative text-gradient">Прокат автомобилей в Москве</h2>
+						<div class="content-block-rollup">
+							<p>
+								Современный человек не может обходиться без машины. Тем более появляться на людях в особые моменты своей жизни на среднестатистическом авто. В компании Sanaev Moscow вы
+								можете оформить прокат автомобилей в Москве на несколько часов или даже дней.
+							</p>
+							<p>
+								Мы располагаем обширным автопарком, где представлены машины в стиле LUXURY, спорт-кары и кабриолеты, словно сошедшие со страниц популярного глянца. Именно на таких авто
+								всегда катались мировые звезды шоу-бизнеса, популярные политики и видные деятели.
+							</p>
+							<p>
+								Сегодня роскошь доступна для наших клиентов. В каталоге представлены премиум седаны, ретро, кабриолеты, спорткары, внедорожники, лимузины, минивэны и микроавтобусы.
+								Есть предложения на любой вкус и кошелек. Доступна аренда авто в Москве с водителем и выезд без шофера.
+							</p>
+							<p>
+								Свяжитесь с нами или приезжайте лично, чтобы выбрать автомобиль своей мечты в прокат. Предлагаем проведение свадеб, сопровождение бизнесменов на встречи, обслуживание
+								массовых мероприятий с развозом приглашенных гостей. У нас работают профессионалы!
+							</p>
+						</div>
+						<button class="content-block-rollup-button">Развернуть описание</button>
 					</div>
 				</div>
 			</div>
-			<!-- <img class="rellax2" src="/assets/images/decoration/Concept_05-04.png" alt="" /> -->
 		</section>
 
+		<!-- Service section -->
 		<section class="main-services-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12 mb-5">
+					<div class="col-lg-12 mb-0 mb-sm-4">
 						<div class="card bg-white border-gray-300 flex-lg-row align-items-center g-0">
 							<a href="./blog-post.html" class="col-12 col-lg-6"><img src="assets/images/friends-in-cabriolet.jpg" alt="themesberg office" class="card-img-top" /></a>
-							<div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-0 p-lg-3 p-xl-5">
-								<a href="./blog-post.html"><h2>Кабриолеты</h2></a>
-								<p class="">Для свадебной церемонии или другого не менее памятного события прекрасно подойдет услуга проката роскошного кабриолета в Москве, которая подарит своему владельцу возможность прокатиться на великолепном автомобиле с открытым верхом. Фотосессия в кабриолете уж точно станет запоминающейся!</p>
+							<div class="card-body d-flex flex-column justify-content-between col-auto p-0 p-lg-3 p-xl-5">
+								<a href="./blog-post.html"><h2 class="h3 mt-2 mt-lg-0">Кабриолеты</h2></a>
+								<p class="">
+									Для свадебной церемонии или другого не менее памятного события прекрасно подойдет услуга проката роскошного кабриолета в Москве, которая подарит своему владельцу
+									возможность прокатиться на великолепном автомобиле с открытым верхом. Фотосессия в кабриолете уж точно станет запоминающейся!
+								</p>
 							</div>
 						</div>
 					</div>
@@ -485,11 +721,14 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="card bg-white border-gray-300 flex-lg-row align-items-center g-0">
-							<div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-0 p-lg-3 p-xl-5">
-								<a href="./blog-post.html"><h2>Спорткары</h2></a>
-								<p class="">Для любителей драйва, быстрой езды, новейших технических разработок в купе с комфортом прекрасно подойдет услуга аренды спорткаров в Москве. Стильные машины, под капотом которых сотни лошадей, всегда готовы отвезти клиента по нужному адресу с ветерком!</p>
+							<div class="card-body d-flex flex-column justify-content-between order-2 order-lg-1 col-auto p-0 p-lg-3 p-xl-5">
+								<a href="./blog-post.html"><h2 class="h3 mt-2 mt-lg-0">Спорткары</h2></a>
+								<p class="">
+									Для любителей драйва, быстрой езды, новейших технических разработок в купе с комфортом прекрасно подойдет услуга аренды спорткаров в Москве. Стильные машины, под
+									капотом которых сотни лошадей, всегда готовы отвезти клиента по нужному адресу с ветерком!
+								</p>
 							</div>
-							<a href="./blog-post.html" class="col-12 col-lg-6"><img src="assets/images/sports-car-on-a-city.jpg" alt="themesberg office" class="card-img-top" /></a>
+							<a href="./blog-post.html" class="col-12 col-lg-6 order-1 order-lg-2"><img src="assets/images/sports-car-on-a-city.jpg" alt="themesberg office" class="card-img-top" /></a>
 						</div>
 					</div>
 				</div>

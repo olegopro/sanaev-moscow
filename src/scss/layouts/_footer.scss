@@ -20,6 +20,10 @@ footer {
 				left: 0;
 				right: 0;
 				margin: 0 auto;
+
+				@media (max-width: 575px) {
+					top: 56px;
+				}
 			}
 
 			i {
@@ -29,6 +33,10 @@ footer {
 				grid-area: imag;
 				padding-right: 70px;
 				padding-top: 6px;
+
+				@media (max-width: 575px) {
+					width: 70%;
+				}
 			}
 
 			.phone-area-footer {
@@ -78,12 +86,42 @@ footer {
 			grid-template-areas:
 				'imag teel mail addr'
 				'soci time navi navi';
+
+			@media (max-width: 575px) {
+				grid-template-areas:
+					'imag'
+					'navi'
+					'teel'
+					'mail'
+					'time'
+					'addr'
+					'soci';
+			}
 		}
 
 		.footer-footer-line {
 			box-sizing: border-box;
 			margin-top: 30px;
 			border-top: 1px solid #acacad;
+			color: #979797;
+
+			@media (max-width: 575px) {
+				display: flex;
+				flex-direction: column;
+				font-size: 14px;
+
+				line-height: 120%;
+			}
+
+			a {
+				color: inherit;
+			}
+
+			.col:first-child {
+				@media (max-width: 575px) {
+					margin-bottom: 16px;
+				}
+			}
 		}
 	}
 }

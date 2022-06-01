@@ -2,6 +2,8 @@
 header
 	nav
 		transition: all 0.3s
+		border-bottom: 1px solid rgba(0, 0, 0, 0.07)
+		box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.03)
 
 		&.navbar-main
 			position: fixed
@@ -9,76 +11,105 @@ header
 			padding-bottom: 0.3rem
 			background: white
 
-			>a
-				img
-					height: 38px
+			.container-fluid
+				a
+					font-weight: bold
+					text-transform: uppercase
 
-			.navbar-collapse
-				ul.navbar-nav
-					li
-						a
-							color: black
-							font-weight: bold
-							text-transform: uppercase
+				#navbar_global.navbar-collapse
+					// background: grey
+					border-top-left-radius: 0
+					border-top-right-radius: 0
+					margin-top: -5px
+					padding-top: 10px
+					padding-bottom: 0
+
+					.navbar-collapse-header
+						ul.lang
+
+							li
+
+								&:first-child
+									margin-right: 8px
+								a
+									font-size: 16px
+
+								.lang-active
+									color: #8C93A9
+						.collapse-close
+							a
+								padding: 12px
+								font-size: 20px
+
+					> ul.navbar-nav
+						align-items: flex-end
+						> li.nav-item
+							width: 100%
+							> a.nav-link
+								height: 50px
+								justify-content: flex-end
+								padding-right: 14px
+								font-size: 16px
+								border-bottom: 1px solid #E5E7EB
+
+						li.soc-icons-block-mobile
+							padding-top: 16px
+							padding-bottom: 16px
+							ul
+								display: flex
+
+								li a img
+									width: 36px
+
+					form
+						position: relative
+						width: auto
+						input
+							margin: 0
+							background-color: white
+							border: none
+							border-radius: 0
+							border: 0.0625rem solid #d1d5db7b
+							border-radius: 8px
+
+							&:focus
+								box-shadow: none
+								border-color: none
+								border-bottom: 0.0625rem solid #d1d5db
+
+						button
+							position: absolute
+							top: 2px
+							right: 5px
+							border: none
+							color: #8C93A9
 							&:hover
-								color: black
-			a.btn-tel-header
-				color: black
+								background-color: transparent
 
-			.fab
-				// font-size: 24px
-				padding-right: 0
+							&:focus
+								box-shadow: none
 
-			.whatsapp-btn
-				color: #43d854
-				font-size: 24px
-				transition: all .2s
-				&::before
-					transition: all .2s
-					content: ''
-					width: 40px
-					height: 40px
-					border: 2px solid #43d854
-					border-radius: 50%
-					position: absolute
+					ul.lang
 
-					top: 50%
-					left: 50%
-					transform: translateX(-50%) translateY(-50%)
+						li
+							&:first-child
+								margin-right: -18px
 
-				&:focus
-					box-shadow: none
-				&:hover
-					color: #4ef862
-					&::before
-						border: 2px solid #4ef862
+							.lang-active
+								color: #8C93A9
 
-			.telegram-btn
-				color: #0088cc
-				font-size: 24px
-				transition: all .2s
-				&::before
-					transition: all .2s
-					content: ''
-					width: 40px
-					height: 40px
-					border: 2px solid #0088cc
-					border-radius: 50%
-					position: absolute
+				.soc-icons-block
+					margin-left: 10px
+					a
+						padding: 0
+						&:first-child
+							margin-right: 8px
+						&:focus
+							box-shadow: none
 
-					top: 50%
-					left: 50%
-					transform: translateX(-50%) translateY(-50%)
-
-				&:focus
-					box-shadow: none
-				&:hover
-					color: #019fee
-					&::before
-						border: 2px solid #019fee
-
-.scrollHeader
-	background: white
-
-.textLinkBlack
-	color: black
+						@media (max-width: 991px)
+							width: 32px
+				.navbar-toggler
+					&:focus
+						box-shadow: none
+					.navbar-toggler-icon

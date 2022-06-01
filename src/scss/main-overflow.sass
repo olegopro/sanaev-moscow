@@ -27,17 +27,34 @@
 @import helpers/borders
 
 body
-	overflow-x: hidden
+	// overflow-x: hidden
+
+	&::before
+		position: absolute
+		content: ""
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: black
+		z-index: -100
+		// transition: opacity 0.5s linear
+		opacity: 0
+
+	&.body-background-enable
+		&::before
+			z-index: 2
+			opacity: 0.6
 
 //FancyBox Index-page Carousel
-#carousel-premium-cars, #carousel-cabriolet-cars, #carousel-sport-cars, #color-tab-carousel
+#carousel-premium-cars, #carousel-cabriolet-cars, #carousel-sport-cars
 	padding-left: 0
 	padding-right: 0
 	.carousel__viewport
 		width: 100%
 		max-width: none
 	.carousel__slide
-		width: calc(100% / 3)
+		width: calc(100%)
 
 		// padding-left: 2px
 		// padding-right: 0
@@ -53,23 +70,30 @@ body
 				top: 45%
 				left: -50px
 
-//Simpe Parallax
-.parallax-simple
-	height: 40vh
-
 // jQuery Brazzers Carousel
 .tmb-wrap-table div.active
 	border-color: #530666
 
-.rounded-default
-	border-radius: 3px !important
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button
-  -webkit-appearance: none
-  margin: 0
+	-webkit-appearance: none
+	margin: 0
 
 /* Firefox */
 input[type=number]
   -moz-appearance: textfield
+
+.h2
+	@media (max-width: 575px)
+		font-size: 24px !important
+
+.h3
+	@media (max-width: 575px)
+		font-size: 20px !important
+
+// rollup blocks for index page (height, shadow)
+.open-block
+	height: auto !important
+	&::before
+		box-shadow: none !important

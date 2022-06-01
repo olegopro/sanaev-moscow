@@ -28,11 +28,11 @@ d.addEventListener('DOMContentLoaded', function (event) {
 
 	if (document.getElementById('navbar_global')) {
 		document.getElementById('navbar_global').addEventListener('shown.bs.collapse', function () {
-			document.getElementsByTagName('body')[0].classList.add('overflow-hidden')
+			document.getElementsByTagName('body')[0].classList.add('overflow-hidden', 'body-background')
 		})
 
 		document.getElementById('navbar_global').addEventListener('hidden.bs.collapse', function () {
-			document.getElementsByTagName('body')[0].classList.remove('overflow-hidden')
+			document.getElementsByTagName('body')[0].classList.remove('overflow-hidden', 'body-background')
 		})
 	}
 
