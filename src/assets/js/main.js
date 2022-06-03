@@ -1,4 +1,5 @@
 // @ts-nocheck
+
 ;(function ($) {
 	;('use strict')
 
@@ -64,12 +65,12 @@
 				let textArr = []
 
 				selectHead.on('click', function () {
+					const windowWidth = window.innerWidth
+
 					if (!$(this).hasClass('on')) {
 						$(this).addClass('on')
 
-						selectList.fadeIn(duration)
-
-						console.log('selectList', selectList)
+						windowWidth > 575 ? selectList.fadeIn(duration) : selectList.slideDown(duration)
 
 						selectItem.on('click', function () {
 							let chooseItem = $(this).data('value')
@@ -113,78 +114,97 @@
 						})
 					} else {
 						$(this).removeClass('on')
-						selectList.fadeOut(duration / 1.6)
+
+						windowWidth > 575 ? selectList.fadeOut(duration / 1.6) : selectList.slideUp(duration)
 					}
 				})
 			})
 
 			$('#showCarsPlaces').on('click', function (event) {
 				event.preventDefault()
+				const windowWidth = window.innerWidth
+				const carsPlacesInputGroup = $('#carsPlaces .input-group')
 
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on')
-					$('#carsPlaces .input-group').fadeIn()
+
+					windowWidth > 575 ? carsPlacesInputGroup.fadeIn() : carsPlacesInputGroup.slideDown()
 				} else {
 					$(this).removeClass('on')
-					$('#carsPlaces .input-group').fadeOut()
+					windowWidth > 575 ? carsPlacesInputGroup.fadeOut() : carsPlacesInputGroup.slideUp()
 				}
+
+				carsPlacesInputGroup.toggleClass('d-block')
 			})
 
 			$('#showCarsYears').on('click', function (event) {
 				event.preventDefault()
+				const windowWidth = window.innerWidth
+				const carsYearsInputGroup = $('#carsYears .input-group')
 
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on')
-					$('#carsYears .input-group').fadeIn()
+
+					windowWidth > 575 ? carsYearsInputGroup.fadeIn() : carsYearsInputGroup.slideDown()
 				} else {
 					$(this).removeClass('on')
-					$('#carsYears .input-group').fadeOut()
+					windowWidth > 575 ? carsYearsInputGroup.fadeOut() : carsYearsInputGroup.slideUp()
 				}
 
-				$('#carsYears .input-group').toggleClass('d-block')
+				carsYearsInputGroup.toggleClass('d-block')
 			})
 
 			$('#showCarsPrice').on('click', function (event) {
 				event.preventDefault()
+				const windowWidth = window.innerWidth
+				const carsPriceInputGroup = $('#carsPrice .input-group')
 
 				if (!$(this).hasClass('on')) {
-					$('#carsPrice .input-group').fadeIn()
 					$(this).addClass('on')
+
+					windowWidth > 575 ? carsPriceInputGroup.fadeIn() : carsPriceInputGroup.slideDown()
 				} else {
 					$(this).removeClass('on')
-					$('#carsPrice .input-group').fadeOut()
+					windowWidth > 575 ? carsPriceInputGroup.fadeOut() : carsPriceInputGroup.slideUp()
 				}
 
-				$('#carsPrice .input-group').toggleClass('d-block')
+				carsPriceInputGroup.toggleClass('d-block')
 			})
 		}
+
+		/* Header */
+		$(window).on('scroll', function () {
+			if ($(this).scrollTop() > 10) {
+				$('nav#navbar-main').css({
+					borderBottom: '1px solid rgba(0, 0, 0, 0.07)',
+					boxShadow: '0px 4px 8px 0px rgba(0, 0, 0, 0.03)'
+				})
+			} else {
+				$('nav#navbar-main').css({
+					borderBottom: '1px solid rgba(0, 0, 0, 0)',
+					boxShadow: ''
+				})
+			}
+		})
 
 		/* Mobile menu */
 		if (document.getElementById('navbar_global')) {
 			document.getElementById('navbar_global').addEventListener('show.bs.collapse', function (e) {
-				// if ($(this).is(e.target)) {
-				// 	console.log(e.target)
-				// }
-
 				$('body').addClass('position-relative overflow-hidden body-background-enable')
 				$('.navbar-brand-logo').hide()
-
-				// $(this).after('<div></div>').css({
-				// 	width: '100%',
-				// 	height: ' 300px',
-				// 	opacity: ' 0',
-				// 	background: 'transparent',
-				// 	position: 'absolute',
-				// 	top: '300px'
-				// })
-
-				// $('body').attr('data-bs-toggle', 'collapse')
-				// $('body').attr('data-bs-target', '#navbar_global')
 			})
 
 			document.getElementById('navbar_global').addEventListener('hide.bs.collapse', function () {
 				$('body').removeClass('position-relative overflow-hidden body-background-enable')
 				$('.navbar-brand-logo').show()
+			})
+
+			/* Close mobile menu on click to body */
+			document.addEventListener('click', function (event) {
+				// if the clicked element isn't child of the navbar, you must close it if is open
+				if (!event.target.closest('#navbar-main') && document.getElementById('navbar_global').classList.contains('show')) {
+					document.getElementById('hamburger-menu-button').click()
+				}
 			})
 		}
 
@@ -461,7 +481,17 @@
 		if (galleryVideoCardCarousel) {
 			// Initialise Carousel
 			const initGalleryVideoCardCarouse = new Carousel(galleryVideoCardCarousel, {
-				Dots: false
+				Dots: false,
+
+				on: {
+					change: carousel => {
+						let iFrame = carousel.pages[carousel.prevPageIndex]
+
+						// if (iFrame?.slides[0])
+						// 	if (iFrame?.slides[0]?.$el.querySelector('iframe'))
+						iFrame?.slides[0].$el?.querySelector('iframe')?.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+					}
+				}
 			})
 
 			// Thumbnails
@@ -534,6 +564,41 @@
 			Fancybox.bind('[data-fancybox="gallery"]', {
 				Image: {
 					zoom: false
+				}
+			})
+		}
+
+		/* Single gallery page slider */
+		const singleGalleryCarousel = document.querySelector('#singleGalleryCarousel')
+		if (singleGalleryCarousel) {
+			// Initialise Carousel
+			const initSingleGalleryCarousel = new Carousel(singleGalleryCarousel, {
+				Dots: false
+			})
+
+			// Thumbnails
+			const singleGalleryThumbCarousel = new Carousel(document.querySelector('#singleGalleryThumbCarousel'), {
+				Sync: {
+					target: initSingleGalleryCarousel,
+					friction: 0
+				},
+				Dots: false,
+				Navigation: false,
+				center: true,
+				slidesPerPage: 1,
+				infinite: false
+			})
+
+			// Customize Fancybox
+			Fancybox.bind('[data-fancybox="gallery"]', {
+				Carousel: {
+					on: {
+						change: that => {
+							initSingleGalleryCarousel.slideTo(initSingleGalleryCarousel.findPageForSlide(that.page), {
+								friction: 0
+							})
+						}
+					}
 				}
 			})
 		}

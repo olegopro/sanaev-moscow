@@ -1,9 +1,9 @@
 
 header
 	nav
-		transition: all 0.3s
-		border-bottom: 1px solid rgba(0, 0, 0, 0.07)
-		box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.03)
+		// transition: all 0.3s
+		border-bottom: 1px solid rgba(0, 0, 0, 0)
+		// box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.03)
 
 		&.navbar-main
 			position: fixed
@@ -11,18 +11,17 @@ header
 			padding-bottom: 0.3rem
 			background: white
 
-			.container-fluid
+			div[class^="container"]
 				a
 					font-weight: bold
 					text-transform: uppercase
 
 				#navbar_global.navbar-collapse
-					// background: grey
 					border-top-left-radius: 0
 					border-top-right-radius: 0
-					margin-top: -5px
-					padding-top: 10px
-					padding-bottom: 0
+					// margin-top: -5px
+					// padding-top: 10px
+					// padding-bottom: 0
 
 					.navbar-collapse-header
 						ul.lang
@@ -41,29 +40,32 @@ header
 								padding: 12px
 								font-size: 20px
 
-					> ul.navbar-nav
-						align-items: flex-end
-						> li.nav-item
-							width: 100%
-							> a.nav-link
-								height: 50px
-								justify-content: flex-end
-								padding-right: 14px
-								font-size: 16px
-								border-bottom: 1px solid #E5E7EB
+					@media (max-width: 991px)
+						> ul.navbar-nav
+							align-items: flex-end
+							> li.nav-item
+								width: 100%
+								> a.nav-link
+									height: 50px
+									justify-content: flex-end
+									padding-right: 14px
+									font-size: 16px
+									border-bottom: 1px solid #E5E7EB
 
-						li.soc-icons-block-mobile
-							padding-top: 16px
-							padding-bottom: 16px
-							ul
-								display: flex
+							li.soc-icons-block-mobile
+								padding-top: 16px
+								padding-bottom: 16px
+								ul
+									display: flex
 
-								li a img
-									width: 36px
+									li a img
+										width: 36px
 
 					form
 						position: relative
-						width: auto
+						// width: auto
+						transition: all .3s
+
 						input
 							margin: 0
 							background-color: white
@@ -73,6 +75,7 @@ header
 							border-radius: 8px
 
 							&:focus
+
 								box-shadow: none
 								border-color: none
 								border-bottom: 0.0625rem solid #d1d5db
@@ -99,9 +102,17 @@ header
 								color: #8C93A9
 
 				.soc-icons-block
+					transition: none
 					margin-left: 10px
+					display: flex
 					a
+
 						padding: 0
+						flex-shrink: 0
+
+						width: 40px
+						height: 40px
+
 						&:first-child
 							margin-right: 8px
 						&:focus
@@ -109,6 +120,15 @@ header
 
 						@media (max-width: 991px)
 							width: 32px
+
+						@media (max-width: 575px)
+							display: none
+
+						img
+							// max-width: none
+							width: auto
+							height: auto
+
 				.navbar-toggler
 					&:focus
 						box-shadow: none

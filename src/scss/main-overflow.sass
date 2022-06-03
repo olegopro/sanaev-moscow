@@ -43,32 +43,32 @@ body
 
 	&.body-background-enable
 		&::before
-			z-index: 2
+			z-index: 10
 			opacity: 0.6
 
-//FancyBox Index-page Carousel
-#carousel-premium-cars, #carousel-cabriolet-cars, #carousel-sport-cars
-	padding-left: 0
-	padding-right: 0
-	.carousel__viewport
-		width: 100%
-		max-width: none
-	.carousel__slide
-		width: calc(100%)
+// //FancyBox Index-page Carousel
+// #carousel-premium-cars, #carousel-cabriolet-cars, #carousel-sport-cars
+// 	padding-left: 0
+// 	padding-right: 0
+// 	.carousel__viewport
+// 		width: 100%
+// 		max-width: none
+// 	.carousel__slide
+// 		width: calc(100%)
 
-		// padding-left: 2px
-		// padding-right: 0
+// 		// padding-left: 2px
+// 		// padding-right: 0
 
-	.carousel__nav
-		button
-			background: white
-			box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
-			&.is-next
-				top: 45%
-				right: -50px
-			&.is-prev
-				top: 45%
-				left: -50px
+// 	.carousel__nav
+// 		button
+// 			background: white
+// 			box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
+// 			&.is-next
+// 				top: 45%
+// 				right: -50px
+// 			&.is-prev
+// 				top: 45%
+// 				left: -50px
 
 // jQuery Brazzers Carousel
 .tmb-wrap-table div.active
@@ -85,10 +85,22 @@ input[type=number]
   -moz-appearance: textfield
 
 .h2
+	font-size: 40px
+
+	@media (max-width: 1199px)
+		font-size: 36px
+
+	@media (max-width: 991px)
+		font-size: 32px
+
+	@media (max-width: 767px)
+		font-size: 28px
+
 	@media (max-width: 575px)
 		font-size: 24px !important
 
 .h3
+	font-size: 32px
 	@media (max-width: 575px)
 		font-size: 20px !important
 

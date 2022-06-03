@@ -12,11 +12,9 @@
 		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
 
 		<!-- Page title section -->
-		<section class="page-title-section">
-			<div class="parallax-simple">
-				<img class="section-bg-image" src="/assets/images/page-title-image.jpg" alt="" />
-			</div>
 
+		<!-- Page title section -->
+		<section class="page-title-section">
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -27,55 +25,71 @@
 								<li class="breadcrumb-item active" aria-current="page">Детский праздник на лимузине форд</li>
 							</ol>
 						</nav>
-
-						<h1 class="text-white">Детский праздник на лимузине форд</h1>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="single-gallery-block section">
+		<section class="single-gallery-block mt-2">
 			<div class="container">
 				<div class="row">
-					<div class="col text-center main-header">
-						<h1 class="mb-5 position-relative header-element text-gradient">Детский праздник на лимузине</h1>
+					<div class="col gallery-image-box">
+						<div id="singleGalleryCarousel" class="carousel">
+							<div
+								class="carousel__slide"
+								data-src="https://lipsum.app/id/1/1200x600"
+								data-fancybox="gallery"
+								data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit."
+							>
+								<img src="https://lipsum.app/id/1/1200x700" />
+							</div>
+							<div
+								class="carousel__slide"
+								data-src="https://lipsum.app/id/2/1200x700"
+								data-fancybox="gallery"
+								data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris"
+							>
+								<img src="https://lipsum.app/id/2/1200x700" />
+							</div>
+							<div class="carousel__slide" data-src="https://lipsum.app/id/3/1200x700" data-fancybox="gallery" data-caption="Hello 🖐">
+								<img src="https://lipsum.app/id/3/1200x700" />
+							</div>
+							<div class="carousel__slide" data-src="https://lipsum.app/id/4/1200x700" data-fancybox="gallery" data-caption="Another caption">
+								<img src="https://lipsum.app/id/4/1200x700" />
+							</div>
+							<div class="carousel__slide" data-src="https://lipsum.app/id/5/1200x700" data-fancybox="gallery">
+								<img data-lazy-src="https://lipsum.app/id/5/1200x700" />
+							</div>
+							<div class="carousel__slide" data-src="https://lipsum.app/id/6/1200x700" data-fancybox="gallery">
+								<img src="https://lipsum.app/id/6/1200x700" />
+							</div>
+							<div class="carousel__slide" data-src="https://lipsum.app/id/7/1200x700" data-fancybox="gallery">
+								<img src="https://lipsum.app/id/7/1200x700" />
+							</div>
+						</div>
 
-						<p class="lead mb-5">В этом разделе собраны фотографии катания на лимузинах по Москве, сделанные нашими фотографами и предоставленные нашими клиентами, которые доверили проекту Sanaew Moscow проведение своего торжественного мероприятия.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="gallery-block">
-							<a data-fancybox="gallery" href="https://lipsum.app/id/60/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/60/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/61/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/61/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/62/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/62/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/63/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/63/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/64/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/64/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/65/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/65/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/66/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/66/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/67/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/67/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/68/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/68/500x400" />
-							</a>
-							<a data-fancybox="gallery" href="https://lipsum.app/id/69/1600x1200">
-								<img class="rounded" src="https://lipsum.app/id/69/500x400" />
-							</a>
+						<div id="singleGalleryThumbCarousel" class="carousel">
+							<div class="carousel__slide">
+								<img class="panzoom__content" src="https://lipsum.app/id/1/320x160" />
+							</div>
+							<div class="carousel__slide">
+								<img class="panzoom__content" src="https://lipsum.app/id/2/320x160" />
+							</div>
+							<div class="carousel__slide">
+								<img class="panzoom__content" src="https://lipsum.app/id/3/320x160" />
+							</div>
+							<div class="carousel__slide">
+								<img class="panzoom__content" src="https://lipsum.app/id/4/320x160" />
+							</div>
+							<div class="carousel__slide">
+								<img class="panzoom__content" src="https://lipsum.app/id/5/320x160" />
+							</div>
+							<div class="carousel__slide">
+								<img class="panzoom__content" src="https://lipsum.app/id/6/320x160" />
+							</div>
+							<div class="carousel__slide">
+								<img class="panzoom__content" src="https://lipsum.app/id/7/320x160" />
+							</div>
 						</div>
 					</div>
 				</div>

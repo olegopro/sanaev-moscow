@@ -293,7 +293,6 @@ section.main-cars-block-section
 			#carousel-premium-cars,
 			#carousel-cabriolet-cars,
 			#carousel-sport-cars,
-
 				--carousel-button-bg: #fff
 
 				--carousel-button-width: 50px
@@ -382,6 +381,12 @@ section.main-cars-block-section
 					font-weight: normal
 					padding-right: 4px
 
+					@media  (min-width:575px) and (max-width: 1199px)
+						font-size: calc(0.4rem + 1.5vw)
+
+					@media (max-width: 575px)
+						font-size: 12px
+
 					&::after
 						content: ''
 						position: absolute
@@ -396,9 +401,6 @@ section.main-cars-block-section
 							transform: scale(0.65) translateY(-55%)
 							top: 30%
 							left: 100%
-
-					@media (max-width: 575px)
-						font-size: 12px
 
 			@import ../layouts/car-card-carousel
 

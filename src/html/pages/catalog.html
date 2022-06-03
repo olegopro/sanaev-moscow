@@ -12,7 +12,7 @@
 		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
 
 		<!-- Page title section -->
-		<section class="page-title-section mx-3">
+		<section class="page-title-section mx-0 mx-md-3">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col">
@@ -23,7 +23,7 @@
 							</ol>
 						</nav>
 
-						<h1 class="text-gradient">Каталог автомобилей</h1>
+						<h1 class="h2 text-gradient">Каталог автомобилей</h1>
 					</div>
 				</div>
 			</div>
@@ -31,7 +31,7 @@
 
 		<!-- Tab's section FancyApp -->
 		<section class="cars-block-types-catalog-section pb-3 mx-3">
-			<div class="container-fluid">
+			<div class="container-fluid px-0">
 				<div class="row">
 					<div id="cars-types-catalog">
 						<div class="carousel__slide">
@@ -125,7 +125,7 @@
 			</div>
 		</section>
 
-		<section class="filter-bar-catalog-section my-5 mt-2 mx-3">
+		<section class="filter-bar-catalog-section mt-2 mb-0 mb-md-5 mt-2 mx-0 mx-md-3">
 			<div class="container-fluid">
 				<div class="row">
 					<form class="selectors-panel" action="send.php" method="GET">
@@ -136,24 +136,28 @@
 								<option value="option 2">2</option>
 								<option value="option 3">3</option>
 							</select>
+
 							<select class="select" name="carBrand[]" multiple>
 								<option disabled>Марка</option>
 								<option value="Audi">Audi</option>
 								<option value="BMW">BMW</option>
 								<option value="Opel">Opel</option>
 							</select>
+
 							<select class="select">
 								<option disabled>Модель</option>
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>
 							</select>
+
 							<select class="select">
 								<option disabled>Цвет</option>
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>
 							</select>
+
 							<select class="select">
 								<option disabled>Страна</option>
 								<option>1</option>
@@ -214,7 +218,7 @@
 						</div>
 
 						<div class="filter-action-buttons">
-							<button type="submit">Отправить</button>
+							<button type="submit">Показать</button>
 							<a href="">Cбросить</a>
 						</div>
 					</form>
@@ -223,13 +227,16 @@
 		</section>
 
 		<!-- Cars block section -->
-		<section class="cars-block-catalog-section mx-3">
+		<section class="cars-block-catalog-section mx-0 mx-md-3">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col py-4 d-flex align-items-center">
+					<div class="col pt-3 pb-4 mb-4 d-flex align-items-start align-items-md-center">
 						<img class="title-stock" src="/assets/images/elements/percent.svg" alt="" />
-						<span class="title-stock">Акция:</span>
-						<p class="title-stock">2 часа катания по центру на кабриолете с водителем – от 7 500 руб.</p>
+
+						<p class="title-stock">
+							<span class="title-stock">Акция:</span>
+							2 часа катания по центру на кабриолете с водителем – от 7 500 руб.
+						</p>
 					</div>
 				</div>
 				<!-- prettier-ignore -->
@@ -303,34 +310,49 @@
 		</section>
 
 		<!-- Booking order -->
-		<section class="booking-order-section mx-3 mt-5">@@include('./components/_booking-order.html', { "path": "../..", "title": "Заказать автомобиль" })</section>
+		<section class="booking-order-section mx-0 mx-md-3 mt-3 mt-md-5">@@include('./components/_booking-order.html', { "path": "../..", "title": "Заказать автомобиль" })</section>
 
-		<section class="content-section mx-3 my-5">
+		<section class="content-section mx-0 mx-md-3 my-4 my-md-5">
 			<div class="container">
 				<div class="row">
 					<div class="main-content">
-						<p>Знаете ли вы, что прокат лимузина отлично подойдет для такого праздника как день рождения? Вы сможете весело прокатиться со своими друзьями по интересным и знаковым местам Москвы, сделать на память отличные фото. Мы позаботимся, чтобы ваш день рождения в лимузине прошел в легкой и непринужденной атмосфере праздника.</p>
-						<p>Также вас приглашают наши партнеры – ночные клубы, бары, рестораны. В ваш день рождения они подготовили для вас самые лояльные условия и скидки. Ведь заказ лимузина на день рождения в Sanaev Moscow - это индивидуальный подход и возможность отпраздновать день рождения наилучшим образом.</p>
-						<h3 class="h1 mt-5">Сценарий дня рождения в лимузине:</h3>
+						<p>
+							Знаете ли вы, что прокат лимузина отлично подойдет для такого праздника как день рождения? Вы сможете весело прокатиться со своими друзьями по интересным и знаковым местам
+							Москвы, сделать на память отличные фото. Мы позаботимся, чтобы ваш день рождения в лимузине прошел в легкой и непринужденной атмосфере праздника.
+						</p>
+						<p>
+							Также вас приглашают наши партнеры – ночные клубы, бары, рестораны. В ваш день рождения они подготовили для вас самые лояльные условия и скидки. Ведь заказ лимузина на день
+							рождения в Sanaev Moscow - это индивидуальный подход и возможность отпраздновать день рождения наилучшим образом.
+						</p>
+						<h3 class="h2 mt-0 mt-md-5">Сценарий дня рождения в лимузине:</h3>
 						<ol>
 							<li>Во время заказа услуги вы указываете место подачи автомобиля. Это будет место, с которого начнется ваш удивительный день рождения.</li>
-							<li>В самых красивый и топовых местах города мы делаем остановки, чтобы сделать красивые фотографии. Это могут быть снимки в лимузине, на фоне необычного природного ландшафта или здания с красивой архитектурой. Количество снимков не ограничено.</li>
+							<li>
+								В самых красивый и топовых местах города мы делаем остановки, чтобы сделать красивые фотографии. Это могут быть снимки в лимузине, на фоне необычного природного
+								ландшафта или здания с красивой архитектурой. Количество снимков не ограничено.
+							</li>
 							<li>В ходе поездки вы будете обеспечены хорошим настроением, веселым драйвом и различными напитками.</li>
-							<li>По окончании праздничной программы мы привезем вас в желаемое место. Это может быть ресторан, бар, клуб, караоке – все зависит от вашего выбора, с которым можем помочь заранее.</li>
+							<li>
+								По окончании праздничной программы мы привезем вас в желаемое место. Это может быть ресторан, бар, клуб, караоке – все зависит от вашего выбора, с которым можем помочь
+								заранее.
+							</li>
 						</ol>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="advantages-section mx-3 my-n3">@@include('./components/_advantages.html')</section>
+		<section class="advantages-section mx-0 mx-md-3 my-n3">@@include('./components/_advantages.html')</section>
 
-		<section class="content-section pt-0 mx-3 my-5">
+		<section class="content-section pt-0 mx-0 mx-md-3 my-4 my-md-5">
 			<div class="container">
 				<div class="row">
 					<div class="main-content">
-						<h3 class="h1">Почему стоит заказать лимузин именно у нас?</h3>
-						<p>Компания Sanaev Moscow – это безупречная репутация и большой опыт в организации праздничных мероприятий. Предлагаем недорого заказать лимузин на день рождения, чтобы весело отпраздновать праздник. Непринужденная атмосфера и веселое настроение вам гарантированы.</p>
+						<h3 class="h2">Почему стоит заказать лимузин именно у нас?</h3>
+						<p>
+							Компания Sanaev Moscow – это безупречная репутация и большой опыт в организации праздничных мероприятий. Предлагаем недорого заказать лимузин на день рождения, чтобы весело
+							отпраздновать праздник. Непринужденная атмосфера и веселое настроение вам гарантированы.
+						</p>
 					</div>
 				</div>
 			</div>

@@ -1,10 +1,36 @@
 section.advantages-section
 	.advantages-block
-		.card-body
-			background: #FFFFFF
-			border: 1px solid #530666
-			border-radius: 8px
-			p
-				color: #1C2540
-				font-size: 16px
-				font-weight: 400
+		.card
+			.card-body
+				background: #FFFFFF
+				border: 1px solid #530666
+				border-radius: 8px
+
+				@media (max-width: 575px)
+					padding: 0
+
+				.icon-box-title
+					@media (max-width: 767px)
+						font-size: 18px
+						font-weight: bold
+						margin-top: -2px
+
+				p.icon-box-text
+					color: #1C2540
+					font-size: 16px
+					font-weight: 400
+
+					@media (max-width: 767px)
+						margin-bottom: 0
+
+				.icon
+					@media (max-width: 767px)
+						float: left
+						margin-right: 10px
+
+					span
+
+						@media (max-width: 767px)
+							float: left
+							&::before
+								font-size: 44px

@@ -5,17 +5,28 @@
 
 			img
 
-				height: 235px
+				// height: 235px
 				width: 100%
-				object-fit: cover
-				object-position: center
+				aspect-ratio: 8 / 5
+				// object-fit: cover
+				// object-position: center
 				filter: drop-shadow(-4px 4px 6px rgba(28, 37, 64, 0.1))
 				border-radius: 8px
 
 		.card-body
 			padding-left: 0
-			padding-top: 10px
-			a
-				display: inline
-				+vertical-lines(1)
-				margin: 0
+			padding-right: 0
+			padding-top: 6px
+			.card-text
+				a
+					display: inline
+					+vertical-lines(1)
+					margin: 0
+					font-weight: bold
+					font-size: 24px
+
+					@media (max-width: 1199px)
+						font-size: 20px
+
+					@media (max-width: 992px)
+						font-size: 16px
