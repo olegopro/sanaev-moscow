@@ -3,15 +3,26 @@
 		border: none
 
 		&:hover
+
 			.card-images
-				filter: drop-shadow(-5px 8px 14px rgba(83, 6, 102, 0.22))
+				filter: drop-shadow(-5px 10px 15px rgba(83, 6, 102, 0.3))
+
+			.card-body
+				.card-text
+					color: #5e1e61
+					a
+						background: linear-gradient(90deg, #1C2540 0%, #7C2781 36.81%), #1C2540
+						background-clip: border-box
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
 
 		.card-images
-			margin-bottom: -10px
-			transition: all .3s
 
-			// &:hover
-			// 	filter: drop-shadow(-5px 8px 14px rgba(83, 6, 102, 0.22))
+			margin-bottom: -14px
+			transition: all .3s ease
+			picture
+				// transition: all .3s
+
 			.tmb-wrap
 				height: calc(100% - 10px)
 
@@ -26,6 +37,8 @@
 							border-bottom-right-radius: 8px
 
 			.image-wrap
+				border-radius: 8px
+				background: #4a324c
 				img
 					aspect-ratio: 8 / 5
 					object-fit: cover
@@ -42,30 +55,38 @@
 				font-size: 24px
 				font-weight: bold
 				margin-bottom: 0
-				padding-right: 48px
-				width: fit-content
-				max-width: 100%
-				line-height: 1
+				width: calc(100% - 48px)
+				line-height: 120%
+
+				overflow: hidden
+
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-line-clamp: 1
+				-webkit-box-orient: vertical
 
 				a
-					display: inline-block
+
 					font-size: 24px
 					font-weight: bold
-					white-space: nowrap
-					overflow: hidden
-					text-overflow: ellipsis
 					width: 100%
+
+					background: #0b0f18
+					background-clip: border-box
+					-webkit-background-clip: text
 
 					@media (max-width: 1199px)
 						font-size: 20px
 
-					@media (max-width: 992px)
-						font-size: 16px
+						@media (max-width: 992px)
+							font-size: 16px
 
 			small
 				font-weight: 400
 				font-size: 16px
 				color: #1C2540
+				user-select: none
+				cursor: default
 
 				@media (max-width: 767px)
 					font-size: 12px

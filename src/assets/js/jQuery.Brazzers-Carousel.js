@@ -32,7 +32,11 @@
 			.hover(function () {
 				var this_img = $(this).parent('.tmb-wrap-table').closest('.brazzers-daddy').find('img')
 				var all_thmbs = $(this).parent('.tmb-wrap-table').find('div')
-				this_img.hide().eq($(this).index()).css('display', 'block')
+				this_img.hide().eq($(this).index()).css({
+					display: 'block',
+					opacity: 1
+					// animation: 'fadeInFromNone .5s ease-in'
+				})
 				all_thmbs.removeClass('active')
 				$(this).addClass('active')
 			})
