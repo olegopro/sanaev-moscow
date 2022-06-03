@@ -246,7 +246,7 @@
 		if (carsTypesCatalog) {
 			new Carousel(carsTypesCatalog, {
 				Dots: false,
-				center: true,
+				center: false,
 				infinite: false,
 				slidesPerPage: 2,
 				dragFree: true,
