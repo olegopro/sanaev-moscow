@@ -3,10 +3,12 @@
 		<!-- prettier-ignore -->
 		<div class="card-images">
 			<!-- card-image -->
-			@@include('./components/car-card/_card-image-service.html', { 
+			<a href="@@path/html/pages/single-service.html">
+				@@include('./components/car-card/_card-image-service.html', { 
 				"imageService": "@@imageService", 
 				"path": "@@path" 
 			})	
+			</a>
 		</div>
 
 		<div class="card-body pt-0 pt-md-1 pb-0 pb-sm-2 pb-lg-3">

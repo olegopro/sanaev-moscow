@@ -1,7 +1,23 @@
 .service-card-single
 	.card
 		border: none
+
+		&:hover
+
+			.card-images
+				filter: drop-shadow(-5px 10px 15px rgba(83, 6, 102, 0.3))
+
+			.card-body
+				.card-text
+					color: #5e1e61
+					a
+						background: linear-gradient(90deg, #1C2540 0%, #7C2781 36.81%), #1C2540
+						background-clip: border-box
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+
 		.card-images
+			transition: all .3s ease
 			img
 				filter: drop-shadow(-4px 4px 6px rgba(28, 37, 64, 0.1))
 				border-radius: 8px
@@ -21,6 +37,15 @@
 					display: -webkit-box
 					-webkit-line-clamp: 1
 					-webkit-box-orient: vertical
+
+					background: #0b0f18
+					background-clip: border-box
+					-webkit-background-clip: text
+					&:hover
+						background: linear-gradient(90deg, #1C2540 0%, #7C2781 36.81%), #1C2540
+						background-clip: border-box
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
 
 					@media (max-width: 1199px)
 						font-size: 20px
