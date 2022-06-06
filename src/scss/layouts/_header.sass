@@ -11,9 +11,20 @@ header
 			padding-bottom: 0.3rem
 			background: white
 
+			@media (max-width: 575px)
+				padding-top: 0
+				padding-bottom: 0
+
 			div[class^="container"]
+
+				.navbar-brand
+					img
+
+						@media (max-width: 575px)
+							height: 24px
+
 				a
-					font-weight: boldnavbar-brand
+					font-weight: bold
 					text-transform: uppercase
 
 				#navbar_global.navbar-collapse
@@ -135,3 +146,6 @@ header
 					&:focus
 						box-shadow: none
 					.navbar-toggler-icon
+						@media (max-width: 575px)
+							width: 24px
+							height: 24px
