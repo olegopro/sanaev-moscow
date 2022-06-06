@@ -13,7 +13,7 @@ header
 
 			div[class^="container"]
 				a
-					font-weight: bold
+					font-weight: boldnavbar-brand
 					text-transform: uppercase
 
 				#navbar_global.navbar-collapse
@@ -68,22 +68,24 @@ header
 
 						input
 							margin: 0
+							padding-left: 5px
+							padding-right: 0
 							background-color: white
 							border: none
 							border-radius: 0
-							border: 0.0625rem solid #d1d5db7b
-							border-radius: 8px
+							border-bottom: 1px solid #e8e8e8
+							border-radius: 0
 
 							&:focus
 
 								box-shadow: none
 								border-color: none
-								border-bottom: 0.0625rem solid #d1d5db
+								border-bottom: 1px solid #cdcdcd
 
 						button
 							position: absolute
 							top: 2px
-							right: 5px
+							right: -5px
 							border: none
 							color: #8C93A9
 							&:hover
@@ -110,8 +112,8 @@ header
 						padding: 0
 						flex-shrink: 0
 
-						width: 40px
-						height: 40px
+						width: 36px
+						height: 36px
 
 						&:first-child
 							margin-right: 8px

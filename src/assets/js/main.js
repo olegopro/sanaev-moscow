@@ -211,15 +211,12 @@
 		/* Brazzers - Carousel */
 		$('.images-toggle').brazzersCarousel()
 
-		/* Roll-up text button in main content blocks */
+		/* Roll-up text button in main content blocks (single-car page) */
 		const rollUpTextContent = $('.roll-up-text-content')
 		if (rollUpTextContent) {
 			const rollUpTextButton = rollUpTextContent.find('button.roll-up-text-button').on('click', function () {
-				rollUpTextContent.find('p').css({
-					'-webkit-line-clamp': 'none'
-				})
-
-				rollUpTextButton.hide()
+				$(this).parent().find('p').addClass('open-block')
+				$(this).hide()
 			})
 		}
 
@@ -227,12 +224,10 @@
 		const contentBlockRollup = $('.content-block-rollup')
 		if (contentBlockRollup) {
 			contentBlockRollup.each(function () {
-				console.log($(this))
 				$(this)
 					.parent()
 					.find('button.content-block-rollup-button')
 					.on('click', function () {
-						console.log($(this).parent().find('.content-block-rollup'))
 						$(this).parent().find('.content-block-rollup').addClass('open-block')
 						$(this).hide()
 					})
@@ -446,7 +441,18 @@
 		if (singleCarCardCarousel) {
 			// Initialise Carousel
 			const initSingleCarCardCarousel = new Carousel(singleCarCardCarousel, {
-				Dots: false
+				Dots: false,
+				l10n: {
+					NEXT: 'Следующий автомобиль',
+					PREV: 'Предыдущий  автомобиль',
+					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+				}
 			})
 
 			// Thumbnails
@@ -523,6 +529,28 @@
 			Fancybox.bind('[data-fancybox="gallery"]', {
 				Image: {
 					zoom: false
+				}
+			})
+		}
+
+		/* Single car page Popular Cars - section */
+		const carouselPopularCars = document.querySelector('#carousel-popular-cars')
+		if (carouselPopularCars) {
+			new Carousel(carouselPopularCars, {
+				Dots: false,
+				center: false,
+				infinite: false,
+				slidesPerPage: 1,
+				l10n: {
+					NEXT: 'Следующий автомобиль',
+					PREV: 'Предыдущий  автомобиль',
+					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 				}
 			})
 		}

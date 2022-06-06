@@ -25,6 +25,12 @@ section.cars-block-types-catalog-section
 						&.carousel__button.is-prev
 							top: 46%
 							left: 14px
+
+							@media (max-width: 575px)
+								width: 24px
+								height: 24px
+								padding: 9px
+
 							svg
 								margin-right: 1px
 								margin-top: 1px
@@ -35,14 +41,15 @@ section.cars-block-types-catalog-section
 								transform: scale(0)
 								transition: all .5s
 
+						&.carousel__button.is-next
+							top: 46%
+							right: 14px
+
 							@media (max-width: 575px)
 								width: 24px
 								height: 24px
 								padding: 9px
 
-						&.carousel__button.is-next
-							top: 46%
-							right: 14px
 							svg
 								margin-right: 1px
 								margin-top: 1px
@@ -51,11 +58,6 @@ section.cars-block-types-catalog-section
 								right: -10%
 
 								transition: all .5s
-
-							@media (max-width: 575px)
-								width: 24px
-								height: 24px
-								padding: 9px
 
 				.carousel__viewport
 					width: calc(100% + 32px)

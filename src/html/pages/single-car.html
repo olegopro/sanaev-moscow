@@ -12,36 +12,34 @@
 		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
 
 		<!-- Page title section -->
-		<section class="page-title-section">
+		<section class="page-title-section mb-2">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
+							<ol class="breadcrumb px-0">
 								<li class="breadcrumb-item"><a href="/">Главная</a></li>
 								<li class="breadcrumb-item"><a href="../../html/pages/catalog.html">Автопарк</a></li>
 								<li class="breadcrumb-item"><a href="../../html/pages/brand.html">BMW</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Cadillac 1959 Convertible</li>
 							</ol>
 						</nav>
-
-						<!-- <h1 class="text-white">Cadillac 1959 Convertible</h1> -->
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="car-card-single-car-section pb-5">
+		<section class="car-card-single-car-section mb-4 mb-sm-5">
 			<div class="container">
 				<div class="row">
-					<div class="col mb-2 car-title d-flex justify-content-between align-items-center">
-						<h1 class="h2 text-gradient">Cadillac 1959 Convertible</h1>
-						<span class="h4">от 7 000 ₽/час</span>
+					<div class="col mb-2 car-title">
+						<h1 class="h2 mb-0 text-gradient">Cadillac 1959 Convertible</h1>
+						<span>от 7 000 ₽/час</span>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="car-image-box col-9">
+					<div class="car-image-box col-lg-9 gx-lg-5">
 						<div id="singleCarCardCarousel" class="carousel">
 							<div
 								class="carousel__slide"
@@ -101,7 +99,7 @@
 						</div>
 					</div>
 
-					<div class="col-3">
+					<div class="col-lg-3 mt-4 mt-lg-0">
 						<div class="car-info-box">
 							<ul class="box-item">
 								<li class="title">год выпуска</li>
@@ -129,38 +127,36 @@
 			</div>
 		</section>
 
-		<section class="info-car-single-car-section">
+		<section class="info-car-single-car-section mb-4 mb-sm-5">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="mb-5">
-							<h1 class="h2 text-gradient mb-4">Аренда автомобиля</h1>
-							<div class="table-responsive-sm">
-								<table class="table table-striped">
-									<tbody>
-										<tr>
-											<th scope="row" id="class2">Тариф</th>
-											<td>1 сутки</td>
-											<td>2-3 суток</td>
-											<td>4-6 суток</td>
-											<td>7-14 суток</td>
-											<td>15-21 суток</td>
-											<td>22-30 суток</td>
-											<td>Более</td>
-										</tr>
-										<tr>
-											<th scope="row">Стандарт</th>
-											<td>8.500</td>
-											<td>8.100</td>
-											<td>7.700</td>
-											<td>7.200</td>
-											<td>6.800</td>
-											<td>6.400</td>
-											<td>Договорная</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+						<h1 class="h2 text-gradient mb-2">Аренда автомобиля</h1>
+						<div class="table-responsive-lg">
+							<table class="table table-striped mb-0">
+								<tbody>
+									<tr>
+										<th scope="row">Тариф</th>
+										<td>1 сутки</td>
+										<td>2-3 суток</td>
+										<td>4-6 суток</td>
+										<td>7-14 суток</td>
+										<td>15-21 суток</td>
+										<td>22-30 суток</td>
+										<td>Более</td>
+									</tr>
+									<tr>
+										<th scope="row">Стандарт</th>
+										<td>8.500</td>
+										<td>8.100</td>
+										<td>7.700</td>
+										<td>7.200</td>
+										<td>6.800</td>
+										<td>6.400</td>
+										<td>Договорная</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -168,14 +164,14 @@
 		</section>
 
 		<!-- Booking order -->
-		<section class="booking-order-section">@@include('./components/_booking-order.html', { "path": "../..", "title": "Заказать Porsche Boxster" })</section>
+		<section class="booking-order-section mb-4 mb-sm-5">@@include('./components/_booking-order.html', { "path": "../..", "title": "Заказать Porsche Boxster" })</section>
 
-		<section class="content-section py-5">
+		<section class="content-section mb-4 mb-sm-5">
 			<div class="container">
 				<div class="row">
 					<div class="main-content">
 						<div class="roll-up-text-content">
-							<p>
+							<p class="position-relative">
 								Максимальный комфорт и бескомпромиссная функциональность - ключевые особенности новой крыши с ее невероятным электрогидравлическим механизмом. Двухсекционная стальная
 								крыша открывается автоматически плавным движением, поскольку каждый Максимальный комфорт и бескомпромиссная функциональность - ключевые особенности новой крыши с ее
 								невероятным электрогидравлическим механизмом. Двухсекционная стальная крыша открывается автоматически плавным движением, поскольку кай
@@ -187,38 +183,43 @@
 			</div>
 		</section>
 
-		<section class="popular-cars-single-car-section">
+		<section class="popular-cars-single-car-section mb-4 mb-sm-5">
 			<div class="container">
 				<div class="row">
-					<h1 class="h2 text-gradient">Популярные машины</h1>
-				</div>
-				<!-- prettier-ignore -->
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5">
-				
-					<!-- car card -->
-					@@include('./components/_car-card-multiply-photo-single.html', { 
-						"path": "../..", 
-						"class": "d-none",
-						"carName": "BMW 530d M-SPORT", 
-						"carPrice": "от 25 600 руб/час" 
-					})
+					<h1 class="h2 text-gradient mb-2">Популярные машины</h1>
 
-					<!-- car card -->
-					@@include('./components/_car-card-multiply-photo-single.html', { 
-						"path": "../..", 
-						"class": "d-none",
-						"carName": "Akura NSX", 
-						"carPrice": "от 21 600 руб/час" 
-					})
+					<!-- prettier-ignore -->
 
-					<!-- car card -->
-					@@include('./components/_car-card-multiply-photo-single.html', { 
-						"path": "../..", 
-						"class": "d-none",
-						"carName": "Toyota Supra FT1", 
-						"carPrice": "от 12 600 руб/час" 
-					})
-					
+					<div id="carousel-popular-cars" class="position-relative">
+						<div class="carousel__slide">
+							@@include('./components/_car-card-multiply-photo-carousel.html', { 
+								"path": "../..", 
+								"class": "d-none",
+								"carName": "BMW 530d M-SPORT", 
+								"carPrice": "от 25 600 руб/час" 
+							})
+						</div>
+
+						<div class="carousel__slide">
+							@@include('./components/_car-card-multiply-photo-carousel.html', {
+								"path": "../..", 
+								"class": "d-none",
+								"carName": "BMW 530d M-SPORT", 
+								"carPrice": "от 25 600 руб/час"
+							})
+						</div>
+						
+						
+						<div class="carousel__slide">
+							@@include('./components/_car-card-multiply-photo-carousel.html', { 
+								"path": "../..", 
+								"class": "d-none",
+								"carName": "Akura NSX", 
+								"carPrice": "от 21 600 руб/час" 
+							})
+						</div>
+						
+					</div>
 				</div>
 			</div>
 		</section>

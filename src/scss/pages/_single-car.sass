@@ -3,26 +3,53 @@ section.car-card-single-car-section
 	.container
 		.row
 			.car-title
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+				@media (max-width: 991px)
+					flex-direction: column
+					align-items: start
+
 				span
 					font-size: 36px
 					font-weight: normal
+
+					@media (max-width: 1199px)
+						font-size: 32px
+
+					@media (max-width: 991px)
+						font-size: 26px
+
+					@media (max-width: 767px)
+						font-size: 24px
+
+					@media (max-width: 575px)
+						font-size: 12px
+
 			.car-image-box
-				padding-right: 30px
+				// padding-right: 30px
 
 				#singleCarCardCarousel
-					margin: 0 auto 1rem auto
+					margin: 0 auto 10px auto
 
 					--carousel-button-color: #170724
 					--carousel-button-bg: #fff
 					--carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%)
 
-					--carousel-button-svg-width: 20px
-					--carousel-button-svg-height: 20px
-					--carousel-button-svg-stroke-width: 2.5
+					--carousel-button-width: 50px
+					--carousel-button-height: 50px
+
+					--carousel-button-svg-width: 18px
+					--carousel-button-svg-height: 18px
+					--carousel-button-svg-stroke-width: 1.5
+
+					@media (max-width: 767px)
+						margin-bottom: 3px
 
 					.carousel__viewport
 						border-radius: 1rem
-						box-shadow: 0px 3px 12px 2px rgba(0, 0, 0, 0.28)
+						filter: drop-shadow(-4px 4px 6px rgba(28, 37, 64, 0.2))
 
 					.carousel__slide
 						width: 100%
@@ -30,33 +57,67 @@ section.car-card-single-car-section
 						img
 							aspect-ratio: 215 / 143
 							object-fit: cover
-							// height: 100%
 							width: 100%
 
-					.carousel__button.is-prev
-						left: -1.5rem
+					button
+						box-shadow: 1px 2px 14px rgba(72, 72, 72, 0.25)
+						transition: box-shadow .1s easeOutQuint
 
-					.carousel__button.is-next
-						right: -1.5rem
+						@media (max-width: 575px)
+							padding: 10px
 
-					.carousel__button:focus
-						outline: none
-						box-shadow: 0 0 0 4px #a78bfa
+						&:active
+							svg
+								transform: scale(0.96)
+
+						&:focus
+							outline: none
+
+						&.carousel__button.is-prev
+							left: -1.5rem
+
+							@media (max-width: 575px)
+								width: 24px
+								height: 24px
+								padding: 9px
+								left: -14px
+
+							svg
+								// margin-left: -4px
+
+						&.carousel__button.is-next
+							right: -1.5rem
+
+							@media (max-width: 575px)
+								width: 24px
+								height: 24px
+								padding: 9px
+								right: -14px
+
+							svg
+								// margin-right: -2px
 
 				#singleCarCardThumbCarousel
 					.carousel__slide
 						opacity: 0.5
 						padding: 0
 						margin: 0.25rem
-						width: 96px
-						height: 64px
+						// width: 116px
+						width: auto
+						height: 78px
 
-					.carousel__slide
+						@media (max-width: 575px)
+							height: auto
+
 						img
 							width: 100%
 							height: 100%
 							object-fit: cover
-							border-radius: 4px
+							border-radius: 8px
+
+							@media (max-width: 575px)
+								width: 64px
+								height: 43px
 
 					.carousel__slide.is-nav-selected
 						opacity: 1
@@ -68,6 +129,9 @@ section.car-card-single-car-section
 				box-shadow: 0px 0px 9px rgba(28, 37, 64, 0.1)
 				border-radius: 8px
 
+				@media (max-width: 575px)
+					padding: 12px 16px 12px 16px
+
 				button
 					width: 100%
 					padding-top: 12px
@@ -78,6 +142,14 @@ section.car-card-single-car-section
 					background: linear-gradient(87.78deg, #540666 0%, #A64380 150.61%)
 					box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
 					border-radius: 8px
+					transition: box-shadow .3s ease
+
+					@media (max-width: 575px)
+						padding-top: 8px
+						padding-bottom: 8px
+
+					&:hover
+						box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.30)
 
 				ul.box-item
 					list-style: none
@@ -92,10 +164,17 @@ section.car-card-single-car-section
 						font-weight: normal
 						font-size: 16px
 						line-height: 120%
+
+						@media (max-width: 767px)
+							font-size: 14px
+
 					li.content
 						font-weight: bold
 						font-size: 20px
 						line-height: 120%
+
+						@media (max-width: 767px)
+							font-size: 16px
 
 				small
 					display: block
@@ -105,9 +184,106 @@ section.car-card-single-car-section
 					font-weight: normal
 					line-height: 120%
 
+					@media (max-width: 575px)
+						margin-bottom: 16px
+
 section.info-car-single-car-section
+	.container
+		.row
+
+			table.table
+				tbody
+
+					@media (max-width: 767px)
+						display: flex
+
+					tr
+
+						@media (max-width: 767px)
+							display: flex
+							flex-direction: column
+							width: 100%
+
+						th
+							@media (max-width: 767px)
+								display: none
+
+						td
+							@media (max-width: 767px)
+								&:last-child
+									border-bottom: none
 
 section.popular-cars-single-car-section
-	@import ../layouts/car-card
-	.card-body
-		padding: 5px 0 0 0 !important
+	.container
+		.row
+			#carousel-popular-cars
+				--carousel-button-bg: #fff
+
+				--carousel-button-width: 50px
+				--carousel-button-height: 50px
+
+				--carousel-button-svg-width: 18px
+				--carousel-button-svg-height: 18px
+				--carousel-button-svg-stroke-width: 1.5
+
+				--carousel-button-shadow: 1px 2px 14px rgba(72, 72, 72, 0.25)
+
+				padding-left: 0
+				padding-right: 0
+
+				.carousel__viewport
+					width: 100%
+					max-width: none
+
+				.carousel__slide
+					width: calc(100% / 3)
+					padding-top: 0
+					padding-bottom: 0
+
+					@import ../layouts/car-card
+
+					@media (max-width: 991px)
+						width: calc(100% / 2)
+
+					@media (max-width: 575px)
+						width: 100%
+
+				.carousel__nav
+					display: none
+
+					@media (max-width: 575px)
+						display: block
+						button
+							background: white
+							box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.5)
+							&.is-next
+								top: 39%
+								right: 0
+								svg
+									// margin-left: 1px
+									// margin-top: 1px
+								&:disabled
+									opacity: 0
+									right: -30%
+									transition: all .5s
+
+								@media (max-width: 575px)
+									width: 24px
+									height: 24px
+									padding: 9px
+
+							&.is-prev
+								top: 39%
+								left: 0
+								svg
+									// margin-left: 1px
+									// margin-top: 1px
+								&:disabled
+									opacity: 0.6
+									left: -30%
+									transition: all .5s
+
+								@media (max-width: 575px)
+									width: 24px
+									height: 24px
+									padding: 9px
