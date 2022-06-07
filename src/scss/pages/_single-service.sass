@@ -1,66 +1,134 @@
 section.service-card-single-service-section
 	.container
 		.row
-			.car-image-box
+			.service-title
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+				@media (max-width: 991px)
+					flex-direction: column
+					align-items: start
+
+				span
+					font-size: 36px
+					font-weight: normal
+
+					@media (max-width: 1199px)
+						font-size: 32px
+
+					@media (max-width: 991px)
+						font-size: 26px
+
+					@media (max-width: 767px)
+						font-size: 24px
+
+					@media (max-width: 575px)
+						font-size: 12px
+			.service-image-box
 				#singleServiceCardCarousel
-					/* width: 600px; */
-					margin: 0 auto 1rem auto
+					margin: 0 auto 10px auto
 
 					--carousel-button-color: #170724
 					--carousel-button-bg: #fff
 					--carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%)
 
-					--carousel-button-svg-width: 20px
-					--carousel-button-svg-height: 20px
-					--carousel-button-svg-stroke-width: 2.5
+					--carousel-button-width: 50px
+					--carousel-button-height: 50px
+
+					--carousel-button-svg-width: 18px
+					--carousel-button-svg-height: 18px
+					--carousel-button-svg-stroke-width: 1.5
+
+					@media (max-width: 767px)
+						margin-bottom: 3px
 
 					.carousel__viewport
-						// height: 500px
 						border-radius: 1rem
-						box-shadow: 0px 3px 12px 2px rgba(0, 0, 0, 0.28)
+						filter: drop-shadow(-4px 4px 6px rgba(28, 37, 64, 0.2))
 
 					.carousel__slide
 						width: 100%
 						padding: 0
 						img
+							aspect-ratio: 215 / 143
 							object-fit: cover
-							height: 750px
-							width: auto
+							width: 100%
 
-					.carousel__button.is-prev
-						left: -1.5rem
+					button
+						box-shadow: 1px 2px 14px rgba(72, 72, 72, 0.25)
+						transition: box-shadow .1s easeOutQuint
 
-					.carousel__button.is-next
-						right: -1.5rem
+						@media (max-width: 575px)
+							padding: 10px
 
-					.carousel__button:focus
-						outline: none
-						box-shadow: 0 0 0 4px #a78bfa
+						&:active
+							svg
+								transform: scale(0.96)
+
+						&:focus
+							outline: none
+
+						&.carousel__button.is-prev
+							left: -1.5rem
+
+							@media (max-width: 575px)
+								width: 24px
+								height: 24px
+								padding: 9px
+								left: -14px
+
+							svg
+								// margin-left: -4px
+
+						&.carousel__button.is-next
+							right: -1.5rem
+
+							@media (max-width: 575px)
+								width: 24px
+								height: 24px
+								padding: 9px
+								right: -14px
+
+							svg
+								// margin-right: -2px
 
 				#singleServiceCardThumbCarousel
-					.carousel__slide
-						opacity: 0.5
-						padding: 0
-						margin: 0.25rem
-						width: 96px
-						height: 64px
+					.carousel__viewport
 
-					.carousel__slide
-						img
-							width: 100%
-							height: 100%
-							object-fit: cover
-							border-radius: 4px
+						.carousel__track
 
-					.carousel__slide.is-nav-selected
-						opacity: 1
-			.car-info-box
+							.carousel__slide
+								opacity: 0.5
+								padding: 0
+								margin: 0.25rem
+								width: 161px
+
+								@media (max-width: 575px)
+									width: 64px
+
+								&.is-nav-selected
+									opacity: 1
+
+								img
+									width: 100%
+									height: 100%
+									object-fit: cover
+									border-radius: 8px
+
+									@media (max-width: 575px)
+										width: 64px
+										height: 43px
+			.service-info-box
 				height: fit-content
-				padding: 24px 16px
+				padding: 16px 16px 16px 16px
 				background: #FFFFFF
 				border: 1px solid #530666
 				box-shadow: 0px 0px 9px rgba(28, 37, 64, 0.1)
 				border-radius: 8px
+
+				@media (max-width: 575px)
+					padding: 12px 16px 12px 16px
 
 				button
 					width: 100%
@@ -72,15 +140,52 @@ section.service-card-single-service-section
 					background: linear-gradient(87.78deg, #540666 0%, #A64380 150.61%)
 					box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
 					border-radius: 8px
+					transition: box-shadow .3s ease
 
-				ul
+					@media (max-width: 575px)
+						padding-top: 8px
+						padding-bottom: 8px
+
+					&:hover
+						box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.30)
+
+				ul.box-item
 					list-style: none
 					padding-left: 0
 					color: #1C2540
+					// margin-bottom: 10px
+
+					&:last-of-type
+						margin-bottom: 0 !important
 
 					li.title
 						font-weight: normal
 						font-size: 16px
+						line-height: 120%
+
+						@media (max-width: 767px)
+							font-size: 14px
+
 					li.content
 						font-weight: bold
 						font-size: 20px
+						line-height: 120%
+
+						@media (max-width: 767px)
+							font-size: 16px
+
+				small
+					display: block
+					margin-top: 8px
+					margin-bottom: 24px
+					font-size: 12px
+					font-weight: normal
+					line-height: 120%
+
+					@media (max-width: 575px)
+						margin-bottom: 16px
+
+section.popular-cars-single-car-section
+	.container
+		.row
+			@import ../layouts/service-card-single
