@@ -503,6 +503,18 @@
 			const initGalleryVideoCardCarouse = new Carousel(galleryVideoCardCarousel, {
 				Dots: false,
 
+				l10n: {
+					NEXT: 'Следующий автомобиль',
+					PREV: 'Предыдущий  автомобиль',
+					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+				},
+
 				on: {
 					change: carousel => {
 						let iFrame = carousel.pages[carousel.prevPageIndex]
@@ -522,7 +534,7 @@
 				},
 				Dots: false,
 				Navigation: false,
-				center: true,
+				center: false,
 				slidesPerPage: 1,
 				infinite: false
 			})

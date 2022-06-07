@@ -83,32 +83,69 @@ section.main-gallery-section
 								width: 100%
 								height: 100%
 
-						.carousel__button.is-prev
-							left: -1.5rem
+						button
+							box-shadow: 1px 2px 14px rgba(72, 72, 72, 0.25)
+							transition: box-shadow .1s easeOutQuint
 
-						.carousel__button.is-next
-							right: -1.5rem
+							@media (max-width: 575px)
+								padding: 10px
 
-						.carousel__button:focus
-							outline: none
-							box-shadow: 0 0 0 4px #a78bfa
+							&:active
+								svg
+									transform: scale(0.96)
+
+							&:focus
+								outline: none
+
+							&.carousel__button.is-prev
+								left: -1.5rem
+
+								@media (max-width: 575px)
+									width: 24px
+									height: 24px
+									padding: 9px
+									left: -14px
+
+								svg
+									// margin-left: -4px
+
+							&.carousel__button.is-next
+								right: -1.5rem
+
+								@media (max-width: 575px)
+									width: 24px
+									height: 24px
+									padding: 9px
+									right: -14px
+
+								svg
+									// margin-right: -2px
 
 					#galleryVideoCardThumbCarousel
-						.carousel__slide
-							opacity: 0.5
-							padding: 0
-							margin: 0.25rem
-							width: auto
-							height: 80px
+						.carousel__viewport
 
-							img
-								aspect-ratio: 16 / 8
-								width: 100%
-								height: 100%
-								object-fit: cover
-								border-radius: 4px
+							.carousel__track
 
-						.carousel__slide.is-nav-selected
-							opacity: 1
+								.carousel__slide
+									opacity: 0.5
+									padding: 0
+									margin: 0.25rem
+									width: 161px
+
+									@media (max-width: 575px)
+										width: 64px
+
+									&.is-nav-selected
+										opacity: 1
+
+									img
+										width: 100%
+										height: 100%
+										object-fit: cover
+										border-radius: 8px
+
+										@media (max-width: 575px)
+											width: 64px
+											height: 43px
 
 				@import ../layouts/gallery-card-single
