@@ -192,11 +192,25 @@
 			document.getElementById('navbar_global').addEventListener('show.bs.collapse', function (e) {
 				$('body').addClass('position-relative overflow-hidden body-background-enable')
 				$('.navbar-brand-logo').hide()
+				$('header nav.navbar-main').css({
+					background: '#636363',
+					transition: 'background .2s ease'
+				})
+				$('.navbar-brand-logo').css({
+					visibility: 'hidden'
+				})
 			})
 
 			document.getElementById('navbar_global').addEventListener('hide.bs.collapse', function () {
 				$('body').removeClass('position-relative overflow-hidden body-background-enable')
 				$('.navbar-brand-logo').show()
+				$('header nav.navbar-main').css({
+					background: '',
+					transition: ''
+				})
+				$('.navbar-brand-logo').css({
+					visibility: ''
+				})
 			})
 
 			/* Close mobile menu on click to body */
@@ -463,7 +477,7 @@
 				},
 				Dots: false,
 				Navigation: false,
-				center: true,
+				center: false,
 				slidesPerPage: 1,
 				infinite: false
 			})

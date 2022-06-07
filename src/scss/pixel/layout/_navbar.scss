@@ -382,8 +382,8 @@
 		padding: 1.5rem;
 		border-radius: $dropdown-border-radius;
 		background: $white;
-		animation: show-navbar-collapse 0s ease forwards;
-		@include box-shadow(0 0 20px rgba(0, 0, 0, 0.1));
+		animation: show-navbar-collapse 0.2s ease forwards;
+		// @include box-shadow(0 0 20px rgba(0, 0, 0, 11));
 	}
 
 	.navbar-collapse.collapsing-out {

@@ -17,13 +17,11 @@
 				<div class="row">
 					<div class="col">
 						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb breadcrumb-primary breadcrumb-transparent">
+							<ol class="breadcrumb px-0">
 								<li class="breadcrumb-item"><a href="#">Главная</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Галерея</li>
 							</ol>
 						</nav>
-
-						<h1 class="h2 text-gradient">Наша галерея</h1>
 					</div>
 				</div>
 			</div>
@@ -33,6 +31,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="main-content">
+						<h1 class="h2 text-gradient">Наша галерея</h1>
 						<p>
 							В этом разделе собраны фотографии катания на лимузинах по Москве, сделанные нашими фотографами и предоставленные нашими клиентами, которые доверили проекту Sanaew Moscow
 							проведение своего торжественного мероприятия.
@@ -42,7 +41,7 @@
 			</div>
 		</section>
 
-		<section class="main-gallery-section mb-md-n3">
+		<section class="main-gallery-section mb-4 mb-sm-5">
 			<div class="container">
 				<div class="row">
 					<div class="col mb-4">
@@ -59,23 +58,20 @@
 					<div class="tab-content" id="myTabGalleryContent">
 						<div class="tab-pane fade show active" id="photo" role="tabpanel" aria-labelledby="photo-tab">
 							<!-- prettier-ignore -->
-							<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-1">
-
-								<!-- Gallery card -->
+							<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+							
 								@@include('./components/_gallery-card-single.html', { 
 									"path": "../..", 
 									"imageGallery": "/assets/images/gallery/connector.jpg", 
 									"galleryName": "Портфолио Форумы и Кабриолет" 
 								})
 
-								<!-- Gallery card -->
 								@@include('./components/_gallery-card-single.html', { 
 									"path": "../..", 
 									"imageGallery": "/assets/images/gallery/connector-1.jpg", 
 									"galleryName": "Детские праздники" 
 								})
 
-								<!-- Gallery card -->
 								@@include('./components/_gallery-card-single.html', { 
 									"path": "../..",
 									 "imageGallery": 
@@ -83,21 +79,18 @@
 									"galleryName": "Девичник на лимузине в Москве" 
 								})
 
-								<!-- Gallery card -->
 								@@include('./components/_gallery-card-single.html', { 
 									"path": "../..", 
 									"imageGallery": "/assets/images/gallery/connector-3.jpg", 
 									"galleryName": "Выпускной" 
 								})
 
-								<!-- Gallery card -->
 								@@include('./components/_gallery-card-single.html', { 
 									"path": "../..", 
 									"imageGallery": "/assets/images/gallery/connector-4.jpg", 
 									"galleryName": "Девичник в кабриолете"
 								})
 
-								<!-- Gallery card -->
 								@@include('./components/_gallery-card-single.html', { 
 									"path": "../..", 
 									"imageGallery": "/assets/images/gallery/connector-5.jpg", 

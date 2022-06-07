@@ -17,13 +17,13 @@
 				<div class="row">
 					<div class="col">
 						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb breadcrumb-primary breadcrumb-transparent">
+							<ol class="breadcrumb px-0"">
 								<li class="breadcrumb-item"><a href="#">Главная</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Все услуги</li>
 							</ol>
 						</nav>
 
-						<h1 class="h2 text-gradient">Наши услуги</h1>
+						
 					</div>
 				</div>
 			</div>
@@ -33,6 +33,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="main-content">
+						<h1 class="h2 text-gradient">Наши услуги</h1>
 						<p>
 							Собственный автопарк SanaevMoscow представлен коллекцией элитных автомобилей. Вы можете оформить услугу проката авто люкс класса за считанные минуты и уже в течение часа
 							оказаться за рулем одного из наших красавцев.
@@ -43,12 +44,12 @@
 		</section>
 
 		<!-- Services block section -->
-		<section class="services-block-single-service-section">
+		<section class="services-block-single-service-section mb-4 mb-sm-5">
 			<div class="container">
 				<!-- prettier-ignore -->
 
-				<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3  g-3 gx-4">
-					<!-- car card -->
+				<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4">
+				
 					@@include('./components/_service-card-single.html', { 
 						"path": "../..", 
 						"imageService": "/assets/images/services/happy-birthday-2021-09-24-03-06-59-utc.jpg", 
@@ -57,7 +58,6 @@
 						 "от 5 000 руб/час" 
 					})
 
-					<!-- car card -->
 					@@include('./components/_service-card-single.html', { 
 						"path": "../..", 
 						"imageService": "/assets/images/services/positive-young-girls-women-friends-indoors-on-bed-2021-09-04-09-29-06-utc.jpg", 
@@ -65,7 +65,6 @@
 						"servicePrice": "от 7 000 руб/час" 
 					})
 
-					<!-- car card -->
 					@@include('./components/_service-card-single.html', { 
 						"path": "../..", 
 						"imageService": "/assets/images/services/mother-draws-on-daughter-39-s-cheek-while-she-and-2021-08-27-09-59-03-utc.jpg", 
@@ -73,7 +72,6 @@
 						"servicePrice": "от 12 000 руб/час" 
 					})
 
-					<!-- car card -->
 					@@include('./components/_service-card-single.html', { 
 						"path": "../..", 
 						"imageService": "/assets/images/services/couple-on-a-date-2021-08-29-16-46-44-utc.jpg", 
@@ -81,7 +79,6 @@
 						"servicePrice": "от 4 500 руб/час" 
 					})
 
-					<!-- car card -->
 					@@include('./components/_service-card-single.html', { 
 						"path": "../..", 
 						"imageService": "/assets/images/services/festive-fireworks-in-the-night-sky-2021-09-02-07-08-16-utc.jpg", 
@@ -89,7 +86,6 @@
 						"servicePrice": "от 1200 руб." 
 					})
 
-					<!-- car card -->
 					@@include('./components/_service-card-single.html', { 
 						"path": "../..", 
 						"imageService": "/assets/images/services/vehicle-interior-woman-in-formal-clothes-is-indoo-2021-12-27-15-52-16-utc.jpg", 
@@ -101,7 +97,7 @@
 			</div>
 		</section>
 
-		<section class="content-section my-3 mt-lg-4">
+		<section class="content-section mb-4 mb-sm-5">
 			<div class="container">
 				<div class="row">
 					<div class="main-content">
