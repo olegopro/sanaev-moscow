@@ -98,29 +98,31 @@ section.car-card-single-car-section
 								// margin-right: -2px
 
 				#singleCarCardThumbCarousel
-					.carousel__slide
-						opacity: 0.5
-						padding: 0
-						margin: 0.25rem
-						// width: 116px
-						width: auto
-						height: 78px
+					.carousel__viewport
 
-						@media (max-width: 575px)
-							height: auto
+						.carousel__track
 
-						img
-							width: 100%
-							height: 100%
-							object-fit: cover
-							border-radius: 8px
+							.carousel__slide
+								opacity: 0.5
+								padding: 0
+								margin: 0.25rem
+								width: 161px
 
-							@media (max-width: 575px)
-								width: 64px
-								height: 43px
+								@media (max-width: 575px)
+									width: 64px
 
-					.carousel__slide.is-nav-selected
-						opacity: 1
+								&.is-nav-selected
+									opacity: 1
+
+								img
+									width: 100%
+									height: 100%
+									object-fit: cover
+									border-radius: 8px
+
+									@media (max-width: 575px)
+										width: 64px
+										height: 43px
 			.car-info-box
 				height: fit-content
 				padding: 16px 16px 16px 16px
