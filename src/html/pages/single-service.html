@@ -207,35 +207,80 @@
 			</div>
 		</section>
 
-		<section class="popular-cars-single-car-section mb-4 mb-sm-5">
+		<section class="additional-services-single-service-section mb-4 mb-sm-5">
 			<div class="container">
 				<div class="row">
-					<h1 class="h2 text-gradient">Дополнительные услуги</h1>
+					<h1 class="h2 text-gradient mb-2">Дополнительные услуги</h1>
+
+					<!-- prettier-ignore -->
+
+					<div id="carousel-additional-services" class="position-relative">
+						<div class="carousel__slide">
+							@@include('./components/_service-card-single.html', { 
+								"path": "../..", 
+								"imageService": "/assets/images/services/happy-birthday-2021-09-24-03-06-59-utc.jpg", 
+								"serviceName": "День рождения", 
+								"servicePrice": "от 5 000 руб/час" 
+							})
+						</div>
+
+						<div class="carousel__slide">
+							@@include('./components/_service-card-single.html', { 
+								"path": "../..", 
+								"imageService": "/assets/images/services/positive-young-girls-women-friends-indoors-on-bed-2021-09-04-09-29-06-utc.jpg", 
+								"serviceName": "Девичник", 
+								"servicePrice": "от 7 000 руб/час" 
+							})
+						</div>
+						
+						<div class="carousel__slide">
+							@@include('./components/_service-card-single.html', { 
+								"path": "../..", 
+								"imageService": "/assets/images/services/mother-draws-on-daughter-39-s-cheek-while-she-and-2021-08-27-09-59-03-utc.jpg", 
+								"serviceName": "Детский праздник", 
+								"servicePrice": "от 12 000 руб/час" 
+							})
+						</div>
+					</div>
 				</div>
-				<!-- prettier-ignore -->
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4">
-				
-					@@include('./components/_service-card-single.html', { 
-						"path": "../..", 
-						"imageService": "/assets/images/services/happy-birthday-2021-09-24-03-06-59-utc.jpg", 
-						"serviceName": "День рождения", 
-						"servicePrice": "от 5 000 руб/час" 
-					})
+			</div>
+		</section>
 
-					@@include('./components/_service-card-single.html', { 
-						"path": "../..", 
-						"imageService": "/assets/images/services/positive-young-girls-women-friends-indoors-on-bed-2021-09-04-09-29-06-utc.jpg", 
-						"serviceName": "Девичник", 
-						"servicePrice": "от 7 000 руб/час" 
-					})
+		<section class="popular-services-single-service-section mb-4 mb-sm-5">
+			<div class="container">
+				<div class="row">
+					<h1 class="h2 text-gradient mb-2">Популярные услуги</h1>
 
-					@@include('./components/_service-card-single.html', { 
-						"path": "../..", 
-						"imageService": "/assets/images/services/mother-draws-on-daughter-39-s-cheek-while-she-and-2021-08-27-09-59-03-utc.jpg", 
-						"serviceName": "Детский праздник", 
-						"servicePrice": "от 12 000 руб/час" 
-					})
+					<!-- prettier-ignore -->
 
+					<div id="carousel-popular-services" class="position-relative">
+						<div class="carousel__slide">
+							@@include('./components/_service-card-single.html', { 
+								"path": "../..", 
+								"imageService": "/assets/images/services/couple-on-a-date-2021-08-29-16-46-44-utc.jpg", 
+								"serviceName": "Свидание", 
+								"servicePrice": "от 4 500 руб/час" 
+							})
+						</div>
+
+						<div class="carousel__slide">
+							@@include('./components/_service-card-single.html', { 
+								"path": "../..", 
+								"imageService": "/assets/images/services/festive-fireworks-in-the-night-sky-2021-09-02-07-08-16-utc.jpg", 
+								"serviceName": "Фейерверк", 
+								"servicePrice": "от 1200 руб." 
+							})
+						</div>
+						
+						<div class="carousel__slide">
+							@@include('./components/_service-card-single.html', { 
+								"path": "../..", 
+								"imageService": "/assets/images/services/vehicle-interior-woman-in-formal-clothes-is-indoo-2021-12-27-15-52-16-utc.jpg", 
+								"serviceName": "Фотосессия", 
+								"servicePrice": "от 4 900 руб/час" 
+							})
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

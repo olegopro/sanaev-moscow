@@ -633,6 +633,50 @@
 			})
 		}
 
+		/* Single service page Additional services - section */
+		const carouselAdditionalServices = document.querySelector('#carousel-additional-services')
+		if (carouselAdditionalServices) {
+			new Carousel(carouselAdditionalServices, {
+				Dots: false,
+				center: false,
+				infinite: false,
+				slidesPerPage: 1,
+				l10n: {
+					NEXT: 'Следующая услуга',
+					PREV: 'Предыдущая  услуга',
+					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+				}
+			})
+		}
+
+		/* Single service page Additional services - section */
+		const carouselPopularServices = document.querySelector('#carousel-popular-services')
+		if (carouselPopularServices) {
+			new Carousel(carouselPopularServices, {
+				Dots: false,
+				center: false,
+				infinite: false,
+				slidesPerPage: 1,
+				l10n: {
+					NEXT: 'Следующая услуга',
+					PREV: 'Предыдущая  услуга',
+					GOTO: 'Вернуться к %d'
+				},
+				Navigation: {
+					prevTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+					nextTpl:
+						'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+				}
+			})
+		}
+
 		/* Single gallery page slider */
 		const singleGalleryCarousel = document.querySelector('#singleGalleryCarousel')
 		if (singleGalleryCarousel) {
