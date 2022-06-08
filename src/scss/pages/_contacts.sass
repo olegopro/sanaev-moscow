@@ -17,21 +17,38 @@ section.main-content-contact-section
 
 					.contact-text
 						color: #979797
+						font-weight: normal
 						a
 							display: block
 							color: #979797
+							&:hover
+								color: darken(#979797, 30%)
 
 					&.social-items-list
 						display: grid
 						align-items: start
 						// grid-template-columns: repeat(2, 1fr)
 						grid-template-columns: min-content auto
-						row-gap: 16px
-						column-gap: 64px
+						row-gap: 24px
+						column-gap: 50px
 
 						a
 							display: flex
 							align-items: center
-							span
-								font-size: 32px
-								margin-right: 16px
+							padding-left: 36px
+							position: relative
+							color: #1C2540
+							font-size: 16px
+							margin-right: 16px
+
+							&.whatsapp-svg
+								@include whatsapp-black(32px, 32px)
+
+							&.vkontakte-svg
+								@include vk-black(32px, 32px)
+
+							&.youtube-svg
+								@include youtube-black(32px, 32px)
+
+							&.telegram-svg
+								@include telegram-black(32px, 32px)

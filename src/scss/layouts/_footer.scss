@@ -11,6 +11,14 @@ footer {
 			display: grid;
 			row-gap: 30px;
 
+			a {
+				color: #979797;
+
+				&:hover {
+					color: darken(#979797, 30%);
+				}
+			}
+
 			&::after {
 				content: '';
 				position: absolute;
@@ -31,8 +39,13 @@ footer {
 			}
 			.footer-image {
 				grid-area: imag;
-				padding-right: 70px;
-				padding-top: 6px;
+
+				padding-right: 50px;
+				padding-top: 4px;
+
+				img {
+					height: 48px;
+				}
 
 				@media (max-width: 575px) {
 					width: 70%;
@@ -63,14 +76,34 @@ footer {
 				grid-area: soci;
 
 				.social-items-list {
-					display: flex;
-					flex-wrap: wrap;
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
 					gap: 20px;
+
 					list-style: none;
 					font-size: 16px;
+
 					a {
-						display: flex;
-						align-items: center;
+						position: relative;
+						padding-left: 36px;
+						color: #979797;
+
+						&.whatsapp-svg {
+							@include whatsapp(32px, 32px);
+						}
+
+						&.vkontakte-svg {
+							@include vk(32px, 32px);
+						}
+
+						&.youtube-svg {
+							@include youtube(32px, 32px);
+						}
+
+						&.telegram-svg {
+							@include telegram(32px, 32px);
+						}
+
 						span {
 							margin-right: 10px;
 							font-size: 26px;
