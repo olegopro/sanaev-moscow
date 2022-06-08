@@ -3,6 +3,10 @@ section.main-content-contact-section
 		.row
 			ul
 				margin: 0
+
+				@media (max-width: 991px)
+					padding-left: 0
+
 				li
 					list-style: none
 					&:not(:last-child)
@@ -31,6 +35,15 @@ section.main-content-contact-section
 						grid-template-columns: min-content auto
 						row-gap: 24px
 						column-gap: 50px
+
+						@media (max-width: 575px)
+							padding-bottom: 10px
+
+						@media (max-width: 767px)
+							margin-bottom: -10px
+
+						@media (max-width: 991px)
+							padding-bottom: 20px
 
 						a
 							display: flex

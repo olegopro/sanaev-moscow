@@ -24,10 +24,14 @@ footer {
 				position: absolute;
 				border-bottom: 1px solid #acacad;
 				width: calc(100% - 32px);
-				top: 70px;
+				top: 68px;
 				left: 0;
 				right: 0;
 				margin: 0 auto;
+
+				@media (max-width: 767px) {
+					top: 84px;
+				}
 
 				@media (max-width: 575px) {
 					top: 56px;
@@ -41,14 +45,16 @@ footer {
 				grid-area: imag;
 
 				padding-right: 50px;
-				padding-top: 4px;
+				padding-top: 3px;
+				width: 333px;
 
-				img {
-					height: 48px;
+				@media (max-width: 767px) {
+					padding-top: 20px;
 				}
 
 				@media (max-width: 575px) {
-					width: 70%;
+					width: 270px;
+					padding-top: 3px;
 				}
 			}
 
@@ -74,6 +80,11 @@ footer {
 
 			.social-icons-area-footer {
 				grid-area: soci;
+				padding-top: 10px;
+
+				@media (max-width: 1199px) {
+					padding-top: 0;
+				}
 
 				.social-items-list {
 					display: grid;
@@ -82,6 +93,14 @@ footer {
 
 					list-style: none;
 					font-size: 16px;
+
+					@media (max-width: 991px) {
+						width: 50%;
+					}
+
+					@media (max-width: 575px) {
+						width: 100%;
+					}
 
 					a {
 						position: relative;
@@ -120,7 +139,22 @@ footer {
 				'imag teel mail addr'
 				'soci time navi navi';
 
-			@media (max-width: 575px) {
+			@media (max-width: 1199px) {
+				grid-template-areas:
+					'imag imag imag '
+					'navi teel mail'
+					'soci time addr';
+			}
+
+			@media (max-width: 991px) {
+				grid-template-areas:
+					'imag imag imag '
+					'navi navi teel'
+					'time mail addr'
+					'soci soci soci';
+			}
+
+			@media (max-width: 767px) {
 				grid-template-areas:
 					'imag'
 					'navi'
