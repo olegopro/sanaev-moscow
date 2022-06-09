@@ -70,14 +70,12 @@
 					if (!$(this).hasClass('on')) {
 						$(this).addClass('on')
 
-						windowWidth > 575 ? selectList.fadeIn(duration) : selectList.slideDown(duration)
+						windowWidth > 767 ? selectList.fadeIn(duration) : selectList.slideDown(duration)
 
 						selectItem.on('click', function () {
 							let chooseItem = $(this).data('value')
 
 							if (!selectOption.filter(`option[value="${chooseItem}"]`).attr('selected')) {
-								// selectOption.parent().attr('selected', 'selected')
-
 								selectOption.filter(`option[value="${chooseItem}"]`).attr('selected', 'selected').prop('selected', true)
 
 								textArr.push($(this).find('span').css({ background: 'yellow' }).text())
@@ -105,17 +103,13 @@
 									selectHead.text('').append(textArr.join(', '))
 								} else {
 									selectHead.text(selectOption.filter(':disabled').val())
-									// selectOption.parent().removeAttr('selected')
 								}
 							}
-
-							// selectList.slideUp(duration)
-							// selectHead.removeClass('on')
 						})
 					} else {
 						$(this).removeClass('on')
 
-						windowWidth > 575 ? selectList.fadeOut(duration / 1.6) : selectList.slideUp(duration)
+						windowWidth > 767 ? selectList.fadeOut(duration / 1.6) : selectList.slideUp(duration)
 					}
 				})
 			})
@@ -128,10 +122,10 @@
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on')
 
-					windowWidth > 575 ? carsPlacesInputGroup.fadeIn() : carsPlacesInputGroup.slideDown()
+					windowWidth > 767 ? carsPlacesInputGroup.fadeIn() : carsPlacesInputGroup.slideDown()
 				} else {
 					$(this).removeClass('on')
-					windowWidth > 575 ? carsPlacesInputGroup.fadeOut() : carsPlacesInputGroup.slideUp()
+					windowWidth > 767 ? carsPlacesInputGroup.fadeOut() : carsPlacesInputGroup.slideUp()
 				}
 
 				carsPlacesInputGroup.toggleClass('d-block')
@@ -145,10 +139,10 @@
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on')
 
-					windowWidth > 575 ? carsYearsInputGroup.fadeIn() : carsYearsInputGroup.slideDown()
+					windowWidth > 767 ? carsYearsInputGroup.fadeIn() : carsYearsInputGroup.slideDown()
 				} else {
 					$(this).removeClass('on')
-					windowWidth > 575 ? carsYearsInputGroup.fadeOut() : carsYearsInputGroup.slideUp()
+					windowWidth > 767 ? carsYearsInputGroup.fadeOut() : carsYearsInputGroup.slideUp()
 				}
 
 				carsYearsInputGroup.toggleClass('d-block')
@@ -162,10 +156,10 @@
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on')
 
-					windowWidth > 575 ? carsPriceInputGroup.fadeIn() : carsPriceInputGroup.slideDown()
+					windowWidth > 767 ? carsPriceInputGroup.fadeIn() : carsPriceInputGroup.slideDown()
 				} else {
 					$(this).removeClass('on')
-					windowWidth > 575 ? carsPriceInputGroup.fadeOut() : carsPriceInputGroup.slideUp()
+					windowWidth > 767 ? carsPriceInputGroup.fadeOut() : carsPriceInputGroup.slideUp()
 				}
 
 				carsPriceInputGroup.toggleClass('d-block')
