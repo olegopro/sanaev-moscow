@@ -347,9 +347,7 @@
 				Dots: false,
 				center: false,
 				infinite: false,
-				slidesPerPage: 2,
 				dragFree: true,
-				friction: 0.9,
 				l10n: {
 					NEXT: 'Следующий автомобиль',
 					PREV: 'Предыдущий  автомобиль',

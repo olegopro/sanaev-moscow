@@ -26,24 +26,20 @@
 			color: #1C2540
 
 			.card-text
+				overflow: hidden
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-line-clamp: 1
+				-webkit-box-orient: vertical
+
 				a
+					margin-bottom: 0
 					font-size: 24px
 					font-weight: bold
-					margin-bottom: 0
-					overflow: hidden
-					text-overflow: ellipsis
-					display: -webkit-box
-					-webkit-line-clamp: 1
-					-webkit-box-orient: vertical
 
 					background: #0b0f18
 					background-clip: border-box
 					-webkit-background-clip: text
-					&:hover
-						background: linear-gradient(90deg, #1C2540 0%, #7C2781 36.81%), #1C2540
-						background-clip: border-box
-						-webkit-background-clip: text
-						-webkit-text-fill-color: transparent
 
 					@media (max-width: 1199px)
 						font-size: 20px
@@ -54,6 +50,8 @@
 			small
 				font-size: 16px
 				font-weight: normal
+				user-select: none
+				cursor: default
 
 				@media (max-width: 575px)
 					font-size: 16px

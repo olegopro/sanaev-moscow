@@ -28,22 +28,22 @@
 		.card-body
 			padding: 4px 0 0 0
 			.card-text
+
+				overflow: hidden
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-line-clamp: 1
+				-webkit-box-orient: vertical
+
 				a
-					display: inline
-					+vertical-lines(1)
+
 					margin: 0
-					font-weight: bold
 					font-size: 24px
+					font-weight: bold
 
 					background: #0b0f18
 					background-clip: border-box
 					-webkit-background-clip: text
-
-					&:hover
-						background: linear-gradient(90deg, #1C2540 0%, #7C2781 36.81%), #1C2540
-						background-clip: border-box
-						-webkit-background-clip: text
-						-webkit-text-fill-color: transparent
 
 					@media (max-width: 1199px)
 						font-size: 20px
