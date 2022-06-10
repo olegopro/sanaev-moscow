@@ -27,11 +27,16 @@
 			$('.select').each(function () {
 				const _this = $(this)
 
-				// console.log(_this)
+				// _this.each(function (index, element) {
+				// 	console.log('this.selectedOptions - ', this.selectedOptions)
+				// 	console.log('index -', index)
+				// 	console.log('element -', element)
+				// 	console.log('--------')
+				// })
+
 				const selectOption = _this.find('option')
 				const selectOptionLength = selectOption.length
-				const selectedOption = selectOption.filter(':selected')
-				const duration = 250 // длительность анимации
+				const duration = 250
 
 				_this.hide()
 				_this.wrap('<div class="select"></div>')
@@ -47,6 +52,7 @@
 				}).insertAfter(selectHead)
 
 				const selectList = selectHead.next('.new-select__list')
+
 				for (let i = 1; i < selectOptionLength; i++) {
 					$('<div>', {
 						class: 'new-select__item',
@@ -72,11 +78,14 @@
 
 						windowWidth > 767 ? selectList.fadeIn(duration) : selectList.slideDown(duration)
 
+						console.log(selectOption)
+
 						selectItem.on('click', function () {
 							let chooseItem = $(this).data('value')
+							let currentSelectOption = selectOption.filter(`option[value="${chooseItem}"]`)
 
-							if (!selectOption.filter(`option[value="${chooseItem}"]`).attr('selected')) {
-								selectOption.filter(`option[value="${chooseItem}"]`).attr('selected', 'selected').prop('selected', true)
+							if (currentSelectOption.prop('selected') === false) {
+								currentSelectOption.prop('selected', true)
 
 								textArr.push($(this).find('span').css({ background: 'yellow' }).text())
 
@@ -84,17 +93,11 @@
 
 								selectHead.text(function (index, text) {
 									selectHead.text('').append(textArr.join(', '))
-
-									console.log('textArr', textArr)
 								})
-							} else if (selectOption.filter(`option[value="${chooseItem}"]`).attr('selected')) {
-								$(this).find('span').css({ background: 'red' })
-
-								console.log($(this).attr('data-value'))
+							} else {
+								currentSelectOption.prop('selected', false)
 
 								textArr.splice(textArr.indexOf($(this).attr('data-value')), 1)
-
-								selectOption.filter(`option[value="${chooseItem}"]`).removeAttr('selected').prop('selected', false)
 
 								$(this).removeClass('check-box-item')
 								$(this).find('span').css({ background: 'gray' })
@@ -108,6 +111,7 @@
 						})
 					} else {
 						$(this).removeClass('on')
+						selectItem.off()
 
 						windowWidth > 767 ? selectList.fadeOut(duration / 1.6) : selectList.slideUp(duration)
 					}

@@ -44,7 +44,7 @@
 					<div id="cars-types-catalog">
 						<div class="carousel__slide">
 							<label class="checkbox-style">
-								<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/wheel.png')" />
+								<input type="checkbox" style="background-image: url('/assets/images/tab-content/types/wheel.png')" autocomplete="off" />
 								<span>Без водителя</span>
 							</label>
 						</div>
@@ -139,39 +139,39 @@
 				<div class="row">
 					<form class="selectors-panel" action="send.php" method="GET">
 						<div class="select-wrapper">
-							<select class="select" name="carType[]" multiple>
+							<select class="select" name="carType[]" multiple autocomplete="off">
 								<option disabled>Тип</option>
-								<option value="option 1">1</option>
-								<option value="option 2">2</option>
-								<option value="option 3">3</option>
+								<option value="Внедорожник">Внедорожник</option>
+								<option value="Купе">Купе</option>
+								<option value="Липузин">Липузин</option>
 							</select>
 
-							<select class="select" name="carBrand[]" multiple>
+							<select class="select" name="carBrand[]" multiple autocomplete="off">
 								<option disabled>Марка</option>
 								<option value="Audi">Audi</option>
 								<option value="BMW">BMW</option>
 								<option value="Opel">Opel</option>
 							</select>
 
-							<select class="select">
+							<select class="select" name="carModel[]" multiple autocomplete="off">
 								<option disabled>Модель</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
+								<option value="X6">X6</option>
+								<option value="Q7">Q7</option>
+								<option value="308">308</option>
 							</select>
 
-							<select class="select">
+							<select class="select" name="carColor[]" multiple autocomplete="off">
 								<option disabled>Цвет</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
+								<option value="Красный">Красный</option>
+								<option value="Белый">Белый</option>
+								<option value="Зеленый">Зеленый</option>
 							</select>
 
-							<select class="select">
+							<select class="select" name="carCountry[]" multiple autocomplete="off">
 								<option disabled>Страна</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
+								<option value="Россия">Россия</option>
+								<option value="Франция">Франция</option>
+								<option value="Китай">Китай</option>
 							</select>
 
 							<div class="input-data" id="carsPlaces">
@@ -180,12 +180,12 @@
 									<fieldset>
 										<label for="showCarsPlacesFrom">
 											От
-											<input type="number" class="form-control" min="2" max="32" id="showCarsPlacesFrom" name="showCarsPlacesFrom" placeholder="2" />
+											<input type="number" class="form-control" min="2" max="32" id="showCarsPlacesFrom" name="showCarsPlacesFrom" placeholder="2" autocomplete="off" />
 										</label>
 
 										<label for="showCarsPlacesBefore">
 											До
-											<input type="number" class="form-control" min="2" max="32" id="showCarsPlacesBefore" name="showCarsPlacesBefore" placeholder="32" />
+											<input type="number" class="form-control" min="2" max="32" id="showCarsPlacesBefore" name="showCarsPlacesBefore" placeholder="32" autocomplete="off" />
 										</label>
 									</fieldset>
 								</div>
@@ -197,12 +197,12 @@
 									<fieldset>
 										<label for="showCarsYearsFrom">
 											От
-											<input type="number" class="form-control" min="1928" max="2022" id="showCarsYearsFrom" placeholder="1928" />
+											<input type="number" class="form-control" min="1928" max="2022" id="showCarsYearsFrom" placeholder="1928" autocomplete="off" />
 										</label>
 
 										<label for="showCarsYearsBefore">
 											До
-											<input type="number" class="form-control" min="1928" max="2022" id="showCarsYearsBefore" placeholder="2022" />
+											<input type="number" class="form-control" min="1928" max="2022" id="showCarsYearsBefore" placeholder="2022" autocomplete="off" />
 										</label>
 									</fieldset>
 								</div>
@@ -214,12 +214,12 @@
 									<fieldset>
 										<label for="showCarsPriceFrom">
 											От
-											<input type="number" class="form-control" min="1200" max="50000" id="showCarsPriceFrom" placeholder="1 200" />
+											<input type="number" class="form-control" min="1200" max="50000" id="showCarsPriceFrom" placeholder="1 200" autocomplete="off" />
 										</label>
 
 										<label for="showCarsPriceBefore">
 											До
-											<input type="number" class="form-control" min="1200" max="50000" id="showCarsPriceBefore" placeholder="50 000" />
+											<input type="number" class="form-control" min="1200" max="50000" id="showCarsPriceBefore" placeholder="50 000" autocomplete="off" />
 										</label>
 									</fieldset>
 								</div>
