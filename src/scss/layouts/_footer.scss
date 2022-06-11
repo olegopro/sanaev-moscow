@@ -5,6 +5,16 @@ footer {
 
 		h4 {
 			margin-bottom: 5px !important;
+
+			@media (max-width: 575px) {
+				font-size: 16px !important;
+			}
+		}
+
+		a {
+			@media (max-width: 575px) {
+				font-size: 14px !important;
+			}
 		}
 
 		.row:first-child {
@@ -34,7 +44,7 @@ footer {
 				}
 
 				@media (max-width: 575px) {
-					top: 56px;
+					top: 51px;
 				}
 			}
 
@@ -53,7 +63,7 @@ footer {
 				}
 
 				@media (max-width: 575px) {
-					width: 270px;
+					width: 240px;
 					padding-top: 3px;
 				}
 			}

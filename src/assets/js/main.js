@@ -27,13 +27,6 @@
 			$('.select').each(function () {
 				const _this = $(this)
 
-				// _this.each(function (index, element) {
-				// 	console.log('this.selectedOptions - ', this.selectedOptions)
-				// 	console.log('index -', index)
-				// 	console.log('element -', element)
-				// 	console.log('--------')
-				// })
-
 				const selectOption = _this.find('option')
 				const selectOptionLength = selectOption.length
 				const duration = 250
@@ -87,7 +80,7 @@
 							if (currentSelectOption.prop('selected') === false) {
 								currentSelectOption.prop('selected', true)
 
-								textArr.push($(this).find('span').css({ background: 'yellow' }).text())
+								textArr.push($(this).find('span').text())
 
 								$(this).addClass('check-box-item')
 
@@ -100,7 +93,6 @@
 								textArr.splice(textArr.indexOf($(this).attr('data-value')), 1)
 
 								$(this).removeClass('check-box-item')
-								$(this).find('span').css({ background: 'gray' })
 
 								if (textArr.length !== 0) {
 									selectHead.text('').append(textArr.join(', '))
@@ -126,10 +118,10 @@
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on')
 
-					windowWidth > 767 ? carsPlacesInputGroup.fadeIn() : carsPlacesInputGroup.slideDown()
+					windowWidth > 767 ? carsPlacesInputGroup.fadeIn(250) : carsPlacesInputGroup.slideDown(250)
 				} else {
 					$(this).removeClass('on')
-					windowWidth > 767 ? carsPlacesInputGroup.fadeOut() : carsPlacesInputGroup.slideUp()
+					windowWidth > 767 ? carsPlacesInputGroup.fadeOut(250) : carsPlacesInputGroup.slideUp(250)
 				}
 
 				carsPlacesInputGroup.toggleClass('d-block')
@@ -143,10 +135,10 @@
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on')
 
-					windowWidth > 767 ? carsYearsInputGroup.fadeIn() : carsYearsInputGroup.slideDown()
+					windowWidth > 767 ? carsYearsInputGroup.fadeIn(250) : carsYearsInputGroup.slideDown(250)
 				} else {
 					$(this).removeClass('on')
-					windowWidth > 767 ? carsYearsInputGroup.fadeOut() : carsYearsInputGroup.slideUp()
+					windowWidth > 767 ? carsYearsInputGroup.fadeOut(250) : carsYearsInputGroup.slideUp(250)
 				}
 
 				carsYearsInputGroup.toggleClass('d-block')
@@ -160,10 +152,10 @@
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on')
 
-					windowWidth > 767 ? carsPriceInputGroup.fadeIn() : carsPriceInputGroup.slideDown()
+					windowWidth > 767 ? carsPriceInputGroup.fadeIn(250) : carsPriceInputGroup.slideDown(250)
 				} else {
 					$(this).removeClass('on')
-					windowWidth > 767 ? carsPriceInputGroup.fadeOut() : carsPriceInputGroup.slideUp()
+					windowWidth > 767 ? carsPriceInputGroup.fadeOut(250) : carsPriceInputGroup.slideUp(250)
 				}
 
 				carsPriceInputGroup.toggleClass('d-block')
