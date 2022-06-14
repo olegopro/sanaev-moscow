@@ -5,9 +5,6 @@
 	</head>
 
 	<body>
-		<!-- Icons -->
-		@@include('./components/_svg-icons.html', { "path": "../.." })
-
 		<!-- Navbar -->
 		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
 
@@ -17,18 +14,17 @@
 				<div class="row">
 					<div class="col">
 						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb px-0"">
+							<ol class="breadcrumb px-0">
 								<li class="breadcrumb-item"><a href="#">Главная</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Все услуги</li>
 							</ol>
 						</nav>
-
-						
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<!-- Content section -->
 		<section class="content-section mb-3">
 			<div class="container">
 				<div class="row">
@@ -97,6 +93,7 @@
 			</div>
 		</section>
 
+		<!-- Content section -->
 		<section class="content-section mb-4 mb-sm-5">
 			<div class="container">
 				<div class="row">
@@ -116,7 +113,7 @@
 			</div>
 		</section>
 
-		<!-- footer -->
+		<!-- Footer -->
 		@@include('./_footer.html', { "path": "../.." })
 
 		<!-- Scripts -->

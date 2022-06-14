@@ -9,7 +9,6 @@ const cssbeautify = require('gulp-cssbeautify')
 const gulp = require('gulp')
 const npmDist = require('gulp-npm-dist')
 const sass = require('gulp-sass')(require('node-sass'))
-// const sass = require('gulp-dart-sass')
 const wait = require('gulp-wait')
 const sourcemaps = require('gulp-sourcemaps')
 const fileinclude = require('gulp-file-include')
@@ -282,6 +281,11 @@ gulp.task('copy:dev:html:index', function () {
 // Copy assets
 gulp.task('copy:dist:assets', function () {
 	return gulp.src(paths.src.assets).pipe(gulp.dest(paths.dist.assets))
+})
+
+// Copy sass to assets
+gulp.task('copy:sass:assets', function () {
+	return gulp.src(paths.src.scss + '/**/*.*').pipe(gulp.dest(paths.temp.assets + '/scss'))
 })
 
 gulp.task('copy:dev:assets', function () {
