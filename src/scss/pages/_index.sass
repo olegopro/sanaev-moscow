@@ -119,21 +119,34 @@ section.cars-block-tab-section
 
 				#type
 					#type-tab-carousel-fancy
-
-						input
-							background-size: 90%
+						img
+							padding: 5px
 
 				#brand
-					input
-						background-size: 80%
+					#brand-tab-carousel-fancy
+						img
+							padding: 10px
 
 				#model
-					input
-						background-size: 80%
+					#model-tab-carousel-fancy
+						a
+							width: fit-content
+						img
+							// padding: 5px
+							width: 100%
+							height: 100%
+						span
+							display: block
 
 				#service
-					input
-						background-size: 80%
+					#service-tab-carousel-fancy
+						img
+							padding: 5px
+
+				#extra
+					#extra-tab-carousel-fancy
+						img
+							padding: 5px
 
 				.tab-pane
 
@@ -207,6 +220,7 @@ section.cars-block-tab-section
 						.carousel__track
 							.carousel__slide
 								max-width: fit-content
+								height: 140px
 
 								@media (max-width: 767px)
 									padding-right: 5px
@@ -214,58 +228,24 @@ section.cars-block-tab-section
 									&:last-child
 										padding-right: 20px
 
-								.checkbox-style
-
+								a
 									display: block
 									position: relative
 									height: 100px
 									width: 100px
-									overflow: initial
 									text-align: center
 									border-radius: 0.25rem
 									box-shadow: 0px 0px 3px 0px rgba(75, 75, 75, 0.52)
 
+									&:hover
+										box-shadow: 0px 0px 3px 0px rgba(75, 75, 75, 0.52), -5px 8px 14px rgba(83, 6, 102, 0.22)
+
+									&.active-item
+										box-shadow: 0px 0px 3px 0px rgba(75, 75, 75, 0.52), -5px 8px 14px rgba(83, 6, 102, 0.22)
+
 									span
 										font-size: 12px
 										font-weight: normal
-
-									input[type=checkbox]
-										-webkit-appearance: none
-										-moz-appearance: none
-										appearance: none
-
-										display: block
-										cursor: pointer
-
-										position: relative
-										z-index: -1
-
-										width: 100%
-										height: 100%
-
-										background-size: contain
-										background-repeat: no-repeat
-										background-position: center
-										background-origin: content-box
-
-										border-radius: 0.25rem
-
-									input[type=checkbox]:checked
-										background-size: contain
-										background-repeat: no-repeat
-										background-position: center
-
-										// outline: 1px solid #ff60009e
-										box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
-
-										border-radius: 0.25rem
-										transition: all .3s
-										// filter: invert(11%) sepia(56%) saturate(500%) hue-rotate(250deg) brightness(77%) contrast(125%)
-
-									input[type=checkbox]:active
-										background-size: contain
-										background-repeat: no-repeat
-										background-position: center
 
 			span.name-title-range
 				display: block
