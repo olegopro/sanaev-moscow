@@ -12,6 +12,7 @@ const sass = require('gulp-sass')(require('node-sass'))
 const wait = require('gulp-wait')
 const sourcemaps = require('gulp-sourcemaps')
 const fileinclude = require('gulp-file-include')
+const htmlbeautify = require('gulp-html-beautify')
 
 // Define paths
 const paths = {
@@ -83,6 +84,7 @@ gulp.task('index', function () {
 				}
 			})
 		)
+		.pipe(htmlbeautify())
 		.pipe(gulp.dest(paths.temp.base))
 		.pipe(browserSync.stream())
 })
@@ -99,6 +101,7 @@ gulp.task('html', function () {
 				}
 			})
 		)
+		.pipe(htmlbeautify())
 		.pipe(gulp.dest(paths.temp.html))
 		.pipe(browserSync.stream())
 })
