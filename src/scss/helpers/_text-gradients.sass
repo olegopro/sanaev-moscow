@@ -5,6 +5,9 @@
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
 
+	@supports not (-webkit-text-fill-color: transparent)
+		-webkit-text-fill-color: #540666
+
 .text-gradient-hover
 	background: #0b0f18
 	background-clip: border-box
