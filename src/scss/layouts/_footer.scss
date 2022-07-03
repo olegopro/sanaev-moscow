@@ -143,6 +143,16 @@ footer {
 
 			.shedule-area-footer {
 				grid-area: time;
+				p {
+					color: #979797;
+					font-weight: normal;
+
+					br {
+						@media (max-width: 767px) {
+							display: none;
+						}
+					}
+				}
 			}
 
 			grid-template-areas:

@@ -1,14 +1,16 @@
 <div class="col mb-1 mb-sm-4 mb-lg-0 car-card">
 	<div class="card">
-		<div class="card-images images-toggle">
-			<!-- prettier-ignore -->
-			@@loop('./components/car-card/_card-image.html',[ 
+		<a href="@@path/html/pages/single-car.html">
+			<div class="card-images images-toggle">
+				<!-- prettier-ignore -->
+				@@loop('./components/car-card/_card-image.html',[ 
 				{ "path": "@@path", "imageCar": "reno-01.jpg" },
 				{ "path": "@@path", "imageCar": "reno-02.jpg" }, 
 				{ "path": "@@path", "imageCar": "reno-03.jpg" }, 
 				{ "path": "@@path", "imageCar": "reno-04.jpg" }, 
 			])
-		</div>
+			</div>
+		</a>
 
 		<div class="card-body">
 			<h3 class="card-text">
