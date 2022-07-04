@@ -3,6 +3,12 @@
 ;(function ($) {
 	;('use strict')
 
+	//Преобразование первой буквы в заглавную
+	const capitalizeFirstChar = str => str.charAt(0).toUpperCase() + str.substring(1)
+
+	//Генератор рандомного числа
+	const randomInt = (max, min) => Math.round(Math.random() * (max - min)) + min
+
 	$(document).ready(function () {
 		/* Select bar in Catalog page */
 		if (document.querySelector('select')) {
@@ -24,6 +30,25 @@
 				}
 			}
 
+			//закрываю выпадающий список (select) на клик по заголовку другого элемента в фильтре
+			if (window.innerWidth > 767) {
+				document.addEventListener('click', function (event) {
+					if (event.target.getAttribute('key')) {
+						let attribute = event.target.getAttribute('key')
+
+						if ($('.new-select.on').attr('key') == attribute) {
+							$('.new-select.on').eq(1).trigger('click')
+						}
+
+						if ($('.new-select.on').attr('key') !== attribute) {
+							$(`[key=${$('.new-select.on').attr('key')}]`).triggerHandler('click')
+						}
+					}
+				})
+			}
+
+			let numberCounter = 0
+
 			$('.select').each(function () {
 				const _this = $(this)
 
@@ -36,6 +61,7 @@
 
 				$('<div>', {
 					class: 'new-select',
+					key: ++numberCounter,
 					text: _this.children('option:disabled').text()
 				}).insertAfter(_this)
 
@@ -63,6 +89,15 @@
 
 				let textArr = []
 
+				//закрываю выпадающий список (select) на клик по любому элементу кроме списка
+				if (window.innerWidth > 767) {
+					document.addEventListener('click', function (event) {
+						if (!event.target.closest('.new-select__list, .new-select')) {
+							_this.siblings('.new-select.on').trigger('click')
+						}
+					})
+				}
+
 				selectHead.on('click', function () {
 					const windowWidth = window.innerWidth
 
@@ -70,8 +105,6 @@
 						$(this).addClass('on')
 
 						windowWidth > 767 ? selectList.fadeIn(duration) : selectList.slideDown(duration)
-
-						console.log(selectOption)
 
 						selectItem.on('click', function () {
 							let chooseItem = $(this).data('value')
@@ -109,6 +142,31 @@
 					}
 				})
 			})
+
+			//фкункция для обработки события модальных окон с инпутами в фильтре
+			function closeModal(event, target) {
+				if (
+					event.target == $(`#${target} input`)[0] ||
+					event.target == $(`#${target} input`)[1] ||
+					event.target == $(`#${target} label`)[0] ||
+					event.target == $(`#${target} label`)[1] ||
+					event.target == $(`#${target} .input-group`)[0] ||
+					event.target == $(`#show${capitalizeFirstChar(target)}`)[0]
+				) {
+					return false
+				} else {
+					$('#show' + capitalizeFirstChar(`${target}`) + '.on').triggerHandler('click')
+				}
+			}
+
+			//закрываю input (места/год/цена)
+			if (window.innerWidth > 767) {
+				document.addEventListener('click', function (event) {
+					closeModal(event, 'carsPlaces')
+					closeModal(event, 'carsYears')
+					closeModal(event, 'carsPrice')
+				})
+			}
 
 			$('#showCarsPlaces').on('click', function (event) {
 				event.preventDefault()
