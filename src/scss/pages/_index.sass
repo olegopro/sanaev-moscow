@@ -62,10 +62,6 @@ section.cars-block-tab-section
 					&::-webkit-scrollbar
 						display: none
 
-					// padding: 5px 1px 15px 1px
-
-					// margin-bottom: -14px
-
 					li
 						display: flex
 						border-radius: 8px
@@ -155,6 +151,12 @@ section.cars-block-tab-section
 					--carousel-button-svg-stroke-width: 1.5
 
 					.carousel__nav
+						position: absolute
+						// width: 100%
+						left: 0
+						right: 0
+						top: 46%
+
 						button
 							z-index: 10
 							box-shadow: 1px 2px 14px rgba(72, 72, 72, 0.35)
@@ -169,13 +171,11 @@ section.cars-block-tab-section
 
 								svg
 									margin-left: -2px
-									// margin-top: 1px
 								&:disabled
-									opacity: 0.6
-									left: -10%
+									opacity: 0
+									// left: -10%
 
-									transform: scale(0)
-									transition: all .5s
+									transition: all .2s
 
 							&.carousel__button.is-next
 								top: 46%
@@ -188,12 +188,11 @@ section.cars-block-tab-section
 
 								svg
 									margin-right: -1px
-									// margin-top: 1px
 								&:disabled
 									opacity: 0
-									right: -10%
+									// right: -10%
 
-									transition: all .5s
+									transition: all .2s
 
 					.carousel__viewport
 
