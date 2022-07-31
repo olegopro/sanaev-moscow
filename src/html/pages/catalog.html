@@ -131,10 +131,16 @@
 		</section>
 
 		<!-- Filter bar -->
-		<section class="filter-bar-catalog-section mt-2 mb-0 mb-md-5 mt-2 mx-0">
+		<section class="filter-bar-catalog-section mb-0 mb-md-5 mt-0 mt-md-2 mx-0">
 			<div class="container-fluid">
+				<div class="row filter-button d-block d-md-none">
+					<div class="col">
+						<button id="showFilterButton">Фильтры</button>
+						<a href="#">Сбросить</a>
+					</div>
+				</div>
 				<div class="row">
-					<form class="selectors-panel" action="send.php" method="GET" id="selectors-panel">
+					<form class="selectors-panel pt-3 pt-md-0" action="send.php" method="GET" id="selectors-panel">
 						<div class="select-wrapper">
 							<select class="select" name="carType[]" multiple autocomplete="off">
 								<option disabled>Тип</option>

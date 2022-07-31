@@ -296,6 +296,12 @@
 			})
 		}
 
+		/* Show filter button in catalog page */
+		const selectorsPanel = $('#selectors-panel')
+		$('#showFilterButton').on('click', function () {
+			selectorsPanel.css('display') === 'block' ? selectorsPanel.slideUp(300) : selectorsPanel.slideDown(300)
+		})
+
 		/* FancyApp */
 
 		/* Catalog page CarsTypes carousel */

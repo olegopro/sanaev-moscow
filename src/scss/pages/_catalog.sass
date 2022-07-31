@@ -167,12 +167,44 @@ section.filter-bar-catalog-section
 	border-radius: 8px
 	.container-fluid
 		.row
+			&.filter-button
+				.col
+					flex-wrap: nowrap
+					align-items: center
+					display: flex
+					button
+						position: relative
+						width: auto
+						height: 48px
+						flex-grow: 1
+						padding-left: 50px
+						text-align: left
+						color: #530666
+						background: white
+						font-weight: bolder
+						border: 1px solid #540666
+						border-radius: 8px
+						box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
+
+						&::before
+							content: ''
+							position: absolute
+							left: 16px
+							width: 32px
+							height: 32px
+							background-image: url('/assets/images/filter-icon.svg')
+							background-repeat: no-repeat
+
+					a
+						padding: 0 16px
+
 			form.selectors-panel
 				display: flex
 				flex-wrap: wrap
 				height: 48px
 
 				@media (max-width: 767px)
+					display: none
 					height: auto
 
 				.select-wrapper
