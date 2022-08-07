@@ -533,9 +533,20 @@ section.filter-bar-catalog-section
 						border: none
 						padding: 8px 40px
 						margin-right: 16px
-						background: linear-gradient(87.78deg, #540666 0%, #A64380 150.61%)
-						box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.22)
+						border: 1px solid #540666
 						border-radius: 8px
+
+						line-height: 120%
+						background: linear-gradient(90deg, #1C2540 0%, #7C2781 36.81%), #1C2540
+						background-clip: border-box
+						-webkit-background-clip: text
+						-webkit-text-fill-color: transparent
+
+						&:hover
+							box-shadow: -5px 8px 14px rgba(83, 6, 102, 0.10)
+
+						@supports not (-webkit-text-fill-color: transparent)
+							-webkit-text-fill-color: #540666
 
 						@media (max-width: 575px)
 							width: 100%
