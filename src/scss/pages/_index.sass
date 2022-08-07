@@ -116,8 +116,15 @@ section.cars-block-tab-section
 
 				#brand
 					#brand-tab-carousel-fancy
+						a
+							width: fit-content
 						img
 							padding: 10px
+							width: auto
+							height: 100%
+						span
+							padding-top: 4px
+							display: block
 
 				#model
 					#model-tab-carousel-fancy
@@ -128,17 +135,38 @@ section.cars-block-tab-section
 							width: auto
 							height: 100%
 						span
+							padding-top: 4px
 							display: block
 
 				#service
 					#service-tab-carousel-fancy
+						a
+							width: fit-content
 						img
-							padding: 5px
+							padding: 0
+							width: 100%
+							height: 100%
+							border-radius: 0.25rem
+							object-fit: cover
+						span
+							padding-top: 4px
+							display: block
+							width: 150px
 
 				#extra
 					#extra-tab-carousel-fancy
+						a
+							width: fit-content
 						img
-							padding: 5px
+							padding: 0
+							width: 100%
+							height: 100%
+							border-radius: 0.25rem
+							object-fit: cover
+						span
+							padding-top: 4px
+							display: block
+							width: 150px
 
 				.tab-pane
 
@@ -156,7 +184,7 @@ section.cars-block-tab-section
 						// width: 100%
 						left: 0
 						right: 0
-						top: 46%
+						top: 42%
 
 						button
 							z-index: 10
@@ -215,7 +243,7 @@ section.cars-block-tab-section
 						.carousel__track
 							.carousel__slide
 								max-width: fit-content
-								height: 140px
+								height: 156px
 
 								@media (max-width: 767px)
 									padding-right: 5px
