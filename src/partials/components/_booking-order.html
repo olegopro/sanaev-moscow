@@ -19,11 +19,12 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col-12 col-md-4">
 							<div class="mb-4">
-								<div class="input-group">
-									<input class="form-control" placeholder="Дата" type="text" required="" />
-									<span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+								<div class="input-group" data-provide="datepicker">
+									<input class="form-control" data-datepicker="" id="exampleInputDate1" placeholder="Select date" type="text" aria-label="Date with icon left" />
+									<span class="input-group-text" id="datepicker"><img src="../../assets/images/elements/calendar.svg" alt="calendar" /></span>
 								</div>
 							</div>
 						</div>
@@ -47,7 +48,7 @@
 						</div>
 
 						<div class="col-12">
-							<button class="btn mt-3" href="#">Заказать</button>
+							<button class="btn btn-submit mt-3" href="#">Заказать</button>
 						</div>
 					</div>
 				</div>
