@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		@@include('./_head.html', { "path": "../..", "title": "Аренда автомобилей в компании в Sanaev Moscow" })
+	</head>
+
+	<body>
+		<!-- Navbar -->
+		@@include('./_navigation.html', { "path": "../..", "classes": "navbar-dark navbar-theme-secondary" })
+
+		<!-- Page title section -->
+		<section class="page-title-section mx-0">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb px-0">
+								<li class="breadcrumb-item"><a href="#">Главная</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Автопарк</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Content-section -->
+		<section class="content-section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="main-content">
+						<h1 class="h2 text-gradient">Каталог автомобилей</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cars block tab section -->
+		<section class="cars-block-types-catalog-section pb-3 mx-0">
+			<div class="container-fluid">
+				<div class="row">
+					<div id="cars-types-catalog">
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/wheel.png" alt="" />
+								<span>Без водителя</span>
+							</a>
+						</div>
+
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/suv.png" alt="" />
+								<span>Внедорожники</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/cabriolet.png" alt="" />
+								<span>Кабриолеты</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/coupe.png" alt="" />
+								<span>Купе</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="active-item">
+								<img src="/assets/images/tab-content/types/limousine.png" alt="" />
+								<span>Лимузины</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/minibus.png" alt="" />
+								<span>Микроавтобусы</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/minivan.png" alt="" />
+								<span>Минивены</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/motorcycle.png" alt="" />
+								<span>Мотоциклы</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/wedding.png" alt="" />
+								<span>На свадьбу</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/shooting.png" alt="" />
+								<span>На съемки</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/premium.png" alt="" />
+								<span>Премиум</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/retro.png" alt="" />
+								<span>Ретро</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/sedan.png" alt="" />
+								<span>Седаны</span>
+							</a>
+						</div>
+						<div class="carousel__slide">
+							<a href="" class="">
+								<img src="/assets/images/tab-content/types/sportcar.png" alt="" />
+								<span>Спорткары</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Filter bar -->
+		<section class="filter-bar-catalog-section mb-0 mb-md-5 mt-0 mt-md-2 mx-0">
+			<div class="container-fluid">
+				<div class="row filter-button d-block d-md-none">
+					<div class="col">
+						<button id="showFilterButton">Фильтры</button>
+						<a href="#">Сбросить</a>
+					</div>
+				</div>
+				<div class="row">
+					<form class="selectors-panel pt-3 pt-md-0" action="send.php" method="GET" id="selectors-panel">
+						<div class="select-wrapper">
+							<select class="select" name="carType[]" multiple autocomplete="off">
+								<option disabled>Тип</option>
+								<option value="Внедорожник">Внедорожник</option>
+								<option value="Купе">Купе</option>
+								<option value="Липузин">Липузин</option>
+							</select>
+
+							<select class="select" name="carBrand[]" multiple autocomplete="off">
+								<option disabled>Марка</option>
+								<option value="Audi">Audi</option>
+								<option value="BMW">BMW</option>
+								<option value="Arrow">Arrow</option>
+								<option value="Birchfield">Birchfield</option>
+								<option value="Bolwell">Bolwell</option>
+								<option value="Borland">Borland</option>
+								<option value="Carbontech">Carbontech</option>
+								<option value="Minetti">Minetti</option>
+								<option value="Quantum">Quantum</option>
+								<option value="Chrysler">Chrysler</option>
+								<option value="Ford">Ford</option>
+								<option value="Giocattolo">Giocattolo</option>
+								<option value="Goggomobil">Goggomobil</option>
+								<option value="Hartnett">Hartnett</option>
+								<option value="Holden">Holden</option>
+								<option value="HSV">HSV</option>
+								<option value="Honda">Honda</option>
+								<option value="Ilinga">Ilinga</option>
+								<option value="Kaditcha">Kaditcha</option>
+								<option value="Leyland">Leyland</option>
+								<option value="Lloyd-Hartnett">Lloyd-Hartnett</option>
+								<option value="Lonsdale">Lonsdale</option>
+								<option value="Mercedes-Benz">Mercedes-Benz</option>
+								<option value="Mitsubishi">Mitsubishi</option>
+								<option value="Morris">Morris</option>
+								<option value="Pellandini">Pellandini</option>
+								<option value="Purvis Eureka">Purvis Eureka</option>
+								<option value="Shrike">Shrike</option>
+								<option value="Southern Cross">Southern Cross</option>
+								<option value="Statesman">Statesman</option>
+								<option value="Toyota">Toyota</option>
+							</select>
+
+							<select class="select" name="carModel[]" multiple autocomplete="off">
+								<option disabled>Модель</option>
+								<option value="X6">X6</option>
+								<option value="Q7">Q7</option>
+								<option value="308">308</option>
+							</select>
+
+							<select class="select" name="carColor[]" multiple autocomplete="off">
+								<option disabled>Цвет</option>
+								<option value="Красный">Красный</option>
+								<option value="Белый">Белый</option>
+								<option value="Зеленый">Зеленый</option>
+							</select>
+
+							<select class="select" name="carCountry[]" multiple autocomplete="off">
+								<option disabled>Страна</option>
+								<option value="Россия">Россия</option>
+								<option value="Франция">Франция</option>
+								<option value="Китай">Китай</option>
+							</select>
+
+							<div class="input-data" id="carsPlaces">
+								<button id="showCarsPlaces">Мест</button>
+								<div class="input-group">
+									<fieldset>
+										<label for="showCarsPlacesFrom">
+											От
+											<input type="number" class="form-control" min="2" max="32" id="showCarsPlacesFrom" name="showCarsPlacesFrom" placeholder="2" autocomplete="off" />
+										</label>
+
+										<label for="showCarsPlacesBefore">
+											До
+											<input type="number" class="form-control" min="2" max="32" id="showCarsPlacesBefore" name="showCarsPlacesBefore" placeholder="32" autocomplete="off" />
+										</label>
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="input-data" id="carsYears">
+								<button id="showCarsYears">Год</button>
+								<div class="input-group">
+									<fieldset>
+										<label for="showCarsYearsFrom">
+											От
+											<input type="number" class="form-control" min="1928" max="2022" id="showCarsYearsFrom" name="showCarsYearsFrom" placeholder="1928" autocomplete="off" />
+										</label>
+
+										<label for="showCarsYearsBefore">
+											До
+											<input type="number" class="form-control" min="1928" max="2022" id="showCarsYearsBefore" name="showCarsYearsBefore" placeholder="2022" autocomplete="off" />
+										</label>
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="input-data" id="carsPrice">
+								<button id="showCarsPrice">Цена</button>
+								<div class="input-group">
+									<fieldset>
+										<label for="showCarsPriceFrom">
+											От
+											<input type="number" class="form-control" min="1200" max="50000" id="showCarsPriceFrom" name="showCarsPriceFrom" placeholder="1 200" autocomplete="off" />
+										</label>
+
+										<label for="showCarsPriceBefore">
+											До
+											<input
+												type="number"
+												class="form-control"
+												min="1200"
+												max="50000"
+												id="showCarsPriceBefore"
+												name="showCarsPriceBefore"
+												placeholder="50 000"
+												autocomplete="off"
+											/>
+										</label>
+									</fieldset>
+								</div>
+							</div>
+						</div>
+
+						<div class="filter-action-buttons">
+							<button type="submit">Показать</button>
+							<a href="">Cбросить</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cars block section -->
+		<section class="cars-block-catalog-section mx-0">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col pt-3 pb-sm-3 pb-4 d-flex align-items-start align-items-md-center">
+						<img class="title-stock" src="/assets/images/elements/percent.svg" alt="" />
+
+						<p class="title-stock">
+							<span class="title-stock">Акция:</span>
+							2 часа катания по центру на кабриолете с водителем – от 7 500 руб.
+						</p>
+					</div>
+				</div>
+				<!-- prettier-ignore -->
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-4">
+				
+					@@include('./components/_car-card-single-photo-inner-carousel.html', { 
+						"path": "../..", 
+						"imageCar": "akura-nsx.jpg", 
+						"carName": "Akura NSX", 
+						"carPrice": "от 20 000 руб/час" 
+					})
+
+					@@include('./components/_car-card-single-photo-inner-carousel.html', { 
+						"path": "../..", 
+						"imageCar": "toyota-supra-ft1.jpg", 
+						"carName": "Toyota Supra FT1", 
+						"carPrice": "от 4 900 руб/час" 
+					})
+
+					@@include('./components/_car-card-single-photo-inner-carousel.html', { 
+						"path": "../..", 
+						"imageCar": "mclaren-675lt.jpg", 
+						"carName": "McLaren 675LT", 
+						"carPrice": "от 20 000 руб/час" 
+					})
+
+					@@include('./components/_car-card-single-photo-inner-carousel.html', { 
+						"path": "../..", 
+						"imageCar": "chevrolet_cabriolet.jpg", 
+						"carName": "Corvette C1 Retro", 
+						"carPrice": "от 50 000 руб/час" 
+					})
+
+					@@include('./components/_car-card-single-photo-inner-carousel.html', { 
+						"path": "../..", 
+						"imageCar": "convertible_1958.jpg", 
+						"carName": "Dodge Coronet Super D-500 Convertible 1958", 
+						"carPrice": "от 4 200 руб/час" 
+					})
+
+					@@include('./components/_car-card-single-photo-inner-carousel.html', { 
+						"path": "../..", 
+						"imageCar": "akura-nsx.jpg", 
+						"carName": "Akura NSX", 
+						"carPrice": "от 20 000 руб/час" 
+					})
+
+					@@include('./components/_car-card-single-photo-inner-carousel.html', { 
+						"path": "../..", 
+						"imageCar": "akura-nsx.jpg", 
+						"carName": "Akura NSX", 
+						"carPrice": "от 20 000 руб/час" 
+					})
+
+					@@include('./components/_car-card-single-photo-inner-carousel.html', { 
+						"path": "../..", 
+						"imageCar": "mclaren-675lt.jpg", 
+						"carName": "McLaren 675LT", 
+						"carPrice": "от 20 000 руб/час" 
+					})
+					
+				</div>
+			</div>
+		</section>
+
+		<!-- Booking order -->
+		<section class="booking-order-section mx-0 mt-3 mt-md-5 mb-4 mb-sm-5">@@include('./components/_booking-order.html', { "path": "../..", "title": "Заказать автомобиль" })</section>
+
+		<!-- Content-section -->
+		<section class="content-section mx-0 mb-4 mb-sm-5">
+			<div class="container">
+				<div class="row">
+					<div class="main-content">
+						<p>
+							Знаете ли вы, что прокат лимузина отлично подойдет для такого праздника как день рождения? Вы сможете весело прокатиться со своими друзьями по интересным и знаковым местам
+							Москвы, сделать на память отличные фото. Мы позаботимся, чтобы ваш день рождения в лимузине прошел в легкой и непринужденной атмосфере праздника.
+						</p>
+						<p>
+							Также вас приглашают наши партнеры – ночные клубы, бары, рестораны. В ваш день рождения они подготовили для вас самые лояльные условия и скидки. Ведь заказ лимузина на день
+							рождения в Sanaev Moscow - это индивидуальный подход и возможность отпраздновать день рождения наилучшим образом.
+						</p>
+						<h3 class="h2 mt-3 mt-md-5">Сценарий дня рождения в лимузине:</h3>
+						<ol>
+							<li>Во время заказа услуги вы указываете место подачи автомобиля. Это будет место, с которого начнется ваш удивительный день рождения.</li>
+							<li>
+								В самых красивый и топовых местах города мы делаем остановки, чтобы сделать красивые фотографии. Это могут быть снимки в лимузине, на фоне необычного природного
+								ландшафта или здания с красивой архитектурой. Количество снимков не ограничено.
+							</li>
+							<li>В ходе поездки вы будете обеспечены хорошим настроением, веселым драйвом и различными напитками.</li>
+							<li>
+								По окончании праздничной программы мы привезем вас в желаемое место. Это может быть ресторан, бар, клуб, караоке – все зависит от вашего выбора, с которым можем помочь
+								заранее.
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Advantages -->
+		<section class="advantages-section mx-0 mb-4 mb-sm-5">@@include('./components/_advantages.html')</section>
+
+		<!-- Content-section -->
+		<section class="content-section pt-0 mx-0 mb-4 mb-sm-5">
+			<div class="container">
+				<div class="row">
+					<div class="main-content">
+						<h3 class="h2">Почему стоит заказать лимузин именно у нас?</h3>
+						<p>
+							Компания Sanaev Moscow – это безупречная репутация и большой опыт в организации праздничных мероприятий. Предлагаем недорого заказать лимузин на день рождения, чтобы весело
+							отпраздновать праздник. Непринужденная атмосфера и веселое настроение вам гарантированы.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		@@include('./_footer.html', { "path": "../.." })
+
+		<!-- Scripts -->
+		@@include('./_scripts.html', { "path": "../.." })
+	</body>
+</html>

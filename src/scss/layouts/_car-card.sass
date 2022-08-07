@@ -59,6 +59,95 @@
 						top: 0
 						width: 100%
 						height: 100%
+			.inner-image-car-card-carousel
+				position: relative
+				border-radius: 8px
+				background: #4a324c
+				height: 100%
+
+				@supports not (aspect-ratio: auto)
+					position: relative
+					padding-top: 62.5%
+					overflow: hidden
+
+				--carousel-button-bg: #fff
+
+				--carousel-button-width: 50px
+				--carousel-button-height: 50px
+
+				--carousel-button-svg-width: 18px
+				--carousel-button-svg-height: 18px
+				--carousel-button-svg-stroke-width: 1.5
+
+				--carousel-slide-width: 100%
+
+				.carousel__nav
+					position: absolute
+					// width: 100%
+					left: 0
+					right: 0
+					top: 48%
+
+					button
+						z-index: 10
+						box-shadow: 1px 2px 14px rgba(72, 72, 72, 0.35)
+						&.carousel__button.is-prev
+							top: 46%
+							@media (max-width: 575px)
+								left: -10px
+								width: 24px
+								height: 24px
+								padding: 8px
+								&:disabled
+									opacity: 0
+
+							svg
+								@media (max-width: 575px)
+									width: 15px
+									height: 15px
+									padding: 1px
+							&:disabled
+								transition: all .2s
+
+						&.carousel__button.is-next
+							top: 46%
+							@media (max-width: 575px)
+								right: -10px
+								width: 24px
+								height: 24px
+								padding: 8px
+								&:disabled
+									opacity: 0
+							svg
+								@media (max-width: 575px)
+									width: 15px
+									height: 15px
+									padding: 1px
+							&:disabled
+								transition: all .2s
+
+				.carousel__viewport
+					border-radius: 8px
+					.carousel__slide
+						padding: 0
+						aspect-ratio: 8 / 5
+						&:last-child
+							border-top-right-radius: 8px
+							border-bottom-right-radius: 8px
+						&:first-child
+							border-top-left-radius: 8px
+							border-bottom-left-radius: 8px
+						img
+							height: 100%
+							object-fit: cover
+							object-position: center
+
+							@supports not (aspect-ratio: auto)
+								position: absolute
+								left: 0
+								top: 0
+								width: 100%
+								height: 100%
 
 		.card-body
 			margin-top: 12px
@@ -69,7 +158,8 @@
 				// 
 
 			@media (max-width: 767px)
-				padding-top: 6px
+				padding-top: 0
+				margin-top: 0
 
 			.card-text
 				font-size: 24px
@@ -109,6 +199,7 @@
 				cursor: default
 
 				@media (max-width: 767px)
+					margin-top: -3px
 					font-size: 12px
 					font-weight: normal
 

@@ -352,6 +352,30 @@
 			})
 		}
 
+		/* Inner car card carousel on the catalog page */
+		const innerImageCarCardCarousel = Array.from(document.querySelectorAll('.inner-image-car-card-carousel'))
+		if (innerImageCarCardCarousel) {
+			innerImageCarCardCarousel.forEach(carousel => {
+				new Carousel(carousel, {
+					Dots: false,
+					center: true,
+					infinite: false,
+					slidesPerPage: 'auto',
+					l10n: {
+						NEXT: 'Следующий автомобиль',
+						PREV: 'Предыдущий  автомобиль',
+						GOTO: 'Вернуться к %d'
+					},
+					Navigation: {
+						prevTpl:
+							'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 16L2 9L8 2" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+						nextTpl:
+							'<svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L8 9L2 16" stroke="#1C2540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+					}
+				})
+			})
+		}
+
 		/* Index page type Tab */
 		const typeTabCarouselFancy = document.querySelector('#type-tab-carousel-fancy')
 		if (typeTabCarouselFancy) {
