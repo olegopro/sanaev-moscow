@@ -9,16 +9,16 @@
 	//Генератор рандомного числа
 	const randomInt = (max, min) => Math.round(Math.random() * (max - min)) + min
 
-	// Datepicker
-	var datepickers = [].slice.call(document.querySelectorAll('[data-datepicker]'))
-	var datepickersList = datepickers.map(function (el) {
-		return new Datepicker(el, {
-			buttonClass: 'btn',
-			language: 'ru'
-		})
-	})
-
 	$(document).ready(function () {
+		/* Datepicker */
+		var datepickers = [].slice.call(document.querySelectorAll('[data-datepicker]'))
+		var datepickersList = datepickers.map(function (el) {
+			return new Datepicker(el, {
+				buttonClass: 'btn',
+				language: 'ru'
+			})
+		})
+
 		/* Select bar in Catalog page */
 		if (document.querySelector('select')) {
 			const select = document.querySelector('select')
