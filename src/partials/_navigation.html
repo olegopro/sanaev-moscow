@@ -5,7 +5,7 @@
 				<img src="@@path/assets/images/phone-header.svg" alt="tel" />
 			</a>
 
-			<a class="navbar-brand me-0 me-xl-5 me-n4" href="@@path/index.html">
+			<a class="navbar-brand me-n4 me-xl-n4" href="@@path/index.html">
 				<img class="navbar-brand-logo d-block" src="@@path/assets/images/logo-header-black.png" alt="Logo light" />
 			</a>
 
@@ -52,9 +52,10 @@
 					</li>
 
 					<li class="soc-icons-block-mobile">
+						<a href="tel:+7 495 095 10 88" class="telephone-header d-block d-lg-none">+7 495 095 10 88</a>
 						<ul>
 							<li class="d-flex d-lg-none nav-item">
-								<a href="https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit" target="_blank" class="btn whatsapp-btn">
+								<a href="https://themesberg.com/product/ui-kit/pixel-pro-premium-bootstrap-5-ui-kit" target="_blank" class="btn whatsapp-btn pe-0">
 									<img src="@@path/assets/images/social-icons/whatsapp.svg" alt="" />
 								</a>
 							</li>
@@ -66,22 +67,24 @@
 						</ul>
 					</li>
 
-					<li>
-						<ul class="navbar-nav lang d-none d-lg-flex">
-							<li class="nav-item">
-								<a href="@@path/html/pages/contacts.html" class="nav-link">RU</a>
-							</li>
-							<li class="nav-item">
-								<a href="@@path/html/pages/contacts.html" class="nav-link lang-active">ENG</a>
-							</li>
+					<form class="d-none d-xl-flex" role="search">
+						<input class="form-control" type="search" placeholder="поиск" aria-label="Поиск" />
+						<button class="btn btn-outline-success" type="submit">
+							<!-- <i class="fas fa-search"></i> -->
+						</button>
+					</form>
+
+					<div class="dropdown d-none d-lg-block">
+						<button class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">RU</button>
+
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item active-link" href="#">RU</a></li>
+							<li><a class="dropdown-item" href="#">ENG</a></li>
 						</ul>
-					</li>
+					</div>
 				</ul>
 
-				<form class="d-none d-xl-flex mx-5" role="search">
-					<input class="form-control" type="search" placeholder="Поиск" aria-label="Поиск" />
-					<button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
-				</form>
+				<a href="tel:+7 495 095 10 88" class="telephone-header d-none d-lg-block">+7 495 095 10 88</a>
 			</div>
 
 			<div class="ms-auto soc-icons-block d-none d-sm-flex">
