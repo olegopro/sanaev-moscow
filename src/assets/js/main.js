@@ -118,16 +118,21 @@
 						selectItem.on('click', function () {
 							let chooseItem = $(this).data('value')
 							let currentSelectOption = selectOption.filter(`option[value="${chooseItem}"]`)
+							let selectHeadTitle = (separator = '') => selectHead.text(selectOption.filter(':disabled').val() + separator)
 
 							if (currentSelectOption.prop('selected') === false) {
 								currentSelectOption.prop('selected', true)
 
 								textArr.push($(this).find('span').text())
 
+								selectHead.css({
+									color: '#540666'
+								})
+
 								$(this).addClass('check-box-item')
 
 								selectHead.text(function (index, text) {
-									selectHead.text('').append(textArr.join(', '))
+									selectHead.text('').append(selectHeadTitle(': ')).append(textArr.join(', '))
 								})
 							} else {
 								currentSelectOption.prop('selected', false)
@@ -137,9 +142,12 @@
 								$(this).removeClass('check-box-item')
 
 								if (textArr.length !== 0) {
-									selectHead.text('').append(textArr.join(', '))
+									selectHead.text('').append(selectHeadTitle(': ')).append(textArr.join(', '))
 								} else {
-									selectHead.text(selectOption.filter(':disabled').val())
+									selectHeadTitle()
+									selectHead.css({
+										color: ''
+									})
 								}
 							}
 						})
